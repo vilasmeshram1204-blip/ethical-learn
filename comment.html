@@ -2,7 +2,7 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<title>Comments</title>
+<title>Comment Section</title>
 
 <style>
 
@@ -15,7 +15,6 @@ padding:0;
 }
 
 .container{
-width:90%;
 max-width:800px;
 margin:auto;
 padding:20px;
@@ -25,19 +24,19 @@ h2{
 text-align:center;
 }
 
-.comment-box{
+.comment-form{
 background:#161b22;
-padding:15px;
+padding:20px;
 border-radius:8px;
 margin-bottom:20px;
 }
 
-input,textarea{
+input, textarea{
 width:100%;
 padding:10px;
 margin-top:10px;
 border:none;
-border-radius:5px;
+border-radius:6px;
 background:#0d1117;
 color:white;
 }
@@ -45,17 +44,21 @@ color:white;
 button{
 margin-top:10px;
 padding:10px 20px;
-border:none;
 background:#238636;
+border:none;
 color:white;
-border-radius:5px;
+border-radius:6px;
 cursor:pointer;
 }
 
-.comment{
+button:hover{
+background:#2ea043;
+}
+
+.comment-box{
 background:#161b22;
-padding:10px;
-border-radius:6px;
+padding:15px;
+border-radius:8px;
 margin-top:10px;
 }
 
@@ -78,40 +81,74 @@ color:gray;
 
 <h2>💬 Comments</h2>
 
+<div class="comment-form">
+
+<input type="text" id="name" placeholder="Your Name">
+
+<textarea id="comment" rows="4" placeholder="Write your comment..."></textarea>
+
+<button onclick="addComment()">Post Comment</button>
+
+</div>
+
+<div id="comments"></div>
+
+</div>
+
+<script>
+
+let comments = JSON.parse(localStorage.getItem("comments")) || [];
+
+function showComments(){
+
+let output = "";
+
+comments.forEach(function(c){
+
+output += `
 <div class="comment-box">
-
-<form action="comment.php" method="POST">
-
-<input type="text" name="name" placeholder="Your Name" required>
-
-<textarea name="comment" rows="4" placeholder="Write your comment..." required></textarea>
-
-<button type="submit">Post Comment</button>
-
-</form>
-
+<div class="name">${c.name}</div>
+<div class="time">${c.time}</div>
+<p>${c.comment}</p>
 </div>
+`;
 
-<?php
+});
 
-$conn = new mysqli("localhost","root","","your_database");
+document.getElementById("comments").innerHTML = output;
 
-$sql = "SELECT * FROM comments ORDER BY id DESC";
+}
 
-$result = $conn->query($sql);
+function addComment(){
 
-while($row = $result->fetch_assoc()){
-?>
+let name = document.getElementById("name").value;
+let comment = document.getElementById("comment").value;
 
-<div class="comment">
-<div class="name"><?php echo $row['name']; ?></div>
-<div class="time"><?php echo $row['created_at']; ?></div>
-<p><?php echo $row['comment']; ?></p>
-</div>
+if(name === "" || comment === ""){
+alert("Please fill all fields");
+return;
+}
 
-<?php } ?>
+let time = new Date().toLocaleString();
 
-</div>
+comments.unshift({
+name:name,
+comment:comment,
+time:time
+});
+
+localStorage.setItem("comments", JSON.stringify(comments));
+
+document.getElementById("name").value="";
+document.getElementById("comment").value="";
+
+showComments();
+
+}
+
+showComments();
+
+</script>
 
 </body>
 </html>
