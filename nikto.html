@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ethical Learn Nikto</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#0f172a;
+  color:white;
+}
+
+/* NAVBAR */
+.navbar{
+  background:#020617;
+  padding:10px 20px;
+}
+
+.logo{
+  color:#00adb5;
+  font-size:20px;
+  font-weight:bold;
+}
+
+/* MENU */
+.nav-links{
+  display:flex;
+  flex-direction:column;  /* IMPORTANT */
+  gap:10px;
+  margin-top:10px;
+}
+
+.nav-links a, .tool-btn{
+  color:white;
+  text-decoration:none;
+  padding:10px;
+  display:block;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.nav-links a:hover, .tool-btn:hover{
+  background:#00adb5;
+  border-radius:6px;
+}
+
+/* TOOLS DROPDOWN */
+.tools-menu{
+  display:none;
+  background:#111827;
+  border-radius:10px;
+  padding:10px;
+}
+
+.tools-menu h4{
+  color:#00adb5;
+  margin:10px 0 5px;
+  border-bottom:1px solid #444;
+}
+
+/* MOBILE BUTTON */
+.menu-toggle{
+  font-size:22px;
+  cursor:pointer;
+  color:white;
+  display:none;
+}
+
+/* DESKTOP */
+@media(min-width:768px){
+  .nav-links{
+    flex-direction:column;
+    width:250px;
+  }
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{
+    display:none;
+  }
+  .nav-links.active{
+    display:flex;
+  }
+  .menu-toggle{
+    display:block;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+  <div class="logo">Ethical Learn</div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <div class="nav-links" id="menu">
+
+    <a href="index.html">Home</a>
+
+    <!-- TOOL BUTTON -->
+    <div class="tool-btn" onclick="toggleTools()">Tools ▼</div>
+
+    <!-- TOOLS LIST -->
+    <div class="tools-menu" id="toolsMenu">
+
+      <h4>Information Gathering</h4>
+      <a href="nmap.html">Nmap</a>
+      <a href="maltego.html">Maltego</a>
+      <a href="theharvester.html">theHarvester</a>
+      <a href="reconng.html">Recon-ng</a>
+      <a href="dnsenum.html">dnsenum</a>
+      <a href="dnsrecon.html">dnsrecon</a>
+
+      <h4>Vulnerability Analysis</h4>
+      <a href="nikto.html">Nikto</a>
+      <a href="openvas.html">OpenVAS</a>
+      <a href="zap.html">OWASP ZAP</a>
+      <a href="sqlmap.html">SQLmap</a>
+
+      <h4>Web Attacks</h4>
+      <a href="burpsuite.html">Burp Suite</a>
+      <a href="commix.html">Commix</a>
+      <a href="skipfish.html">Skipfish</a>
+      <a href="wfuzz.html">Wfuzz</a>
+
+      <h4>Password</h4>
+      <a href="hydra.html">Hydra</a>
+      <a href="hashcat.html">Hashcat</a>
+      <a href="john.html">John</a>
+      <a href="medusa.html">Medusa</a>
+
+      <h4>Wireless</h4>
+      <a href="aircrack.html">Aircrack-ng</a>
+      <a href="reaver.html">Reaver</a>
+      <a href="kismet.html">Kismet</a>
+      <a href="wifite.html">Wifite</a>
+
+      <h4>Exploitation</h4>
+      <a href="metasploit.html">Metasploit</a>
+      <a href="beef.html">BeEF</a>
+      <a href="armitage.html">Armitage</a>
+
+      <h4>Sniffing</h4>
+      <a href="wireshark.html">Wireshark</a>
+      <a href="ettercap.html">Ettercap</a>
+      <a href="bettercap.html">Bettercap</a>
+
+      <h4>Forensics</h4>
+      <a href="autopsy.html">Autopsy</a>
+      <a href="binwalk.html">Binwalk</a>
+      <a href="foremost.html">Foremost</a>
+
+    </div>
+
+    <a href="about.html">About</a>
+    <a href="comment.html">Comment</a>
+
+  </div>
+</div>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+
+function toggleTools(){
+  let tools = document.getElementById("toolsMenu");
+  tools.style.display = (tools.style.display === "block") ? "none" : "block";
+}
+</script>
+
+</body>
+
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nikto Tool Guide</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+background:#0d1117;
+color:#e6edf3;
+margin:0;
+padding:0;
+}
+
+header{
+background:#161b22;
+padding:20px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+border-bottom:2px solid #30363d;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:20px;
+}
+
+.section{
+background:#161b22;
+margin-bottom:20px;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+.section h2{
+color:#58a6ff;
+margin-top:0;
+}
+
+code{
+display:block;
+background:#0d1117;
+padding:10px;
+border-radius:6px;
+margin-top:10px;
+color:#7ee787;
+overflow-x:auto;
+}
+
+.footer{
+text-align:center;
+padding:20px;
+color:#8b949e;
+border-top:1px solid #30363d;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6124052333813612"
+     crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header>
+Nikto Web Server Scanner Guide
+</header>
+
+<div class="container">
+
+<div class="section">
+<h2>🔎 Nikto क्या है?</h2>
+<p>
+Nikto एक powerful Open Source Web Server Scanner है जिसका उपयोग websites में security vulnerabilities खोजने के लिए किया जाता है।
+</p>
+
+<p>यह tool penetration testing और bug bounty में बहुत useful होता है।</p>
+
+<ul>
+<li>Outdated Server Software</li>
+<li>Dangerous Files</li>
+<li>Default Pages</li>
+<li>Server Misconfiguration</li>
+<li>Known Vulnerabilities</li>
+</ul>
+
+</div>
+
+
+<div class="section">
+<h2>⚙️ Kali NetHunter / Kali Linux Installation</h2>
+
+<p>अक्सर Kali Linux में Nikto पहले से installed होता है।</p>
+
+<h3>Check Installation</h3>
+
+<code>
+nikto -h
+</code>
+
+<h3>Install Nikto</h3>
+
+<code>
+sudo apt update
+sudo apt install nikto -y
+</code>
+
+<h3>Check Version</h3>
+
+<code>
+nikto -Version
+</code>
+
+</div>
+
+
+<div class="section">
+
+<h2>🚀 Basic Usage Commands</h2>
+
+<h3>Basic Website Scan</h3>
+
+<code>
+nikto -h http://example.com
+</code>
+
+<h3>HTTPS Scan</h3>
+
+<code>
+nikto -h https://example.com
+</code>
+
+<h3>Specific Port Scan</h3>
+
+<code>
+nikto -h http://example.com -p 8080
+</code>
+
+<h3>Save Report</h3>
+
+<code>
+nikto -h http://example.com -o report.html
+</code>
+
+</div>
+
+
+<div class="section">
+
+<h2>🧪 Bug Bounty Workflow</h2>
+
+<p>Bug bounty testing में Nikto को अक्सर Nmap के बाद use किया जाता है।</p>
+
+<h3>Step 1 – Port Scan</h3>
+
+<code>
+nmap -sV target.com
+</code>
+
+<h3>Step 2 – Nikto Scan</h3>
+
+<code>
+nikto -h http://target.com
+</code>
+
+<h3>Step 3 – Vulnerabilities Analyze</h3>
+
+<ul>
+<li>Directory Listing</li>
+<li>Backup Files</li>
+<li>Admin Panel Exposure</li>
+<li>Outdated Server Version</li>
+</ul>
+
+</div>
+
+
+<div class="section">
+
+<h2>⚠️ Important Notes</h2>
+
+<ul>
+<li>Nikto scan logs में आसानी से detect हो सकता है</li>
+<li>Large websites पर scan slow हो सकता है</li>
+<li>हमेशा permission लेकर ही scan करें</li>
+</ul>
+
+</div>
+
+</div>
+
+<div class="footer">
+Ethical Hacking Learning Page | Nikto Guide
+</div>
+
+</body>
+</html>

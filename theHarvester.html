@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ethical Learn theHarvester</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#0f172a;
+  color:white;
+}
+
+/* NAVBAR */
+.navbar{
+  background:#020617;
+  padding:10px 20px;
+}
+
+.logo{
+  color:#00adb5;
+  font-size:20px;
+  font-weight:bold;
+}
+
+/* MENU */
+.nav-links{
+  display:flex;
+  flex-direction:column;  /* IMPORTANT */
+  gap:10px;
+  margin-top:10px;
+}
+
+.nav-links a, .tool-btn{
+  color:white;
+  text-decoration:none;
+  padding:10px;
+  display:block;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.nav-links a:hover, .tool-btn:hover{
+  background:#00adb5;
+  border-radius:6px;
+}
+
+/* TOOLS DROPDOWN */
+.tools-menu{
+  display:none;
+  background:#111827;
+  border-radius:10px;
+  padding:10px;
+}
+
+.tools-menu h4{
+  color:#00adb5;
+  margin:10px 0 5px;
+  border-bottom:1px solid #444;
+}
+
+/* MOBILE BUTTON */
+.menu-toggle{
+  font-size:22px;
+  cursor:pointer;
+  color:white;
+  display:none;
+}
+
+/* DESKTOP */
+@media(min-width:768px){
+  .nav-links{
+    flex-direction:column;
+    width:250px;
+  }
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{
+    display:none;
+  }
+  .nav-links.active{
+    display:flex;
+  }
+  .menu-toggle{
+    display:block;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+  <div class="logo">Ethical Learn</div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <div class="nav-links" id="menu">
+
+    <a href="index.html">Home</a>
+
+    <!-- TOOL BUTTON -->
+    <div class="tool-btn" onclick="toggleTools()">Tools ▼</div>
+
+    <!-- TOOLS LIST -->
+    <div class="tools-menu" id="toolsMenu">
+
+      <h4>Information Gathering</h4>
+      <a href="nmap.html">Nmap</a>
+      <a href="maltego.html">Maltego</a>
+      <a href="theharvester.html">theHarvester</a>
+      <a href="reconng.html">Recon-ng</a>
+      <a href="dnsenum.html">dnsenum</a>
+      <a href="dnsrecon.html">dnsrecon</a>
+
+      <h4>Vulnerability Analysis</h4>
+      <a href="nikto.html">Nikto</a>
+      <a href="openvas.html">OpenVAS</a>
+      <a href="zap.html">OWASP ZAP</a>
+      <a href="sqlmap.html">SQLmap</a>
+
+      <h4>Web Attacks</h4>
+      <a href="burpsuite.html">Burp Suite</a>
+      <a href="commix.html">Commix</a>
+      <a href="skipfish.html">Skipfish</a>
+      <a href="wfuzz.html">Wfuzz</a>
+
+      <h4>Password</h4>
+      <a href="hydra.html">Hydra</a>
+      <a href="hashcat.html">Hashcat</a>
+      <a href="john.html">John</a>
+      <a href="medusa.html">Medusa</a>
+
+      <h4>Wireless</h4>
+      <a href="aircrack.html">Aircrack-ng</a>
+      <a href="reaver.html">Reaver</a>
+      <a href="kismet.html">Kismet</a>
+      <a href="wifite.html">Wifite</a>
+
+      <h4>Exploitation</h4>
+      <a href="metasploit.html">Metasploit</a>
+      <a href="beef.html">BeEF</a>
+      <a href="armitage.html">Armitage</a>
+
+      <h4>Sniffing</h4>
+      <a href="wireshark.html">Wireshark</a>
+      <a href="ettercap.html">Ettercap</a>
+      <a href="bettercap.html">Bettercap</a>
+
+      <h4>Forensics</h4>
+      <a href="autopsy.html">Autopsy</a>
+      <a href="binwalk.html">Binwalk</a>
+      <a href="foremost.html">Foremost</a>
+
+    </div>
+
+    <a href="about.html">About</a>
+    <a href="comment.html">Comment</a>
+
+  </div>
+</div>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+
+function toggleTools(){
+  let tools = document.getElementById("toolsMenu");
+  tools.style.display = (tools.style.display === "block") ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>theHarvester Tool Guide</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background:#0d1117;
+    color:#e6edf3;
+    margin:0;
+    padding:0;
+}
+
+header{
+    background:#161b22;
+    padding:20px;
+    text-align:center;
+}
+
+h1{
+    color:#58a6ff;
+}
+
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+
+.section{
+    background:#161b22;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+}
+
+h2{
+    color:#58a6ff;
+}
+
+code{
+    background:#0d1117;
+    padding:10px;
+    display:block;
+    border-radius:6px;
+    color:#7ee787;
+    margin-top:10px;
+}
+
+.tip{
+    background:#21262d;
+    padding:15px;
+    border-left:4px solid #58a6ff;
+    margin-top:10px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#161b22;
+    color:#8b949e;
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6124052333813612"
+     crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header>
+<h1>theHarvester Tool Guide</h1>
+<p>OSINT Information Gathering Tool</p>
+</header>
+
+<div class="container">
+
+<div class="section">
+<h2>🔎 theHarvester क्या है?</h2>
+
+<p>
+theHarvester एक <b>OSINT (Open Source Intelligence) reconnaissance tool</b> है जिसका उपयोग किसी
+domain या organization के बारे में <b>public information collect</b> करने के लिए किया जाता है।
+</p>
+
+<p>👉 यह मुख्य रूप से ये जानकारी collect करता है:</p>
+
+<ul>
+<li>Email addresses</li>
+<li>Subdomains</li>
+<li>IP addresses</li>
+<li>Hosts</li>
+<li>Employee names</li>
+</ul>
+
+<p>
+यह tool <b>bug bounty और penetration testing</b> में information gathering phase में बहुत useful होता है।
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>⚙️ Kali NetHunter / Kali Linux में Installation</h2>
+
+<p>अक्सर Kali Linux और NetHunter में यह पहले से install होता है।</p>
+
+<p><b>Step 1: Package Update</b></p>
+
+<code>
+apt update
+</code>
+
+<p><b>Step 2: Install theHarvester</b></p>
+
+<code>
+apt install theharvester
+</code>
+
+<p><b>Step 3: Check Version</b></p>
+
+<code>
+theHarvester -h
+</code>
+
+<p>
+अगर help menu open हो जाता है तो tool successfully install हो गया।
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>🛠️ Basic Usage Commands</h2>
+
+<p><b>1️⃣ Domain से Emails और Subdomains निकालना</b></p>
+
+<code>
+theHarvester -d example.com -b google
+</code>
+
+<p>
+<b>Explanation</b><br>
+-d = Target domain<br>
+-b = Data source (google, bing, yahoo, etc)
+</p>
+
+<p><b>2️⃣ Multiple Sources से Data Collect करना</b></p>
+
+<code>
+theHarvester -d example.com -b all
+</code>
+
+<p>यह command सभी sources से information collect करेगी।</p>
+
+<p><b>3️⃣ Subdomains और Hosts निकालना</b></p>
+
+<code>
+theHarvester -d example.com -b bing -l 200
+</code>
+
+<p>
+<b>Explanation</b><br>
+-l = Results limit
+</p>
+
+<p><b>4️⃣ Results को File में Save करना</b></p>
+
+<code>
+theHarvester -d example.com -b google -f result.html
+</code>
+
+<p>यह command HTML report बना देगा।</p>
+
+</div>
+
+<div class="section">
+
+<h2>🐞 Bug Bounty में Real Use</h2>
+
+<p>
+Bug bounty hunters theHarvester का use करके <b>hidden assets</b> ढूंढते हैं।
+</p>
+
+<p><b>Example</b></p>
+
+<code>
+theHarvester -d target.com -b all
+</code>
+
+<p>👉 इससे आपको मिल सकता है:</p>
+
+<ul>
+<li>dev.target.com</li>
+<li>mail.target.com</li>
+<li>admin.target.com</li>
+</ul>
+
+<p>
+अगर कोई hidden subdomain मिल जाए तो वहां vulnerabilities मिल सकती हैं जैसे:
+</p>
+
+<ul>
+<li>Login panel</li>
+<li>Test server</li>
+<li>Development site</li>
+</ul>
+
+<p>
+यहीं से bug bounty मिलने की chances बढ़ते हैं।
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>🔥 Pro Tips</h2>
+
+<div class="tip">
+
+✔ हमेशा <b>-b all</b> use करो ज्यादा data के लिए<br><br>
+
+✔ results को file में save करो analysis के लिए<br><br>
+
+✔ subdomains को बाद में <b>Nmap</b> से scan करो
+
+</div>
+
+<p><b>Example Workflow</b></p>
+
+<code>
+theHarvester -d target.com -b all
+nmap -sV dev.target.com
+</code>
+
+</div>
+
+</div>
+
+<footer>
+Ethical Learn | Cyber Security Tutorials
+</footer>
+
+</body>
+</html>

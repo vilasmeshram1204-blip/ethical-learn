@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ethical Learn Commix</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#0f172a;
+  color:white;
+}
+
+/* NAVBAR */
+.navbar{
+  background:#020617;
+  padding:10px 20px;
+}
+
+.logo{
+  color:#00adb5;
+  font-size:20px;
+  font-weight:bold;
+}
+
+/* MENU */
+.nav-links{
+  display:flex;
+  flex-direction:column;  /* IMPORTANT */
+  gap:10px;
+  margin-top:10px;
+}
+
+.nav-links a, .tool-btn{
+  color:white;
+  text-decoration:none;
+  padding:10px;
+  display:block;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.nav-links a:hover, .tool-btn:hover{
+  background:#00adb5;
+  border-radius:6px;
+}
+
+/* TOOLS DROPDOWN */
+.tools-menu{
+  display:none;
+  background:#111827;
+  border-radius:10px;
+  padding:10px;
+}
+
+.tools-menu h4{
+  color:#00adb5;
+  margin:10px 0 5px;
+  border-bottom:1px solid #444;
+}
+
+/* MOBILE BUTTON */
+.menu-toggle{
+  font-size:22px;
+  cursor:pointer;
+  color:white;
+  display:none;
+}
+
+/* DESKTOP */
+@media(min-width:768px){
+  .nav-links{
+    flex-direction:column;
+    width:250px;
+  }
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{
+    display:none;
+  }
+  .nav-links.active{
+    display:flex;
+  }
+  .menu-toggle{
+    display:block;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+  <div class="logo">Ethical Learn</div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <div class="nav-links" id="menu">
+
+    <a href="index.html">Home</a>
+
+    <!-- TOOL BUTTON -->
+    <div class="tool-btn" onclick="toggleTools()">Tools ▼</div>
+
+    <!-- TOOLS LIST -->
+    <div class="tools-menu" id="toolsMenu">
+
+      <h4>Information Gathering</h4>
+      <a href="nmap.html">Nmap</a>
+      <a href="maltego.html">Maltego</a>
+      <a href="theharvester.html">theHarvester</a>
+      <a href="reconng.html">Recon-ng</a>
+      <a href="dnsenum.html">dnsenum</a>
+      <a href="dnsrecon.html">dnsrecon</a>
+
+      <h4>Vulnerability Analysis</h4>
+      <a href="nikto.html">Nikto</a>
+      <a href="openvas.html">OpenVAS</a>
+      <a href="zap.html">OWASP ZAP</a>
+      <a href="sqlmap.html">SQLmap</a>
+
+      <h4>Web Attacks</h4>
+      <a href="burpsuite.html">Burp Suite</a>
+      <a href="commix.html">Commix</a>
+      <a href="skipfish.html">Skipfish</a>
+      <a href="wfuzz.html">Wfuzz</a>
+
+      <h4>Password</h4>
+      <a href="hydra.html">Hydra</a>
+      <a href="hashcat.html">Hashcat</a>
+      <a href="john.html">John</a>
+      <a href="medusa.html">Medusa</a>
+
+      <h4>Wireless</h4>
+      <a href="aircrack.html">Aircrack-ng</a>
+      <a href="reaver.html">Reaver</a>
+      <a href="kismet.html">Kismet</a>
+      <a href="wifite.html">Wifite</a>
+
+      <h4>Exploitation</h4>
+      <a href="metasploit.html">Metasploit</a>
+      <a href="beef.html">BeEF</a>
+      <a href="armitage.html">Armitage</a>
+
+      <h4>Sniffing</h4>
+      <a href="wireshark.html">Wireshark</a>
+      <a href="ettercap.html">Ettercap</a>
+      <a href="bettercap.html">Bettercap</a>
+
+      <h4>Forensics</h4>
+      <a href="autopsy.html">Autopsy</a>
+      <a href="binwalk.html">Binwalk</a>
+      <a href="foremost.html">Foremost</a>
+
+    </div>
+
+    <a href="about.html">About</a>
+    <a href="comment.html">Comment</a>
+
+  </div>
+</div>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+
+function toggleTools(){
+  let tools = document.getElementById("toolsMenu");
+  tools.style.display = (tools.style.display === "block") ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commix Tool Guide</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0f172a;
+    color:#e5e7eb;
+}
+
+header{
+    background:#020617;
+    padding:20px;
+    text-align:center;
+    border-bottom:1px solid #1e293b;
+}
+
+header h1{
+    margin:0;
+    color:#38bdf8;
+}
+
+nav{
+    margin-top:10px;
+}
+
+nav a{
+    color:#e5e7eb;
+    text-decoration:none;
+    margin:0 15px;
+    font-size:16px;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:#020617;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+h2{
+    color:#38bdf8;
+}
+
+code{
+    background:#111827;
+    display:block;
+    padding:12px;
+    border-radius:6px;
+    overflow-x:auto;
+    margin-top:10px;
+    color:#22c55e;
+}
+
+footer{
+    background:#020617;
+    text-align:center;
+    padding:15px;
+    border-top:1px solid #1e293b;
+}
+
+@media(max-width:768px){
+
+nav a{
+display:block;
+margin:10px 0;
+}
+
+}
+
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6124052333813612"
+     crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header>
+
+<h1>Commix Tool Guide</h1>
+
+
+</header>
+
+
+<div class="container">
+
+<div class="card">
+
+<h2>🔎 Commix क्या है?</h2>
+
+<p>
+Commix (Command Injection Exploiter) एक powerful penetration testing tool है जिसका उपयोग 
+web applications में Command Injection vulnerabilities detect और exploit करने के लिए किया जाता है।
+</p>
+
+<p>यह tool automatically website parameters को test करता है और अगर vulnerability मिलती है 
+तो server पर system commands execute कर सकता है।</p>
+
+<p><b>Commix का उपयोग ethical hackers और bug bounty hunters करते हैं।</b></p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>⚙️ Kali NetHunter / Kali Linux में Installation</h2>
+
+<p>Kali Linux में Commix अक्सर pre-installed होता है। अगर install करना हो:</p>
+
+<code>
+apt update
+apt install commix
+</code>
+
+<p>Latest version GitHub से install करने के लिए:</p>
+
+<code>
+apt install git
+git clone https://github.com/commixproject/commix.git
+cd commix
+python3 commix.py
+</code>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🧪 Basic Usage</h2>
+
+<h3>1️⃣ Basic URL Scan</h3>
+
+<code>
+commix --url="http://target.com/page.php?id=1"
+</code>
+
+<p>यह URL parameter को test करेगा कि command injection vulnerability है या नहीं।</p>
+
+<h3>2️⃣ POST Request Test</h3>
+
+<code>
+commix --url="http://target.com/login.php" --data="username=test&password=test"
+</code>
+
+<p>यह login form parameters को test करेगा।</p>
+
+<h3>3️⃣ OS Command Execute</h3>
+
+<code>
+commix --url="http://target.com/page.php?id=1" --os-cmd="whoami"
+</code>
+
+<p>यह server पर <b>whoami</b> command run करेगा।</p>
+
+<h3>4️⃣ Interactive Shell</h3>
+
+<code>
+commix --url="http://target.com/page.php?id=1" --os-shell
+</code>
+
+<p>यह target server पर interactive command shell open कर सकता है।</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🎯 Bug Bounty में Commix कहाँ Use होता है?</h2>
+
+<ul>
+<li>Command Injection Vulnerability Testing</li>
+<li>Web Form Security Testing</li>
+<li>Parameter Testing</li>
+<li>Automated Exploitation</li>
+</ul>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>⚠️ Important Note</h2>
+
+<p>
+Commix tool का उपयोग केवल <b>legal penetration testing</b> और 
+<b>permission वाले targets</b> पर ही करें।
+Unauthorized hacking illegal है।
+</p>
+
+</div>
+
+</div>
+
+
+
+<footer>
+
+<p>© 2026 Ethical Learn | Ethical Hacking Tutorials</p>
+
+</footer>
+
+</body>
+</html>
