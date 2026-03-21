@@ -1,102 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comment - Ethical Learn</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Comments</title>
+
+<style>
+
+body{
+background:#0d1117;
+font-family:Arial;
+color:white;
+margin:0;
+padding:0;
+}
+
+.container{
+width:90%;
+max-width:800px;
+margin:auto;
+padding:20px;
+}
+
+h2{
+text-align:center;
+}
+
+.comment-box{
+background:#161b22;
+padding:15px;
+border-radius:8px;
+margin-bottom:20px;
+}
+
+input,textarea{
+width:100%;
+padding:10px;
+margin-top:10px;
+border:none;
+border-radius:5px;
+background:#0d1117;
+color:white;
+}
+
+button{
+margin-top:10px;
+padding:10px 20px;
+border:none;
+background:#238636;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+.comment{
+background:#161b22;
+padding:10px;
+border-radius:6px;
+margin-top:10px;
+}
+
+.name{
+color:#58a6ff;
+font-weight:bold;
+}
+
+.time{
+font-size:12px;
+color:gray;
+}
+
+</style>
 </head>
+
 <body>
-    <canvas id="matrix-bg"></canvas>
 
-    <header class="main-header">
-        <nav class="navbar">
-            <div class="logo">
-                <span class="logo-bracket">&lt;</span>
-                <a href="index.html" style="text-decoration: none;"><span class="logo-text">Ethical Learn</span></a>
-                <span class="logo-bracket">/&gt;</span>
-            </div>
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
-                <span class="hamburger"></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li class="nav-item"><a href="home.html" class="nav-link"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg><span>Home</span></a></li>
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg><span>Tools</span><svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg></a>
-                    <div class="dropdown-menu mega-menu">
-                        <div class="mega-menu-grid">
-                            <div class="dropdown-column"><h3 class="dropdown-category"><span class="cat-number">01</span>Information Gathering</h3><ul class="dropdown-links"><li><a href="tools/nmap.html">Nmap</a></li><li><a href="tools/maltego.html">Maltego</a></li><li><a href="tools/theharvester.html">theHarvester</a></li><li><a href="tools/recon-ng.html">Recon-ng</a></li><li><a href="tools/dnsenum.html">dnsenum</a></li><li><a href="tools/dnsrecon.html">dnsrecon</a></li></ul></div>
-                            <div class="dropdown-column"><h3 class="dropdown-category"><span class="cat-number">02</span>Vulnerability Analysis</h3><ul class="dropdown-links"><li><a href="tools/nikto.html">Nikto</a></li><li><a href="tools/openvas.html">OpenVAS</a></li><li><a href="tools/owasp-zap.html">OWASP ZAP</a></li><li><a href="tools/sqlmap.html">SQLmap</a></li></ul></div>
-                            <div class="dropdown-column"><h3 class="dropdown-category"><span class="cat-number">03</span>Web Application</h3><ul class="dropdown-links"><li><a href="tools/burp-suite.html">Burp Suite</a></li><li><a href="tools/commix.html">Commix</a></li><li><a href="tools/skipfish.html">Skipfish</a></li><li><a href="tools/wfuzz.html">Wfuzz</a></li></ul></div>
-                            <div class="dropdown-column"><h3 class="dropdown-category"><span class="cat-number">04</span>Password Attacks</h3><ul class="dropdown-links"><li><a href="tools/hydra.html">Hydra</a></li><li><a href="tools/hashcat.html">Hashcat</a></li><li><a href="tools/john-the-ripper.html">John the Ripper</a></li><li><a href="tools/medusa.html">Medusa</a></li></ul></div>
-                            <div class="dropdown-column"><h3 class="dropdown-category"><span class="cat-number">05</span>Wireless Attacks</h3><ul class="dropdown-links"><li><a href="tools/aircrack-ng.html">Aircrack-ng</a></li><li><a href="tools/reaver.html">Reaver</a></li><li><a href="tools/kismet.html">Kismet</a></li><li><a href="tools/wifite.html">Wifite</a></li></ul></div>
-                            <div class="dropdown-column"><h3 class="dropdown-category"><span class="cat-number">06</span>Exploitation Tools</h3><ul class="dropdown-links"><li><a href="tools/metasploit.html">Metasploit</a></li><li><a href="tools/beef.html">BeEF</a></li><li><a href="tools/armitage.html">Armitage</a></li></ul></div>
-                            <div class="dropdown-column"><h3 class="dropdown-category"><span class="cat-number">07</span>Sniffing & Spoofing</h3><ul class="dropdown-links"><li><a href="tools/wireshark.html">Wireshark</a></li><li><a href="tools/ettercap.html">Ettercap</a></li><li><a href="tools/bettercap.html">Bettercap</a></li></ul></div>
-                            <div class="dropdown-column"><h3 class="dropdown-category"><span class="cat-number">08</span>Forensics Tools</h3><ul class="dropdown-links"><li><a href="tools/autopsy.html">Autopsy</a></li><li><a href="tools/binwalk.html">Binwalk</a></li><li><a href="tools/foremost.html">Foremost</a></li></ul></div>
-                        </div>
-                    </div>
-                </li>
-                <li class="nav-item"><a href="about.html" class="nav-link"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg><span>About</span></a></li>
-                <li class="nav-item"><a href="comment.html" class="nav-link"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Comment</span></a></li>
-            </ul>
-        </nav>
-    </header>
+<div class="container">
 
-    <main class="page-wrapper">
-        <section class="page-header">
-            <h1 class="page-title">Comments</h1>
-            <p class="page-subtitle">Share your feedback and suggestions</p>
-        </section>
+<h2>💬 Comments</h2>
 
-        <div class="page-content">
-            <div class="content-card">
-                <h2>Leave a Comment</h2>
-                <p>We value your feedback! Share your thoughts, suggestions, or questions about our tutorials and content.</p>
-                <form id="commentForm" style="margin-top: 1.5rem;">
-                    <div style="margin-bottom: 1rem;">
-                        <label style="display: block; color: var(--text-secondary); margin-bottom: 0.5rem;">Name</label>
-                        <input type="text" style="width: 100%; padding: 0.75rem; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-primary); font-family: inherit;" placeholder="Your name">
-                    </div>
-                    <div style="margin-bottom: 1rem;">
-                        <label style="display: block; color: var(--text-secondary); margin-bottom: 0.5rem;">Comment</label>
-                        <textarea rows="4" style="width: 100%; padding: 0.75rem; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-primary); font-family: inherit; resize: vertical;" placeholder="Your comment..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit Comment</button>
-                </form>
-            </div>
-        </div>
-    </main>
+<div class="comment-box">
 
-    <footer class="main-footer">
-        <div class="footer-content">
-            <p>&copy; 2024 Ethical Learn. All rights reserved.</p>
-            <p class="footer-tagline">Learn Ethically, Hack Responsibly</p>
-        </div>
-    </footer>
+<form action="comment.php" method="POST">
 
-    <script>
-        const canvas = document.getElementById('matrix-bg');
-        const ctx = canvas.getContext('2d');
-        function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
-        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()';
-        const fontSize = 14;
-        let drops = Array(Math.floor(canvas.width / fontSize)).fill(1);
-        function drawMatrix() {
-            ctx.fillStyle = 'rgba(10, 15, 20, 0.05)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.font = fontSize + 'px monospace';
-            for (let i = 0; i < drops.length; i++) {
-                ctx.fillStyle = Math.random() > 0.98 ? '#ffffff' : '#00ff88';
-                ctx.fillText(chars[Math.floor(Math.random() * chars.length)], i * fontSize, drops[i] * fontSize);
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-                drops[i]++;
-            }
-        }
-        setInterval(drawMatrix, 50);
-        document.getElementById('menuToggle').addEventListener('click', function() { this.classList.toggle('active'); document.getElementById('navMenu').classList.toggle('active'); });
-    </script>
+<input type="text" name="name" placeholder="Your Name" required>
+
+<textarea name="comment" rows="4" placeholder="Write your comment..." required></textarea>
+
+<button type="submit">Post Comment</button>
+
+</form>
+
+</div>
+
+<?php
+
+$conn = new mysqli("localhost","root","","your_database");
+
+$sql = "SELECT * FROM comments ORDER BY id DESC";
+
+$result = $conn->query($sql);
+
+while($row = $result->fetch_assoc()){
+?>
+
+<div class="comment">
+<div class="name"><?php echo $row['name']; ?></div>
+<div class="time"><?php echo $row['created_at']; ?></div>
+<p><?php echo $row['comment']; ?></p>
+</div>
+
+<?php } ?>
+
+</div>
+
 </body>
 </html>
