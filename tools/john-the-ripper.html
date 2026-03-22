@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>John the Ripper - Ethical Learn | साइबर सिक्योरिटी टूल</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .tool-detail {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        }
+        .tool-detail h1 {
+            color: #1f6392;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        .tool-detail h3 {
+            margin: 1.8rem 0 0.8rem 0;
+            color: #0f2c3d;
+            border-left: 4px solid #1f6392;
+            padding-left: 12px;
+        }
+        .tool-detail pre {
+            background: #1e2a3a;
+            color: #eef4ff;
+            padding: 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            margin: 0.8rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .tool-detail .cmd-note {
+            color: #4a6a7a;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid #7bc6e6;
+        }
+        .tool-detail ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .tool-detail li {
+            margin: 0.5rem 0;
+            line-height: 1.5;
+        }
+        .tool-detail a {
+            color: #1f6392;
+            text-decoration: none;
+        }
+        .tool-detail a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            background: #1f6392;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        .back-link:hover {
+            background: #0f4b6e;
+            transform: scale(0.98);
+        }
+        .badge {
+            display: inline-block;
+            background: #eef2fa;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            color: #1f6392;
+        }
+        hr {
+            margin: 1.5rem 0;
+            border-color: #e0e7f0;
+        }
+        .highlight {
+            background: #f0f7ff;
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+        }
+        @media (max-width: 780px) {
+            .tool-detail {
+                margin: 1rem;
+                padding: 1.2rem;
+            }
+            .tool-detail h1 {
+                font-size: 1.5rem;
+            }
+            pre {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+        <!-- Google AdSense Code -->
+    <meta name="google-adsense-account" content="ca-pub-6124052333813612">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6124052333813612"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo-area">
+            <div class="ethical-logo"><span>EL</span></div>
+            <div class="logo-text"><h1>Ethical Learn</h1><p>cyber security hub</p></div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#" id="navToolsTrigger">Tools</a>
+            <a href="about.html" id="navAbout">About</a>
+            <a href="contant.html" id="navComment">Comment</a>
+        </div>
+        <button class="menu-btn" id="mainToolsMenuBtn"><span class="menu-icon">🛠️</span> Tools Menu</button>
+        <button class="mobile-menu-icon" id="mobileMenuToggle">☰</button>
+    </div>
+    <div id="mobileMenuPanel" style="display: none; background:#0e1c2c; padding: 1rem 2rem; flex-direction: column; gap: 1rem; border-bottom: 1px solid #2c7da0;">
+        <a href="../index.html" style="color:white; text-decoration:none;">🏠 Home</a>
+        <a href="#" id="mobileTools" style="color:white; text-decoration:none;">🛠️ Tools</a>
+        <a href="#" id="mobileAbout" style="color:white; text-decoration:none;">📖 About</a>
+        <a href="#" id="mobileComment" style="color:white; text-decoration:none;">💬 Comment</a>
+    </div>
+</header>
+
+<main>
+  <!-- Header Ad -->
+<div class="ad-container ad-header" style="max-width: 1200px; margin: 10px auto;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6124052333813612"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <div class="tool-detail">
+        <h1>🔓 John the Ripper - Password Cracking Tool</h1>
+        <p><span class="badge">🔑 Password Cracking</span> <span class="badge">🐧 CPU Optimized</span> <span class="badge">🔄 Auto Detection</span></p>
+        <p><strong>Category:</strong> 4️⃣ Password Attacks</p>
+        <hr>
+
+        <h3>📝 Description</h3>
+        <p>John the Ripper (JTR) एक लोकप्रिय और फ्री पासवर्ड क्रैकिंग टूल है। यह CPU (Central Processing Unit) का उपयोग करता है और विभिन्न हैश फॉर्मेट्स को ऑटो-डिटेक्ट कर सकता है। John the Ripper को ओपनवॉल (Openwall) प्रोजेक्ट द्वारा डेवलप किया जाता है। यह Unix/Linux शैडो फाइल, Windows SAM, MD5, SHA1, bcrypt, MySQL, PostgreSQL, और कई अन्य हैश प्रकारों को क्रैक कर सकता है। इसकी सबसे बड़ी खासियत है हैश फाइल का ऑटो-डिटेक्शन - आपको हैश टाइप बताने की जरूरत नहीं होती।</p>
+        <p><strong>विशेषता:</strong> John the Ripper का सबसे बड़ा फायदा है इसका "wordlist mode", "single crack mode", और "incremental mode"। यह आसानी से हैश फाइल को पहचान लेता है और क्रैकिंग शुरू कर देता है। यह ज्यादातर Linux डिस्ट्रीब्यूशन में पहले से इंस्टॉल होता है।</p>
+
+        <h3>📦 Installation</h3>
+        <p><strong>Kali Linux (पहले से इंस्टॉल):</strong></p>
+        <pre>john --help</pre>
+        <p><strong>Ubuntu/Debian:</strong></p>
+        <pre>sudo apt update
+sudo apt install john -y</pre>
+        <p><strong>macOS (Homebrew):</strong></p>
+        <pre>brew install john</pre>
+        <p><strong>GitHub से इंस्टॉल (Jumbo संस्करण):</strong></p>
+        <pre>git clone https://github.com/openwall/john.git
+cd john/src
+./configure
+make
+sudo make install</pre>
+
+        <h3>💻 Common Commands (उदाहरण सहित)</h3>
+        
+        <div class="highlight">
+            <p><strong>📌 John the Ripper का सबसे आम सिंटैक्स: john [options] hashfile</strong></p>
+        </div>
+        
+        <p><strong>🔹 1. हैश फाइल ऑटो-डिटेक्ट और क्रैक करना:</strong></p>
+        <pre>john hash.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> <code>john shadow.txt</code> से /etc/shadow फाइल को ऑटो-डिटेक्ट करके क्रैक करता है।</div>
+
+        <p><strong>🔹 2. क्रैक किए हुए पासवर्ड देखना:</strong></p>
+        <pre>john --show hash.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> अब तक क्रैक हुए सभी पासवर्ड दिखाता है।</div>
+
+        <p><strong>🔹 3. सिंगल क्रैक मोड (सबसे तेज):</strong></p>
+        <pre>john --single hash.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> यूजरनेम और अन्य जानकारी से पासवर्ड बनाता है (जैसे username → username123)।</div>
+
+        <p><strong>🔹 4. वर्डलिस्ट मोड (डिक्शनरी अटैक):</strong></p>
+        <pre>john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> rockyou.txt वर्डलिस्ट से डिक्शनरी अटैक करता है।</div>
+
+        <p><strong>🔹 5. इंक्रीमेंटल मोड (ब्रूटफोर्स):</strong></p>
+        <pre>john --incremental hash.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> सभी संभावित कॉम्बिनेशन ट्राय करता है (बहुत धीमा)।</div>
+
+        <p><strong>🔹 6. हैश टाइप स्पेसिफाई करना:</strong></p>
+        <pre>john --format=md5 hash.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> हैश टाइप MD5 है यह स्पेसिफाई करता है।</div>
+
+        <p><strong>🔹 7. Linux शैडो फाइल क्रैक करना:</strong></p>
+        <pre>unshadow /etc/passwd /etc/shadow > unshadowed.txt
+john unshadowed.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> पहले passwd और shadow को मर्ज करें, फिर क्रैक करें।</div>
+
+        <p><strong>🔹 8. Windows SAM फाइल क्रैक करना:</strong></p>
+        <pre>samdump2 SYSTEM SAM > hash.txt
+john hash.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Windows SAM फाइल से हैश निकालकर क्रैक करना।</div>
+
+        <p><strong>🔹 9. रूल-बेस्ड अटैक:</strong></p>
+        <pre>john --wordlist=wordlist.txt --rules hash.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> वर्डलिस्ट पर रूल्स लगाता है (password → Password, P@ssw0rd)।</div>
+
+        <p><strong>🔹 10. मास्क अटैक (ब्रूटफोर्स पैटर्न):</strong></p>
+        <pre>john --mask=?l?l?l?l?d?d hash.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> 4 लोअरकेस अक्षर + 2 डिजिट (जैसे abcd12)।</div>
+
+        <p><strong>🔹 11. स्टेटस देखना (क्रैकिंग के दौरान):</strong></p>
+        <pre>john --status hash.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> क्रैकिंग की प्रोग्रेस दिखाता है।</div>
+
+        <p><strong>🔹 12. क्रैकिंग रोकना और बाद में जारी रखना:</strong></p>
+        <pre># Ctrl+C दबाएं (सेव हो जाएगा)
+john --restore</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> पिछली क्रैकिंग जारी रखता है।</div>
+
+        <p><strong>🔹 13. आउटपुट को फाइल में सेव करना:</strong></p>
+        <pre>john --wordlist=rockyou.txt --pot=cracked.pot hash.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> क्रैक किए पासवर्ड cracked.pot में सेव होते हैं।</div>
+
+        <p><strong>🔹 14. थ्रेड्स की संख्या बढ़ाना (तेज क्रैकिंग):</strong></p>
+        <pre>john --wordlist=rockyou.txt --fork=4 hash.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> 4 CPU कोर का उपयोग करता है।</div>
+
+        <h3>🎯 John the Ripper के अटैक मोड्स:</h3>
+        <ul>
+            <li><strong>Single Crack Mode:</strong> यूजरनेम और अन्य जानकारी से पासवर्ड बनाता है (सबसे तेज)</li>
+            <li><strong>Wordlist Mode:</strong> डिक्शनरी अटैक (सबसे आम)</li>
+            <li><strong>Incremental Mode:</strong> ब्रूटफोर्स (सबसे धीमा, लेकिन सभी पासवर्ड ट्राय करता है)</li>
+            <li><strong>External Mode:</strong> कस्टम पासवर्ड जनरेटर</li>
+        </ul>
+
+        <h3>🎯 हैश फॉर्मेट्स (-format):</h3>
+        <ul>
+            <li><strong>md5:</strong> MD5 हैश</li>
+            <li><strong>sha1:</strong> SHA1 हैश</li>
+            <li><strong>sha256:</strong> SHA256 हैश</li>
+            <li><strong>nt:</strong> NTLM (Windows)</li>
+            <li><strong>bcrypt:</strong> bcrypt हैश</li>
+            <li><strong>descrypt:</strong> Unix DES हैश</li>
+            <li><strong>mysql:</strong> MySQL हैश</li>
+            <li><strong>postgres:</strong> PostgreSQL हैश</li>
+            <li><strong>zip:</strong> ZIP फाइल पासवर्ड</li>
+            <li><strong>rar:</strong> RAR फाइल पासवर्ड</li>
+            <li><strong>pdf:</strong> PDF फाइल पासवर्ड</li>
+        </ul>
+
+        <h3>🎯 Use Cases (उपयोग के तरीके)</h3>
+        <ul>
+            <li><strong>Linux पासवर्ड क्रैकिंग:</strong> /etc/shadow फाइल से पासवर्ड क्रैक करना।</li>
+            <li><strong>Windows पासवर्ड रिकवरी:</strong> SAM फाइल से पासवर्ड निकालना।</li>
+            <li><strong>फॉरेंसिक जांच:</strong> फोरेंसिक इमेज से पासवर्ड रिकवर करना।</li>
+            <li><strong>आर्काइव पासवर्ड रिकवरी:</strong> ZIP, RAR, PDF फाइल्स का पासवर्ड क्रैक करना।</li>
+            <li><strong>पासवर्ड पॉलिसी टेस्टिंग:</strong> कंपनी के पासवर्ड की ताकत जांचना।</li>
+        </ul>
+
+        <h3>⚙️ Key Features (मुख्य विशेषताएँ)</h3>
+        <ul>
+            <li>✔️ ऑटो-डिटेक्शन - हैश टाइप खुद पहचान लेता है</li>
+            <li>✔️ 50+ हैशिंग एल्गोरिदम सपोर्ट</li>
+            <li>✔️ 4 अटैक मोड्स (सिंगल, वर्डलिस्ट, इंक्रीमेंटल, एक्सटर्नल)</li>
+            <li>✔️ रूल-बेस्ड अटैक (केस बदलना, लीट स्पीक)</li>
+            <li>✔️ मल्टी-कोर CPU सपोर्ट (--fork)</li>
+            <li>✔️ आर्काइव फाइल्स (ZIP, RAR, PDF, 7z) क्रैकिंग</li>
+            <li>✔️ सेशन सेव और रेस्टोर</li>
+            <li>✔️ क्रॉस-प्लेटफॉर्म (Linux, Windows, macOS)</li>
+            <li>✔️ ओपन-सोर्स और फ्री</li>
+        </ul>
+
+        <div class="highlight">
+            <p><strong>📌 John the Ripper के लिए महत्वपूर्ण फाइल्स:</strong></p>
+            <ul>
+                <li><strong>john.pot:</strong> क्रैक किए हुए पासवर्ड की फाइल (~/.john/john.pot)</li>
+                <li><strong>john.rec:</strong> रेस्टोर फाइल (अटैक जारी रखने के लिए)</li>
+                <li><strong>john.conf:</strong> कॉन्फ़िगरेशन फाइल (रूल्स और सेटिंग्स)</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <p><strong>📌 ZIP फाइल पासवर्ड क्रैक करना:</strong></p>
+            <pre># पहले हैश निकालें
+zip2john file.zip > zip_hash.txt
+# फिर क्रैक करें
+john zip_hash.txt</pre>
+        </div>
+
+        <div class="highlight">
+            <p><strong>📌 PDF फाइल पासवर्ड क्रैक करना:</strong></p>
+            <pre># पहले हैश निकालें
+pdf2john.pl file.pdf > pdf_hash.txt
+# फिर क्रैक करें
+john pdf_hash.txt</pre>
+        </div>
+
+        <div class="highlight">
+            <p><strong>📌 John the Ripper vs Hashcat:</strong></p>
+            <ul>
+                <li><strong>John the Ripper:</strong> CPU-आधारित, ऑटो-डिटेक्शन, आर्काइव फाइल्स सपोर्ट, सिंगल क्रैक मोड</li>
+                <li><strong>Hashcat:</strong> GPU-आधारित, बहुत तेज, 300+ एल्गोरिदम, मास्क अटैक</li>
+                <li><strong>अनुशंसा:</strong> John the Ripper CPU और ऑटो-डिटेक्शन के लिए, Hashcat GPU स्पीड के लिए। दोनों सीखना फायदेमंद है।</li>
+            </ul>
+        </div>
+
+        <h3>🔗 Official Resources</h3>
+        <ul>
+            <li><strong>Official Website:</strong> <a href="https://www.openwall.com/john/" target="_blank">https://www.openwall.com/john/</a></li>
+            <li><strong>GitHub Repository:</strong> <a href="https://github.com/openwall/john" target="_blank">https://github.com/openwall/john</a></li>
+            <li><strong>Jumbo Edition:</strong> <a href="https://github.com/openwall/john/tree/bleeding-jumbo" target="_blank">John the Ripper Jumbo</a></li>
+            <li><strong>Documentation:</strong> <a href="https://www.openwall.com/john/doc/" target="_blank">John Documentation</a></li>
+        </ul>
+
+        <h3>🔧 Related Tools (समान उपकरण)</h3>
+        <ul>
+            <li><strong>Hashcat:</strong> GPU-आधारित तेज पासवर्ड क्रैकर</li>
+            <li><strong>Hydra:</strong> नेटवर्क लॉगिन क्रैकर</li>
+            <li><strong>Medusa:</strong> पैरेलल नेटवर्क लॉगिन क्रैकर</li>
+            <li><strong>Johnny:</strong> John the Ripper का GUI फ्रंटएंड</li>
+            <li><strong>Ophcrack:</strong> Windows पासवर्ड क्रैकर (रेडीमेड टेबल्स)</li>
+        </ul>
+
+        <h3>⚠️ Important Note (सावधानी)</h3>
+        <p><strong>John the Ripper एक शक्तिशाली पासवर्ड क्रैकिंग टूल है। इसका उपयोग केवल उन्हीं हैश पर करें जिनकी आपको अनुमति हो। बिना अनुमति के पासवर्ड क्रैक करना कानूनी अपराध है। हमेशा अपने खुद के हैश, CTF चैलेंज, या बग बाउंटी प्रोग्राम पर ही प्रैक्टिस करें। John the Ripper के Jumbo Edition में अधिक फीचर्स हैं, इसलिए उसे इंस्टॉल करें।</strong></p>
+
+        <button class="back-link" onclick="window.location.href='../index.html'">← Back to Home</button>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Ethical Learn — Empowering security researchers. All tools are for authorized testing only.</p>
+</footer>
+
+<script>
+    function openOverlay() {
+        let overlay = document.getElementById("globalToolsOverlay");
+        if (!overlay) {
+            overlay = document.createElement("div");
+            overlay.id = "globalToolsOverlay";
+            overlay.className = "tools-overlay";
+            overlay.innerHTML = `
+                <div class="tools-container">
+                    <button class="close-menu" id="closeOverlayBtnGlobal">✕</button>
+                    <h2 style="color:white; margin-bottom:0.5rem;">🛡️ Security Tools Arsenal</h2>
+                    <p style="color:#bbd4f0; margin-bottom:1rem;">Click any tool to open its dedicated page</p>
+                    <div class="tools-grid" id="globalToolsGrid"></div>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+            document.getElementById("closeOverlayBtnGlobal")?.addEventListener("click", () => overlay.classList.remove("open"));
+            overlay.addEventListener("click", (e) => { if (e.target === overlay) overlay.classList.remove("open"); });
+            const tools = ["Nmap", "Maltego", "theHarvester", "Recon-ng", "dnsenum", "dnsrecon", "Nikto", "OpenVAS", "OWASP ZAP", "SQLmap", "Burp Suite", "Commix", "Skipfish", "Wfuzz", "Hydra", "Hashcat", "John the Ripper", "Medusa", "Aircrack-ng", "Reaver", "Kismet", "Wifite", "Metasploit", "BeEF", "Armitage", "Wireshark", "Ettercap", "Bettercap", "Autopsy", "Binwalk", "Foremost"];
+            const grid = document.getElementById("globalToolsGrid");
+            if (grid) {
+                grid.className = "tools-grid";
+                let html = '';
+                tools.forEach(tool => {
+                    let filename = tool.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
+                    if (tool === "John the Ripper") filename = "john-the-ripper";
+                    if (tool === "OWASP ZAP") filename = "owasp-zap";
+                    if (tool === "Burp Suite") filename = "burpsuite";
+                    if (tool === "Recon-ng") filename = "recon-ng";
+                    if (tool === "theHarvester") filename = "theharvester";
+                    if (tool === "Aircrack-ng") filename = "aircrack-ng";
+                    html += `<div class="tool-category"><ul class="tool-list"><li><a href="../tools/${filename}.html">🔧 ${tool}</a></li></ul></div>`;
+                });
+                grid.innerHTML = html;
+            }
+        }
+        overlay.classList.add("open");
+    }
+    document.getElementById("navToolsTrigger")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); });
+    document.getElementById("mainToolsMenuBtn")?.addEventListener("click", () => openOverlay());
+    const mobileToggle = document.getElementById("mobileMenuToggle");
+    const mobilePanel = document.getElementById("mobileMenuPanel");
+    if (mobileToggle && mobilePanel) {
+        mobileToggle.addEventListener("click", () => { mobilePanel.style.display = mobilePanel.style.display === "none" || mobilePanel.style.display === "" ? "flex" : "none"; });
+        document.getElementById("mobileTools")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); mobilePanel.style.display = "none"; });
+        document.getElementById("mobileAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+        document.getElementById("mobileComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+    }
+    document.getElementById("navAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+    document.getElementById("navComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+</script>
+</body>
+</html>

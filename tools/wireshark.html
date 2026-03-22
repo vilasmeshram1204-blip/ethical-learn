@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Wireshark - Ethical Learn | साइबर सिक्योरिटी टूल</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .tool-detail {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        }
+        .tool-detail h1 {
+            color: #1f6392;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        .tool-detail h3 {
+            margin: 1.8rem 0 0.8rem 0;
+            color: #0f2c3d;
+            border-left: 4px solid #1f6392;
+            padding-left: 12px;
+        }
+        .tool-detail pre {
+            background: #1e2a3a;
+            color: #eef4ff;
+            padding: 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            margin: 0.8rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .tool-detail .cmd-note {
+            color: #4a6a7a;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid #7bc6e6;
+        }
+        .tool-detail ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .tool-detail li {
+            margin: 0.5rem 0;
+            line-height: 1.5;
+        }
+        .tool-detail a {
+            color: #1f6392;
+            text-decoration: none;
+        }
+        .tool-detail a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            background: #1f6392;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        .back-link:hover {
+            background: #0f4b6e;
+            transform: scale(0.98);
+        }
+        .badge {
+            display: inline-block;
+            background: #eef2fa;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            color: #1f6392;
+        }
+        hr {
+            margin: 1.5rem 0;
+            border-color: #e0e7f0;
+        }
+        .highlight {
+            background: #f0f7ff;
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+        }
+        @media (max-width: 780px) {
+            .tool-detail {
+                margin: 1rem;
+                padding: 1.2rem;
+            }
+            .tool-detail h1 {
+                font-size: 1.5rem;
+            }
+            pre {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+        <!-- Google AdSense Code -->
+    <meta name="google-adsense-account" content="ca-pub-6124052333813612">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6124052333813612"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo-area">
+            <div class="ethical-logo"><span>EL</span></div>
+            <div class="logo-text"><h1>Ethical Learn</h1><p>cyber security hub</p></div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#" id="navToolsTrigger">Tools</a>
+            <a href="about.html" id="navAbout">About</a>
+            <a href="contant.html" id="navComment">Comment</a>
+        </div>
+        <button class="menu-btn" id="mainToolsMenuBtn"><span class="menu-icon">🛠️</span> Tools Menu</button>
+        <button class="mobile-menu-icon" id="mobileMenuToggle">☰</button>
+    </div>
+    <div id="mobileMenuPanel" style="display: none; background:#0e1c2c; padding: 1rem 2rem; flex-direction: column; gap: 1rem; border-bottom: 1px solid #2c7da0;">
+        <a href="../index.html" style="color:white; text-decoration:none;">🏠 Home</a>
+        <a href="#" id="mobileTools" style="color:white; text-decoration:none;">🛠️ Tools</a>
+        <a href="#" id="mobileAbout" style="color:white; text-decoration:none;">📖 About</a>
+        <a href="#" id="mobileComment" style="color:white; text-decoration:none;">💬 Comment</a>
+    </div>
+</header>
+
+<main>
+  <!-- Header Ad -->
+<div class="ad-container ad-header" style="max-width: 1200px; margin: 10px auto;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6124052333813612"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <div class="tool-detail">
+        <h1>🔍 Wireshark - World's Most Popular Network Protocol Analyzer</h1>
+        <p><span class="badge">📡 Packet Analyzer</span> <span class="badge">🔍 Network Sniffer</span> <span class="badge">🛡️ Traffic Analysis</span></p>
+        <p><strong>Category:</strong> 7️⃣ Sniffing & Spoofing</p>
+        <hr>
+
+        <h3>📝 Description</h3>
+        <p>Wireshark दुनिया का सबसे लोकप्रिय नेटवर्क प्रोटोकॉल एनालाइज़र है। यह आपको नेटवर्क से गुजरने वाले सभी पैकेट्स को कैप्चर और डिटेल से देखने की सुविधा देता है। Wireshark का उपयोग नेटवर्क ट्रबलशूटिंग, सिक्योरिटी एनालिसिस, प्रोटोकॉल डेवलपमेंट, और फॉरेंसिक जांच के लिए किया जाता है। यह 1000+ नेटवर्क प्रोटोकॉल्स को समझता है और रियल-टाइम में पैकेट्स को डिकोड करता है।</p>
+        <p><strong>विशेषता:</strong> Wireshark की सबसे बड़ी खासियत है इसका शक्तिशाली फिल्टर सिस्टम। आप सिर्फ वही ट्रैफिक देख सकते हैं जो आप चाहते हैं (जैसे सिर्फ HTTP, सिर्फ किसी IP से, सिर्फ किसी पोर्ट पर)। यह ग्राफिकल इंटरफेस के साथ आता है और क्रॉस-प्लेटफॉर्म है।</p>
+
+        <h3>📦 Installation</h3>
+        <p><strong>Kali Linux (पहले से इंस्टॉल):</strong></p>
+        <pre>wireshark</pre>
+        <p><strong>Ubuntu/Debian:</strong></p>
+        <pre>sudo apt update
+sudo apt install wireshark -y</pre>
+        <p><strong>Windows / macOS:</strong></p>
+        <pre>https://www.wireshark.org/download.html से डाउनलोड करें और इंस्टॉल करें।</pre>
+        <p><strong>Command Line Version (tshark):</strong></p>
+        <pre>sudo apt install tshark -y</pre>
+
+        <h3>💻 Common Commands & Filters (उदाहरण सहित)</h3>
+        
+        <div class="highlight">
+            <p><strong>📌 Wireshark GUI शुरू करना:</strong></p>
+            <pre>sudo wireshark</pre>
+            <div class="cmd-note">👉 <strong>उदाहरण:</strong> सबसे पहले कैप्चर करने के लिए इंटरफेस चुनें (eth0, wlan0, etc.)।</div>
+        </div>
+        
+        <h3>🎯 Wireshark के महत्वपूर्ण फिल्टर्स:</h3>
+        
+        <p><strong>🔹 1. IP फिल्टर - किसी स्पेसिफिक IP से ट्रैफिक:</strong></p>
+        <pre>ip.addr == 192.168.1.100</pre>
+        <pre>ip.src == 192.168.1.100
+ip.dst == 192.168.1.100</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> ip.addr == 192.168.1.100 - इस IP से आने वाला और जाने वाला सारा ट्रैफिक दिखाता है।</div>
+
+        <p><strong>🔹 2. प्रोटोकॉल फिल्टर:</strong></p>
+        <pre>http
+https
+dns
+ftp
+ssh
+tcp
+udp
+icmp
+arp</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> http - सिर्फ HTTP ट्रैफिक दिखाता है।</div>
+
+        <p><strong>🔹 3. पोर्ट फिल्टर:</strong></p>
+        <pre>tcp.port == 80
+tcp.port == 443
+udp.port == 53
+tcp.port == 22</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> tcp.port == 80 - सिर्फ पोर्ट 80 (HTTP) का ट्रैफिक दिखाता है।</div>
+
+        <p><strong>🔹 4. HTTP फिल्टर - URL और डोमेन:</strong></p>
+        <pre>http.request.uri contains "admin"
+http.host == "example.com"
+http.request.method == "POST"</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> http.request.uri contains "admin" - URL में "admin" वाली रिक्वेस्ट दिखाता है।</div>
+
+        <p><strong>🔹 5. DNS फिल्टर:</strong></p>
+        <pre>dns.qry.name contains "google"
+dns.flags.response == 1</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> dns.qry.name contains "google" - google से जुड़े DNS क्वेरी दिखाता है।</div>
+
+        <p><strong>🔹 6. क्रेडेंशियल्स ढूँढना:</strong></p>
+        <pre>http.request.method == "POST" and (http contains "password" or http contains "user")</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> POST रिक्वेस्ट में password या user वाले पैरामीटर ढूँढता है।</div>
+
+        <p><strong>🔹 7. सोर्स और डेस्टिनेशन पोर्ट:</strong></p>
+        <pre>tcp.srcport == 443
+tcp.dstport == 80</pre>
+
+        <p><strong>🔹 8. पैकेट साइज फिल्टर:</strong></p>
+        <pre>frame.len > 1000
+frame.len < 100</pre>
+
+        <p><strong>🔹 9. टाइम फिल्टर:</strong></p>
+        <pre>frame.time >= "2024-01-01 10:00:00" and frame.time <= "2024-01-01 11:00:00"</pre>
+
+        <p><strong>🔹 10. कॉम्बिनेशन फिल्टर:</strong></p>
+        <pre>ip.src == 192.168.1.100 and tcp.port == 80
+(http or dns) and ip.dst == 8.8.8.8</pre>
+
+        <h3>💻 Command Line (tshark) उदाहरण:</h3>
+        
+        <p><strong>🔹 11. कैप्चर शुरू करना:</strong></p>
+        <pre>sudo tshark -i eth0</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> eth0 इंटरफेस पर लाइव कैप्चर शुरू करता है।</div>
+
+        <p><strong>🔹 12. कैप्चर को फाइल में सेव करना:</strong></p>
+        <pre>sudo tshark -i eth0 -w capture.pcap</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> कैप्चर को capture.pcap फाइल में सेव करता है।</div>
+
+        <p><strong>🔹 13. पहले से सेव फाइल पढ़ना:</strong></p>
+        <pre>tshark -r capture.pcap</pre>
+
+        <p><strong>🔹 14. फिल्टर के साथ कैप्चर:</strong></p>
+        <pre>sudo tshark -i eth0 -f "port 80"</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> सिर्फ पोर्ट 80 का ट्रैफिक कैप्चर करता है।</div>
+
+        <p><strong>🔹 15. डिस्प्ले फिल्टर के साथ:</strong></p>
+        <pre>tshark -r capture.pcap -Y "http.request.uri contains admin"</pre>
+
+        <h3>🎯 Wireshark के मुख्य विंडोज:</h3>
+        <ul>
+            <li><strong>Packet List:</strong> सभी कैप्चर किए गए पैकेट्स की लिस्ट (नंबर, टाइम, सोर्स, डेस्टिनेशन, प्रोटोकॉल, लेंथ)</li>
+            <li><strong>Packet Details:</strong> चुने हुए पैकेट की डिटेल्ड जानकारी (एथरनेट, IP, TCP, HTTP लेयर्स)</li>
+            <li><strong>Packet Bytes:</strong> पैकेट का रॉ डेटा (हेक्स और ASCII)</li>
+            <li><strong>Filter Toolbar:</strong> डिस्प्ले फिल्टर लगाने के लिए</li>
+            <li><strong>Statistics Menu:</strong> प्रोटोकॉल हायरार्की, कन्वर्सेशन, एंडपॉइंट्स, आईओ ग्राफ</li>
+        </ul>
+
+        <h3>🎯 Use Cases (उपयोग के तरीके)</h3>
+        <ul>
+            <li><strong>नेटवर्क ट्रबलशूटिंग:</strong> धीमे नेटवर्क, लॉस्ट पैकेट्स, लेटेंसी की समस्या ढूँढना।</li>
+            <li><strong>सिक्योरिटी एनालिसिस:</strong> सस्पेक्टस ट्रैफिक, मालवेयर कम्युनिकेशन, DDoS अटैक डिटेक्ट करना।</li>
+            <li><strong>फॉरेंसिक जांच:</strong> नेटवर्क अटैक के बाद पैकेट कैप्चर का एनालिसिस करना।</li>
+            <li><strong>प्रोटोकॉल लर्निंग:</strong> TCP, HTTP, DNS, ARP जैसे प्रोटोकॉल्स को रियल-टाइम में समझना।</li>
+            <li><strong>पासवर्ड रिकवरी:</strong> HTTP बेसिक ऑथेंटिकेशन, FTP, Telnet से पासवर्ड निकालना।</li>
+        </ul>
+
+        <h3>⚙️ Key Features (मुख्य विशेषताएँ)</h3>
+        <ul>
+            <li>✔️ 1000+ नेटवर्क प्रोटोकॉल्स सपोर्ट</li>
+            <li>✔️ रियल-टाइम पैकेट कैप्चर और डिकोडिंग</li>
+            <li>✔️ शक्तिशाली डिस्प्ले फिल्टर सिस्टम</li>
+            <li>✔️ कैप्चर फिल्टर (BPF - Berkeley Packet Filter)</li>
+            <li>✔️ ग्राफिकल इंटरफेस (GUI) और कमांड लाइन (tshark)</li>
+            <li>✔️ स्टैटिस्टिक्स और ग्राफ्स (IO Graph, Flow Graph)</li>
+            <li>✔️ फॉलो स्ट्रीम (TCP, UDP, HTTP, TLS)</li>
+            <li>✔️ कलराइजेशन रूल्स (ट्रैफिक को रंग से पहचानना)</li>
+            <li>✔️ वॉयस और वीडियो एनालिसिस (RTP, SIP)</li>
+            <li>✔️ क्रॉस-प्लेटफॉर्म (Linux, Windows, macOS)</li>
+            <li>✔️ ओपन-सोर्स और फ्री</li>
+        </ul>
+
+        <div class="highlight">
+            <p><strong>📌 Wireshark में फॉलो स्ट्रीम:</strong></p>
+            <pre>पैकेट पर Right Click → Follow → TCP Stream</pre>
+            <div class="cmd-note">👉 <strong>उदाहरण:</strong> पूरी TCP कन्वर्सेशन को री-असेंबल करके दिखाता है (HTTP रिक्वेस्ट/रिस्पॉन्स, FTP ट्रांसफर, आदि)।</div>
+        </div>
+
+        <div class="highlight">
+            <p><strong>📌 Wireshark में स्टैटिस्टिक्स:</strong></p>
+            <ul>
+                <li><strong>Statistics → Protocol Hierarchy:</strong> प्रोटोकॉल्स का ब्रेकडाउन</li>
+                <li><strong>Statistics → Conversations:</strong> IPs के बीच कितना डेटा ट्रांसफर हुआ</li>
+                <li><strong>Statistics → Endpoints:</strong> सभी IPs की लिस्ट और डेटा वॉल्यूम</li>
+                <li><strong>Statistics → IO Graph:</strong> टाइम के हिसाब से ट्रैफिक का ग्राफ</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <p><strong>📌 Wireshark के लिए सुझाव:</strong></p>
+            <ul>
+                <li>हमेशा कैप्चर फिल्टर का उपयोग करें अगर सिर्फ कुछ ट्रैफिक चाहिए (जैसे "port 80")</li>
+                <li>डिस्प्ले फिल्टर सीखना सबसे जरूरी है (ip.addr, tcp.port, http.request)</li>
+                <li>HTTP और DNS ट्रैफिक का एनालिसिस करना शुरू करें</li>
+                <li>"Follow TCP Stream" से पूरी कन्वर्सेशन देखें</li>
+                <li>स्टैटिस्टिक्स से पूरे ट्रैफिक का ओवरव्यू लें</li>
+            </ul>
+        </div>
+
+        <h3>🔗 Official Resources</h3>
+        <ul>
+            <li><strong>Official Website:</strong> <a href="https://www.wireshark.org" target="_blank">https://www.wireshark.org</a></li>
+            <li><strong>Documentation:</strong> <a href="https://www.wireshark.org/docs/" target="_blank">Wireshark User Guide</a></li>
+            <li><strong>Display Filters Reference:</strong> <a href="https://www.wireshark.org/docs/dfref/" target="_blank">Filter Reference</a></li>
+            <li><strong>Sample Captures:</strong> <a href="https://wiki.wireshark.org/SampleCaptures" target="_blank">Sample PCAP Files</a></li>
+        </ul>
+
+        <h3>🔧 Related Tools (समान उपकरण)</h3>
+        <ul>
+            <li><strong>tshark:</strong> Wireshark का कमांड लाइन वर्शन</li>
+            <li><strong>tcpdump:</strong> कमांड लाइन पैकेट एनालाइज़र</li>
+            <li><strong>Ettercap:</strong> MITM अटैक और स्निफिंग टूल</li>
+            <li><strong>Bettercap:</strong> एडवांस्ड MITM फ्रेमवर्क</li>
+            <li><strong>Nmap:</strong> पोर्ट स्कैनिंग और नेटवर्क डिस्कवरी</li>
+        </ul>
+
+        <h3>⚠️ Important Note (सावधानी)</h3>
+        <p><strong>Wireshark एक शक्तिशाली नेटवर्क स्निफर है। इसका उपयोग केवल उन्हीं नेटवर्क पर करें जिनकी आपको अनुमति हो। बिना अनुमति के नेटवर्क ट्रैफिक कैप्चर करना कानूनी अपराध है और यह प्राइवेसी का उल्लंघन है। हमेशा अपने खुद के नेटवर्क या बग बाउंटी प्रोग्राम पर ही प्रैक्टिस करें। कैप्चर किए गए पैकेट्स में संवेदनशील डेटा (पासवर्ड, कुकीज़, व्यक्तिगत जानकारी) हो सकता है, इसलिए इन्हें सुरक्षित रखें।</strong></p>
+
+        <button class="back-link" onclick="window.location.href='../index.html'">← Back to Home</button>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Ethical Learn — Empowering security researchers. All tools are for authorized testing only.</p>
+</footer>
+
+<script>
+    function openOverlay() {
+        let overlay = document.getElementById("globalToolsOverlay");
+        if (!overlay) {
+            overlay = document.createElement("div");
+            overlay.id = "globalToolsOverlay";
+            overlay.className = "tools-overlay";
+            overlay.innerHTML = `
+                <div class="tools-container">
+                    <button class="close-menu" id="closeOverlayBtnGlobal">✕</button>
+                    <h2 style="color:white; margin-bottom:0.5rem;">🛡️ Security Tools Arsenal</h2>
+                    <p style="color:#bbd4f0; margin-bottom:1rem;">Click any tool to open its dedicated page</p>
+                    <div class="tools-grid" id="globalToolsGrid"></div>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+            document.getElementById("closeOverlayBtnGlobal")?.addEventListener("click", () => overlay.classList.remove("open"));
+            overlay.addEventListener("click", (e) => { if (e.target === overlay) overlay.classList.remove("open"); });
+            const tools = ["Nmap", "Maltego", "theHarvester", "Recon-ng", "dnsenum", "dnsrecon", "Nikto", "OpenVAS", "OWASP ZAP", "SQLmap", "Burp Suite", "Commix", "Skipfish", "Wfuzz", "Hydra", "Hashcat", "John the Ripper", "Medusa", "Aircrack-ng", "Reaver", "Kismet", "Wifite", "Metasploit", "BeEF", "Armitage", "Wireshark", "Ettercap", "Bettercap", "Autopsy", "Binwalk", "Foremost"];
+            const grid = document.getElementById("globalToolsGrid");
+            if (grid) {
+                grid.className = "tools-grid";
+                let html = '';
+                tools.forEach(tool => {
+                    let filename = tool.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
+                    if (tool === "John the Ripper") filename = "john-the-ripper";
+                    if (tool === "OWASP ZAP") filename = "owasp-zap";
+                    if (tool === "Burp Suite") filename = "burpsuite";
+                    if (tool === "Recon-ng") filename = "recon-ng";
+                    if (tool === "theHarvester") filename = "theharvester";
+                    if (tool === "Aircrack-ng") filename = "aircrack-ng";
+                    html += `<div class="tool-category"><ul class="tool-list"><li><a href="../tools/${filename}.html">🔧 ${tool}</a></li></ul></div>`;
+                });
+                grid.innerHTML = html;
+            }
+        }
+        overlay.classList.add("open");
+    }
+    document.getElementById("navToolsTrigger")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); });
+    document.getElementById("mainToolsMenuBtn")?.addEventListener("click", () => openOverlay());
+    const mobileToggle = document.getElementById("mobileMenuToggle");
+    const mobilePanel = document.getElementById("mobileMenuPanel");
+    if (mobileToggle && mobilePanel) {
+        mobileToggle.addEventListener("click", () => { mobilePanel.style.display = mobilePanel.style.display === "none" || mobilePanel.style.display === "" ? "flex" : "none"; });
+        document.getElementById("mobileTools")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); mobilePanel.style.display = "none"; });
+        document.getElementById("mobileAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+        document.getElementById("mobileComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+    }
+    document.getElementById("navAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+    document.getElementById("navComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+</script>
+</body>
+</html>

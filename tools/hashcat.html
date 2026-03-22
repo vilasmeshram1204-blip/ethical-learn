@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Hashcat - Ethical Learn | साइबर सिक्योरिटी टूल</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .tool-detail {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        }
+        .tool-detail h1 {
+            color: #1f6392;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        .tool-detail h3 {
+            margin: 1.8rem 0 0.8rem 0;
+            color: #0f2c3d;
+            border-left: 4px solid #1f6392;
+            padding-left: 12px;
+        }
+        .tool-detail pre {
+            background: #1e2a3a;
+            color: #eef4ff;
+            padding: 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            margin: 0.8rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .tool-detail .cmd-note {
+            color: #4a6a7a;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid #7bc6e6;
+        }
+        .tool-detail ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .tool-detail li {
+            margin: 0.5rem 0;
+            line-height: 1.5;
+        }
+        .tool-detail a {
+            color: #1f6392;
+            text-decoration: none;
+        }
+        .tool-detail a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            background: #1f6392;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        .back-link:hover {
+            background: #0f4b6e;
+            transform: scale(0.98);
+        }
+        .badge {
+            display: inline-block;
+            background: #eef2fa;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            color: #1f6392;
+        }
+        hr {
+            margin: 1.5rem 0;
+            border-color: #e0e7f0;
+        }
+        .highlight {
+            background: #f0f7ff;
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+        }
+        @media (max-width: 780px) {
+            .tool-detail {
+                margin: 1rem;
+                padding: 1.2rem;
+            }
+            .tool-detail h1 {
+                font-size: 1.5rem;
+            }
+            pre {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+        <!-- Google AdSense Code -->
+    <meta name="google-adsense-account" content="ca-pub-6124052333813612">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6124052333813612"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo-area">
+            <div class="ethical-logo"><span>EL</span></div>
+            <div class="logo-text"><h1>Ethical Learn</h1><p>cyber security hub</p></div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#" id="navToolsTrigger">Tools</a>
+            <a href="about.html" id="navAbout">About</a>
+            <a href="contant.html" id="navComment">Comment</a>
+        </div>
+        <button class="menu-btn" id="mainToolsMenuBtn"><span class="menu-icon">🛠️</span> Tools Menu</button>
+        <button class="mobile-menu-icon" id="mobileMenuToggle">☰</button>
+    </div>
+    <div id="mobileMenuPanel" style="display: none; background:#0e1c2c; padding: 1rem 2rem; flex-direction: column; gap: 1rem; border-bottom: 1px solid #2c7da0;">
+        <a href="../index.html" style="color:white; text-decoration:none;">🏠 Home</a>
+        <a href="#" id="mobileTools" style="color:white; text-decoration:none;">🛠️ Tools</a>
+        <a href="#" id="mobileAbout" style="color:white; text-decoration:none;">📖 About</a>
+        <a href="#" id="mobileComment" style="color:white; text-decoration:none;">💬 Comment</a>
+    </div>
+</header>
+
+<main>
+  <!-- Header Ad -->
+<div class="ad-container ad-header" style="max-width: 1200px; margin: 10px auto;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6124052333813612"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <div class="tool-detail">
+        <h1>⚡ Hashcat - World's Fastest Password Cracker</h1>
+        <p><span class="badge">🔑 Password Cracking</span> <span class="badge">🎮 GPU Accelerated</span> <span class="badge">⚡ 300+ Algorithms</span></p>
+        <p><strong>Category:</strong> 4️⃣ Password Attacks</p>
+        <hr>
+
+        <h3>📝 Description</h3>
+        <p>Hashcat दुनिया का सबसे तेज और सबसे एडवांस्ड पासवर्ड क्रैकिंग टूल है। यह GPU (Graphics Processing Unit) का उपयोग करके बहुत तेजी से पासवर्ड हैश को क्रैक कर सकता है। Hashcat 300+ हैशिंग एल्गोरिदम को सपोर्ट करता है जैसे MD5, SHA1, SHA256, SHA512, bcrypt, NTLM, MySQL, WordPress, WPA/WPA2, और बहुत कुछ। यह डिक्शनरी अटैक, ब्रूटफोर्स, मास्क अटैक, हाइब्रिड अटैक, और रूल-बेस्ड अटैक कर सकता है।</p>
+        <p><strong>विशेषता:</strong> Hashcat की सबसे बड़ी खासियत है GPU सपोर्ट। एक अच्छे GPU से यह लाखों हैश प्रति सेकंड क्रैक कर सकता है। यह क्रॉस-प्लेटफॉर्म है और कमांड लाइन पर चलता है।</p>
+
+        <h3>📦 Installation</h3>
+        <p><strong>Kali Linux (पहले से इंस्टॉल):</strong></p>
+        <pre>hashcat -h</pre>
+        <p><strong>Ubuntu/Debian:</strong></p>
+        <pre>sudo apt update
+sudo apt install hashcat -y</pre>
+        <p><strong>Windows:</strong></p>
+        <pre>https://hashcat.net/hashcat/ से डाउनलोड करें</pre>
+        <p><strong>macOS (Homebrew):</strong></p>
+        <pre>brew install hashcat</pre>
+        <p><strong>GitHub से इंस्टॉल:</strong></p>
+        <pre>git clone https://github.com/hashcat/hashcat.git
+cd hashcat
+make
+sudo make install</pre>
+
+        <h3>💻 Common Commands (उदाहरण सहित)</h3>
+        
+        <div class="highlight">
+            <p><strong>📌 Hashcat का सबसे आम सिंटैक्स: hashcat -m [hash_type] -a [attack_mode] hash.txt wordlist.txt</strong></p>
+        </div>
+        
+        <p><strong>🔹 1. सबसे पहले GPU/CPU डिवाइस देखना:</strong></p>
+        <pre>hashcat -I</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> आपके सिस्टम में कितने GPU/CPU हैं और उनके ड्राइवर इंस्टॉल हैं या नहीं, यह दिखाता है।</div>
+
+        <p><strong>🔹 2. MD5 हैश क्रैक करना (डिक्शनरी अटैक):</strong></p>
+        <pre>hashcat -m 0 -a 0 hash.txt /usr/share/wordlists/rockyou.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> -m 0 = MD5, -a 0 = डिक्शनरी अटैक। hash.txt में MD5 हैश डालें।</div>
+
+        <p><strong>🔹 3. SHA1 हैश क्रैक करना:</strong></p>
+        <pre>hashcat -m 100 -a 0 hash.txt rockyou.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> -m 100 = SHA1, -a 0 = डिक्शनरी अटैक।</div>
+
+        <p><strong>🔹 4. SHA256 हैश क्रैक करना:</strong></p>
+        <pre>hashcat -m 1400 -a 0 hash.txt rockyou.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> -m 1400 = SHA256 (Unix/Linux शैडो फाइल)।</div>
+
+        <p><strong>🔹 5. NTLM हैश (Windows) क्रैक करना:</strong></p>
+        <pre>hashcat -m 1000 -a 0 hash.txt rockyou.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> -m 1000 = NTLM (Windows पासवर्ड हैश)।</div>
+
+        <p><strong>🔹 6. WPA/WPA2 हैश क्रैक करना (Wi-Fi):</strong></p>
+        <pre>hashcat -m 22000 -a 0 handshake.hc22000 rockyou.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> -m 22000 = WPA/WPA2 (हैंडशेक कैप्चर के बाद)।</div>
+
+        <p><strong>🔹 7. bcrypt हैश क्रैक करना (स्लो, मजबूत):</strong></p>
+        <pre>hashcat -m 3200 -a 0 hash.txt rockyou.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> -m 3200 = bcrypt (धीमा लेकिन सिक्योर)।</div>
+
+        <p><strong>🔹 8. WordPress MD5 हैश क्रैक करना:</strong></p>
+        <pre>hashcat -m 400 -a 0 hash.txt rockyou.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> -m 400 = WordPress (phpass MD5)।</div>
+
+        <p><strong>🔹 9. MySQL हैश क्रैक करना:</strong></p>
+        <pre>hashcat -m 300 -a 0 hash.txt rockyou.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> -m 300 = MySQL 4.1+ हैश।</div>
+
+        <p><strong>🔹 10. मास्क अटैक (ब्रूटफोर्स) - 8 अंकों का पासवर्ड:</strong></p>
+        <pre>hashcat -m 0 -a 3 hash.txt ?d?d?d?d?d?d?d?d</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> -a 3 = ब्रूटफोर्स, ?d = डिजिट (0-9)। सिर्फ डिजिट वाले 8 अंकों के पासवर्ड क्रैक करता है।</div>
+
+        <p><strong>🔹 11. मास्क अटैक - लोअरकेस + डिजिट (8 अंक):</strong></p>
+        <pre>hashcat -m 0 -a 3 hash.txt ?l?l?l?l?l?l?l?l</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> ?l = लोअरकेस a-z।</div>
+
+        <p><strong>🔹 12. हाइब्रिड अटैक (डिक्शनरी + मास्क):</strong></p>
+        <pre>hashcat -m 0 -a 6 hash.txt rockyou.txt ?d?d?d?d</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> -a 6 = डिक्शनरी + मास्क। rockyou.txt के हर शब्द के अंत में 4 डिजिट जोड़ता है।</div>
+
+        <p><strong>🔹 13. रूल-बेस्ड अटैक (केस बदलना, लीट स्पीक):</strong></p>
+        <pre>hashcat -m 0 -a 0 hash.txt rockyou.txt -r /usr/share/hashcat/rules/best64.rule</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> rockyou.txt के हर शब्द पर best64.rule लगाता है (जैसे password → Password, P@ssw0rd)।</div>
+
+        <p><strong>🔹 14. क्रैक किए हुए पासवर्ड देखना:</strong></p>
+        <pre>hashcat -m 0 hash.txt rockyou.txt --show</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> अब तक क्रैक हुए सभी हैश और पासवर्ड दिखाता है।</div>
+
+        <p><strong>🔹 15. आउटपुट को फाइल में सेव करना:</strong></p>
+        <pre>hashcat -m 0 hash.txt rockyou.txt -o cracked.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> क्रैक किए हुए पासवर्ड cracked.txt फाइल में सेव होते हैं।</div>
+
+        <p><strong>🔹 16. स्टेटस दिखाना (स्कैन के दौरान):</strong></p>
+        <pre>hashcat -m 0 hash.txt rockyou.txt --status --status-timer=10</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> हर 10 सेकंड में स्टेटस दिखाता है।</div>
+
+        <p><strong>🔹 17. ओपनसीएल डिवाइस स्पेसिफाई करना:</strong></p>
+        <pre>hashcat -m 0 -a 0 hash.txt rockyou.txt -d 1</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> -d 1 = डिवाइस 1 (पहला GPU) का उपयोग करता है।</div>
+
+        <h3>🎯 Hashcat के अटैक मोड्स (-a):</h3>
+        <ul>
+            <li><strong>-a 0:</strong> डिक्शनरी अटैक (Straight)</li>
+            <li><strong>-a 1:</strong> कॉम्बिनेशन अटैक (दो वर्डलिस्ट का कॉम्बिनेशन)</li>
+            <li><strong>-a 3:</strong> ब्रूटफोर्स / मास्क अटैक</li>
+            <li><strong>-a 6:</strong> हाइब्रिड अटैक (डिक्शनरी + मास्क)</li>
+            <li><strong>-a 7:</strong> हाइब्रिड अटैक (मास्क + डिक्शनरी)</li>
+        </ul>
+
+        <h3>🎯 Hashcat के मास्क चार्सेट:</h3>
+        <ul>
+            <li><strong>?l:</strong> लोअरकेस अक्षर (a-z)</li>
+            <li><strong>?u:</strong> अपरकेस अक्षर (A-Z)</li>
+            <li><strong>?d:</strong> डिजिट (0-9)</li>
+            <li><strong>?s:</strong> स्पेशल कैरेक्टर (!@#$%^&*)</li>
+            <li><strong>?a:</strong> सभी कैरेक्टर (l+u+d+s)</li>
+            <li><strong>?h:</strong> हेक्साडेसिमल (0-9 a-f)</li>
+            <li><strong>?H:</strong> हेक्साडेसिमल (0-9 A-F)</li>
+        </ul>
+
+        <h3>🎯 Use Cases (उपयोग के तरीके)</h3>
+        <ul>
+            <li><strong>पेनिट्रेशन टेस्टिंग:</strong> हैश फाइल्स (जैसे /etc/shadow, Windows SAM) को क्रैक करना।</li>
+            <li><strong>Wi-Fi पासवर्ड क्रैकिंग:</strong> WPA/WPA2 हैंडशेक कैप्चर करके पासवर्ड क्रैक करना।</li>
+            <li><strong>फॉरेंसिक जांच:</strong> फोरेंसिक इमेज से निकाले गए हैश को क्रैक करना।</li>
+            <li><strong>पासवर्ड पॉलिसी टेस्टिंग:</strong> कंपनी के पासवर्ड की ताकत जांचना।</li>
+            <li><strong>डेटा रिकवरी:</strong> भूला हुआ पासवर्ड रिकवर करना (केवल अपने डेटा के लिए)।</li>
+        </ul>
+
+        <h3>⚙️ Key Features (मुख्य विशेषताएँ)</h3>
+        <ul>
+            <li>✔️ 300+ हैशिंग एल्गोरिदम सपोर्ट (MD5, SHA1, SHA256, NTLM, bcrypt, WPA, etc.)</li>
+            <li>✔️ GPU सपोर्ट (NVIDIA CUDA, AMD OpenCL, Intel OpenCL)</li>
+            <li>✔️ CPU सपोर्ट (मल्टी-कोर)</li>
+            <li>✔️ 5+ अटैक मोड्स (डिक्शनरी, ब्रूटफोर्स, कॉम्बिनेशन, हाइब्रिड, रूल-बेस्ड)</li>
+            <li>✔️ मास्क अटैक (कस्टम चार्सेट)</li>
+            <li>✔️ रूल-बेस्ड अटैक (100+ प्री-डिफाइंड रूल्स)</li>
+            <li>✔️ डिस्ट्रिब्यूटेड क्रैकिंग (कई सिस्टम पर फैलाना)</li>
+            <li>✔️ हैश फाइल ऑटो-डिटेक्शन</li>
+            <li>✔️ क्रॉस-प्लेटफॉर्म (Linux, Windows, macOS)</li>
+            <li>✔️ ओपन-सोर्स और फ्री</li>
+        </ul>
+
+        <div class="highlight">
+            <p><strong>📌 Hashcat के लिए GPU सुझाव:</strong></p>
+            <ul>
+                <li><strong>NVIDIA:</strong> RTX 4090 (~400 GH/s MD5), RTX 3090 (~300 GH/s)</li>
+                <li><strong>AMD:</strong> RX 7900 XTX (~350 GH/s MD5)</li>
+                <li><strong>CPU:</strong> सिंगल थ्रेड (~10 MH/s MD5) - GPU से 100x धीमा</li>
+                <li><strong>क्लाउड:</strong> AWS EC2 G4/G5 इंस्टेंस, Google Cloud GPU इंस्टेंस</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <p><strong>📌 सामान्य हैश टाइप्स (-m):</strong></p>
+            <ul>
+                <li><strong>-m 0:</strong> MD5</li>
+                <li><strong>-m 100:</strong> SHA1</li>
+                <li><strong>-m 1400:</strong> SHA256</li>
+                <li><strong>-m 1700:</strong> SHA512</li>
+                <li><strong>-m 1000:</strong> NTLM (Windows)</li>
+                <li><strong>-m 22000:</strong> WPA/WPA2</li>
+                <li><strong>-m 3200:</strong> bcrypt</li>
+                <li><strong>-m 400:</strong> WordPress</li>
+                <li><strong>-m 300:</strong> MySQL 4.1+</li>
+                <li><strong>-m 11:</strong> Joomla</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <p><strong>📌 Hashcat vs John the Ripper:</strong></p>
+            <ul>
+                <li><strong>Hashcat:</strong> GPU सपोर्ट, तेज, 300+ एल्गोरिदम, कमांड लाइन</li>
+                <li><strong>John the Ripper:</strong> CPU सपोर्ट, धीमा, 50+ एल्गोरिदम, पासवर्ड ऑटो-डिटेक्शन</li>
+                <li><strong>अनुशंसा:</strong> Hashcat GPU क्रैकिंग के लिए, John CPU क्रैकिंग और ऑटो-डिटेक्शन के लिए। दोनों सीखना फायदेमंद है।</li>
+            </ul>
+        </div>
+
+        <h3>🔗 Official Resources</h3>
+        <ul>
+            <li><strong>Official Website:</strong> <a href="https://hashcat.net/hashcat/" target="_blank">https://hashcat.net/hashcat/</a></li>
+            <li><strong>GitHub Repository:</strong> <a href="https://github.com/hashcat/hashcat" target="_blank">https://github.com/hashcat/hashcat</a></li>
+            <li><strong>Example Hashes:</strong> <a href="https://hashcat.net/wiki/doku.php?id=example_hashes" target="_blank">Hashcat Example Hashes</a></li>
+            <li><strong>Wiki:</strong> <a href="https://hashcat.net/wiki/" target="_blank">https://hashcat.net/wiki/</a></li>
+        </ul>
+
+        <h3>🔧 Related Tools (समान उपकरण)</h3>
+        <ul>
+            <li><strong>John the Ripper:</strong> CPU-आधारित पासवर्ड क्रैकर</li>
+            <li><strong>Hydra:</strong> नेटवर्क लॉगिन क्रैकर</li>
+            <li><strong>Medusa:</strong> पैरेलल नेटवर्क लॉगिन क्रैकर</li>
+            <li><strong>Hashcat-utils:</strong> हैश क्रैकिंग के लिए यूटिलिटीज</li>
+            <li><strong>oclHashcat:</strong> Hashcat का पुराना नाम (अब मर्ज)</li>
+        </ul>
+
+        <h3>⚠️ Important Note (सावधानी)</h3>
+        <p><strong>Hashcat एक बेहद शक्तिशाली टूल है जो GPU को पूरी क्षमता से चलाता है, जिससे GPU गर्म हो सकता है और बिजली की खपत बढ़ सकती है। इसका उपयोग केवल उन्हीं हैश पर करें जिनकी आपको अनुमति हो। बिना अनुमति के पासवर्ड क्रैक करना कानूनी अपराध है। हमेशा अपने खुद के हैश, CTF चैलेंज, या बग बाउंटी प्रोग्राम पर ही प्रैक्टिस करें। GPU के तापमान पर नजर रखें और अगर जरूरत हो तो कूलिंग का इंतजाम करें।</strong></p>
+
+        <button class="back-link" onclick="window.location.href='../index.html'">← Back to Home</button>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Ethical Learn — Empowering security researchers. All tools are for authorized testing only.</p>
+</footer>
+
+<script>
+    function openOverlay() {
+        let overlay = document.getElementById("globalToolsOverlay");
+        if (!overlay) {
+            overlay = document.createElement("div");
+            overlay.id = "globalToolsOverlay";
+            overlay.className = "tools-overlay";
+            overlay.innerHTML = `
+                <div class="tools-container">
+                    <button class="close-menu" id="closeOverlayBtnGlobal">✕</button>
+                    <h2 style="color:white; margin-bottom:0.5rem;">🛡️ Security Tools Arsenal</h2>
+                    <p style="color:#bbd4f0; margin-bottom:1rem;">Click any tool to open its dedicated page</p>
+                    <div class="tools-grid" id="globalToolsGrid"></div>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+            document.getElementById("closeOverlayBtnGlobal")?.addEventListener("click", () => overlay.classList.remove("open"));
+            overlay.addEventListener("click", (e) => { if (e.target === overlay) overlay.classList.remove("open"); });
+            const tools = ["Nmap", "Maltego", "theHarvester", "Recon-ng", "dnsenum", "dnsrecon", "Nikto", "OpenVAS", "OWASP ZAP", "SQLmap", "Burp Suite", "Commix", "Skipfish", "Wfuzz", "Hydra", "Hashcat", "John the Ripper", "Medusa", "Aircrack-ng", "Reaver", "Kismet", "Wifite", "Metasploit", "BeEF", "Armitage", "Wireshark", "Ettercap", "Bettercap", "Autopsy", "Binwalk", "Foremost"];
+            const grid = document.getElementById("globalToolsGrid");
+            if (grid) {
+                grid.className = "tools-grid";
+                let html = '';
+                tools.forEach(tool => {
+                    let filename = tool.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
+                    if (tool === "John the Ripper") filename = "john-the-ripper";
+                    if (tool === "OWASP ZAP") filename = "owasp-zap";
+                    if (tool === "Burp Suite") filename = "burpsuite";
+                    if (tool === "Recon-ng") filename = "recon-ng";
+                    if (tool === "theHarvester") filename = "theharvester";
+                    if (tool === "Aircrack-ng") filename = "aircrack-ng";
+                    html += `<div class="tool-category"><ul class="tool-list"><li><a href="../tools/${filename}.html">🔧 ${tool}</a></li></ul></div>`;
+                });
+                grid.innerHTML = html;
+            }
+        }
+        overlay.classList.add("open");
+    }
+    document.getElementById("navToolsTrigger")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); });
+    document.getElementById("mainToolsMenuBtn")?.addEventListener("click", () => openOverlay());
+    const mobileToggle = document.getElementById("mobileMenuToggle");
+    const mobilePanel = document.getElementById("mobileMenuPanel");
+    if (mobileToggle && mobilePanel) {
+        mobileToggle.addEventListener("click", () => { mobilePanel.style.display = mobilePanel.style.display === "none" || mobilePanel.style.display === "" ? "flex" : "none"; });
+        document.getElementById("mobileTools")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); mobilePanel.style.display = "none"; });
+        document.getElementById("mobileAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+        document.getElementById("mobileComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+    }
+    document.getElementById("navAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+    document.getElementById("navComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+</script>
+</body>
+</html>

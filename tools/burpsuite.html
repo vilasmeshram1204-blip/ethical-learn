@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Burp Suite - Ethical Learn | साइबर सिक्योरिटी टूल</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .tool-detail {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        }
+        .tool-detail h1 {
+            color: #1f6392;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        .tool-detail h3 {
+            margin: 1.8rem 0 0.8rem 0;
+            color: #0f2c3d;
+            border-left: 4px solid #1f6392;
+            padding-left: 12px;
+        }
+        .tool-detail pre {
+            background: #1e2a3a;
+            color: #eef4ff;
+            padding: 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            margin: 0.8rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .tool-detail .cmd-note {
+            color: #4a6a7a;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid #7bc6e6;
+        }
+        .tool-detail ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .tool-detail li {
+            margin: 0.5rem 0;
+            line-height: 1.5;
+        }
+        .tool-detail a {
+            color: #1f6392;
+            text-decoration: none;
+        }
+        .tool-detail a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            background: #1f6392;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        .back-link:hover {
+            background: #0f4b6e;
+            transform: scale(0.98);
+        }
+        .badge {
+            display: inline-block;
+            background: #eef2fa;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            color: #1f6392;
+        }
+        hr {
+            margin: 1.5rem 0;
+            border-color: #e0e7f0;
+        }
+        .highlight {
+            background: #f0f7ff;
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+        }
+        @media (max-width: 780px) {
+            .tool-detail {
+                margin: 1rem;
+                padding: 1.2rem;
+            }
+            .tool-detail h1 {
+                font-size: 1.5rem;
+            }
+            pre {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+        <!-- Google AdSense Code -->
+    <meta name="google-adsense-account" content="ca-pub-6124052333813612">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6124052333813612"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo-area">
+            <div class="ethical-logo"><span>EL</span></div>
+            <div class="logo-text"><h1>Ethical Learn</h1><p>cyber security hub</p></div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#" id="navToolsTrigger">Tools</a>
+            <a href="about.html" id="navAbout">About</a>
+            <a href="contant.html" id="navComment">Comment</a>
+        </div>
+        <button class="menu-btn" id="mainToolsMenuBtn"><span class="menu-icon">🛠️</span> Tools Menu</button>
+        <button class="mobile-menu-icon" id="mobileMenuToggle">☰</button>
+    </div>
+    <div id="mobileMenuPanel" style="display: none; background:#0e1c2c; padding: 1rem 2rem; flex-direction: column; gap: 1rem; border-bottom: 1px solid #2c7da0;">
+        <a href="../index.html" style="color:white; text-decoration:none;">🏠 Home</a>
+        <a href="#" id="mobileTools" style="color:white; text-decoration:none;">🛠️ Tools</a>
+        <a href="#" id="mobileAbout" style="color:white; text-decoration:none;">📖 About</a>
+        <a href="#" id="mobileComment" style="color:white; text-decoration:none;">💬 Comment</a>
+    </div>
+</header>
+
+<main>
+  <!-- Header Ad -->
+<div class="ad-container ad-header" style="max-width: 1200px; margin: 10px auto;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6124052333813612"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <div class="tool-detail">
+        <h1>🎯 Burp Suite - Web Security Testing Platform</h1>
+        <p><span class="badge">🌐 Web Proxy</span> <span class="badge">🔍 Vulnerability Scanner</span> <span class="badge">💼 Professional Tool</span></p>
+        <p><strong>Category:</strong> 3️⃣ Web Application Attacks</p>
+        <hr>
+
+        <h3>📝 Description</h3>
+        <p>Burp Suite दुनिया का सबसे लोकप्रिय वेब एप्लीकेशन सिक्योरिटी टेस्टिंग प्लेटफॉर्म है। यह PortSwigger द्वारा डेवलप किया जाता है। Burp Suite एक इंटरसेप्टिंग प्रॉक्सी है जो आपको वेब एप्लीकेशन और ब्राउज़र के बीच के सभी HTTP/HTTPS ट्रैफिक को कैप्चर, मॉडिफाई, और रिप्ले करने की सुविधा देता है। इसमें कई शक्तिशाली टूल्स हैं: Proxy, Intruder, Repeater, Scanner, Spider, और Decoder।</p>
+        <p><strong>विशेषता:</strong> Burp Suite Professional (पेड) में ऑटोमेटेड स्कैनर, थ्रेडिंग, और प्रोजेक्ट मैनेजमेंट जैसे फीचर्स हैं। Burp Suite Community Edition (फ्री) में Proxy, Repeater, Intruder (लिमिटेड), और Decoder उपलब्ध हैं।</p>
+
+        <h3>📦 Installation</h3>
+        <p><strong>Kali Linux (पहले से इंस्टॉल):</strong></p>
+        <pre>burpsuite</pre>
+        <p><strong>Windows / macOS / Linux:</strong></p>
+        <pre>https://portswigger.net/burp/releases से डाउनलोड करें और इंस्टॉल करें।</pre>
+        <p><strong>Ubuntu/Debian:</strong></p>
+        <pre>sudo apt update
+sudo apt install burpsuite -y</pre>
+        <p><strong>Java आवश्यकता:</strong> Burp Suite Java में लिखा है, इसलिए Java Runtime Environment (JRE) चाहिए।</p>
+
+        <h3>💻 Burp Suite के मुख्य टूल्स (उदाहरण सहित)</h3>
+        
+        <div class="highlight">
+            <p><strong>📌 Burp Suite खोलने के बाद सबसे पहले प्रॉक्सी सेट करना होता है:</strong></p>
+            <pre>Proxy → Options → Proxy Listeners → 127.0.0.1:8080 Add
+Browser में Proxy: 127.0.0.1:8080 सेट करें</pre>
+        </div>
+
+        <h3>🔹 1. Proxy - Interceptor (ट्रैफिक कैप्चर करना)</h3>
+        <pre>Proxy → Intercept → Intercept is on</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> ब्राउज़र में कोई भी रिक्वेस्ट भेजें, वह Intercept हो जाएगी। आप उसे Forward, Drop, या Action → Send to Repeater/Intruder कर सकते हैं।</div>
+
+        <h3>🔹 2. Repeater - रिक्वेस्ट को मॉडिफाई और रिप्ले करना</h3>
+        <pre>किसी रिक्वेस्ट पर Right Click → Send to Repeater
+Repeater Tab में Request मॉडिफाई करें → Send</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> SQL Injection पेलोड डालकर Send करें और रिस्पॉन्स देखें। एक ही रिक्वेस्ट को बार-बार मॉडिफाई करके भेज सकते हैं।</div>
+
+        <h3>🔹 3. Intruder - ऑटोमेटेड अटैक (पैरामीटर फजिंग)</h3>
+        <pre>रिक्वेस्ट पर Right Click → Send to Intruder
+Positions Tab → पैरामीटर सेलेक्ट करें → Add §
+Payloads Tab → Payload लोड करें → Start Attack</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> लॉगिन पेज पर यूजरनेम और पासवर्ड के लिए ब्रूटफोर्स अटैक करना। वर्डलिस्ट लोड करके हजारों रिक्वेस्ट भेज सकते हैं।</div>
+
+        <h3>🔹 4. Scanner - ऑटोमेटेड वल्नरेबिलिटी स्कैन (Professional में)</h3>
+        <pre>Target Tab → Site Map पर Right Click → Scan</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> वेबसाइट पर SQL Injection, XSS, CSRF जैसी वल्नरेबिलिटीज ऑटोमेटिक स्कैन करता है।</div>
+
+        <h3>🔹 5. Spider - वेबसाइट क्रॉल करना</h3>
+        <pre>Target Tab → Site Map पर Right Click → Spider</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> वेबसाइट के सभी लिंक्स, फॉर्म्स, JavaScript को क्रॉल करता है और Site Map में जोड़ता है।</div>
+
+        <h3>🔹 6. Decoder - एन्कोड/डीकोड करना</h3>
+        <pre>Decoder Tab → Text डालें → Encode/Decode चुनें</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Base64, URL, HTML, Hex एन्कोडिंग/डीकोडिंग कर सकते हैं। पासवर्ड हैश या टोकन डीकोड करने के लिए।</div>
+
+        <h3>🔹 7. Comparer - रिस्पॉन्स कंपेयर करना</h3>
+        <pre>दो रिस्पॉन्स सेलेक्ट करें → Send to Comparer → Compare</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> दो अलग-अलग रिक्वेस्ट के रिस्पॉन्स में क्या अंतर है, यह देखने के लिए।</div>
+
+        <h3>🔹 8. Extender - एक्सटेंशन जोड़ना</h3>
+        <pre>Extender Tab → BApp Store → Extensions Install</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Turbo Intruder, Active Scan++, Logger++ जैसे एक्सटेंशन इंस्टॉल कर सकते हैं।</div>
+
+        <h3>💻 Burp Suite के उन्नत उपयोग:</h3>
+        
+        <p><strong>🔹 9. Match and Replace - ऑटोमेटिक रिक्वेस्ट मॉडिफाई:</strong></p>
+        <pre>Proxy → Options → Match and Replace → Add Rule</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> हर रिक्वेस्ट में User-Agent को ऑटोमेटिक बदलना या CSRF टोकन रिप्लेस करना।</div>
+
+        <p><strong>🔹 10. Session Handling Rules - सेशन मैनेजमेंट:</strong></p>
+        <pre>Project Options → Sessions → Session Handling Rules</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> लॉगिन के बाद सेशन कुकी ऑटोमेटिक अपडेट करना।</div>
+
+        <p><strong>🔹 11. Macros - ऑटोमेटेड एक्शन:</strong></p>
+        <pre>Project Options → Sessions → Macros → Add</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> CSRF टोकन लेने के लिए पहले एक रिक्वेस्ट भेजना, फिर टोकन के साथ दूसरी रिक्वेस्ट भेजना।</div>
+
+        <p><strong>🔹 12. Scope (टारगेट सेट करना):</strong></p>
+        <pre>Target Tab → Scope → Add URL to Scope</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> सिर्फ target.com को स्कोप में रखें ताकि दूसरी वेबसाइटों का ट्रैफिक Proxy में न दिखे।</div>
+
+        <h3>🎯 Burp Suite के मुख्य टैब्स:</h3>
+        <ul>
+            <li><strong>Target:</strong> Site Map, Scope, और Target URLs की लिस्ट</li>
+            <li><strong>Proxy:</strong> Intercept, HTTP History, WebSockets History</li>
+            <li><strong>Intruder:</strong> पैरामीटर फजिंग और ब्रूटफोर्स अटैक</li>
+            <li><strong>Repeater:</strong> रिक्वेस्ट को मैन्युअली मॉडिफाई और रिप्ले करना</li>
+            <li><strong>Scanner:</strong> ऑटोमेटेड वल्नरेबिलिटी स्कैन (Professional)</li>
+            <li><strong>Spider:</strong> वेबसाइट क्रॉल करना</li>
+            <li><strong>Decoder:</strong> एन्कोडिंग/डीकोडिंग</li>
+            <li><strong>Comparer:</strong> दो रिस्पॉन्स कंपेयर करना</li>
+            <li><strong>Extender:</strong> एक्सटेंशन मैनेजमेंट</li>
+            <li><strong>Logger:</strong> सभी रिक्वेस्ट/रिस्पॉन्स का पूरा लॉग</li>
+        </ul>
+
+        <h3>🎯 Use Cases (उपयोग के तरीके)</h3>
+        <ul>
+            <li><strong>वेब एप्लीकेशन पेनिट्रेशन टेस्टिंग:</strong> SQL Injection, XSS, CSRF, IDOR, SSRF, और OWASP Top 10 वल्नरेबिलिटीज ढूँढना।</li>
+            <li><strong>बग बाउंटी:</strong> टारगेट वेबसाइट पर मैनुअल और ऑटोमेटेड टेस्टिंग।</li>
+            <li><strong>API टेस्टिंग:</strong> REST और GraphQL APIs की सुरक्षा टेस्टिंग।</li>
+            <li><strong>रेट लिमिट बायपास:</strong> Intruder से रेट लिमिट चेक करना।</li>
+            <li><strong>पैरामीटर फजिंग:</strong> Intruder से सभी पैरामीटर्स पर पेलोड्स भेजना।</li>
+            <li><strong>ऑथेंटिकेशन बायपास:</strong> कुकी, टोकन, और सेशन मैनेजमेंट टेस्टिंग।</li>
+        </ul>
+
+        <h3>⚙️ Key Features (मुख्य विशेषताएँ)</h3>
+        <ul>
+            <li>✔️ इंटरसेप्टिंग प्रॉक्सी - HTTP/HTTPS ट्रैफिक कैप्चर और मॉडिफाई</li>
+            <li>✔️ Intruder - ऑटोमेटेड अटैक (ब्रूटफोर्स, फजिंग, एन्यूमरेशन)</li>
+            <li>✔️ Repeater - मैनुअल रिक्वेस्ट मॉडिफाई और रिप्ले</li>
+            <li>✔️ Scanner - ऑटोमेटेड वल्नरेबिलिटी स्कैन (Professional)</li>
+            <li>✔️ Spider - वेबसाइट क्रॉल और मैपिंग</li>
+            <li>✔️ Extender - 100+ एक्सटेंशन (BApp Store)</li>
+            <li>✔️ Macros और Session Handling - ऑटोमेटेड सेशन मैनेजमेंट</li>
+            <li>✔️ Match and Replace - ऑटोमेटिक रिक्वेस्ट मॉडिफाई</li>
+            <li>✔️ Decoder - एन्कोडिंग/डीकोडिंग</li>
+            <li>✔️ Comparer - रिस्पॉन्स कंपेयर</li>
+            <li>✔️ प्रोजेक्ट फाइल्स - सारा डेटा सेव करना</li>
+            <li>✔️ Team Collaboration - टीम के साथ शेयर करना (Professional)</li>
+        </ul>
+
+        <div class="highlight">
+            <p><strong>📌 Burp Suite Community vs Professional:</strong></p>
+            <ul>
+                <li><strong>Community (फ्री):</strong> Proxy, Repeater, Intruder (स्लो, लिमिटेड थ्रेड्स), Decoder, Comparer, Extender</li>
+                <li><strong>Professional (पेड - $449/यूनिट):</strong> Scanner (ऑटोमेटेड स्कैन), Intruder (फास्ट), प्रोजेक्ट फाइल्स, Team Collaboration, CI/CD इंटीग्रेशन</li>
+                <li><strong>अनुशंसा:</strong> बिगिनर्स के लिए Community Edition काफी है। प्रोफेशनल बग बाउंटी और पेनिट्रेशन टेस्टर्स Professional Edition उपयोग करते हैं।</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <p><strong>📌 Burp Suite के लोकप्रिय एक्सटेंशन (BApp Store):</strong></p>
+            <ul>
+                <li><strong>Turbo Intruder:</strong> बहुत तेज इंट्रूडर (रेस कंडीशन, रेट लिमिट)</li>
+                <li><strong>Active Scan++:</strong> ज्यादा डीप वल्नरेबिलिटी स्कैन</li>
+                <li><strong>Logger++:</strong> सभी रिक्वेस्ट/रिस्पॉन्स का डिटेल्ड लॉग</li>
+                <li><strong>Autorize:</strong> IDOR (Insecure Direct Object Reference) टेस्टिंग</li>
+                <li><strong>JSON Web Tokens:</strong> JWT टोकन क्रैकिंग और मॉडिफाई</li>
+                <li><strong>Flow:</strong> रिक्वेस्ट/रिस्पॉन्स का टाइमलाइन व्यू</li>
+            </ul>
+        </div>
+
+        <h3>🔗 Official Resources</h3>
+        <ul>
+            <li><strong>Official Website:</strong> <a href="https://portswigger.net/burp" target="_blank">https://portswigger.net/burp</a></li>
+            <li><strong>Burp Suite Documentation:</strong> <a href="https://portswigger.net/burp/documentation" target="_blank">PortSwigger Docs</a></li>
+            <li><strong>BApp Store:</strong> <a href="https://portswigger.net/bappstore" target="_blank">https://portswigger.net/bappstore</a></li>
+            <li><strong>Web Security Academy:</strong> <a href="https://portswigger.net/web-security" target="_blank">Free Burp Suite Training</a></li>
+            <li><strong>GitHub Extensions:</strong> <a href="https://github.com/topics/burp-suite-extension" target="_blank">Burp Suite Extensions</a></li>
+        </ul>
+
+        <h3>🔧 Related Tools (समान उपकरण)</h3>
+        <ul>
+            <li><strong>OWASP ZAP:</strong> Burp Suite का फ्री विकल्प, ओपन-सोर्स</li>
+            <li><strong>Fiddler:</strong> HTTP डिबगिंग प्रॉक्सी (Windows)</li>
+            <li><strong>Charles Proxy:</strong> HTTP/HTTPS प्रॉक्सी</li>
+            <li><strong>Caido:</strong> नया वेब सिक्योरिटी टेस्टिंग टूल</li>
+            <li><strong>SQLmap:</strong> SQL Injection के लिए स्पेशलाइज्ड</li>
+            <li><strong>Wfuzz:</strong> वेब फजिंग टूल</li>
+        </ul>
+
+        <div class="highlight">
+            <p><strong>📌 Burp Suite के लिए जरूरी सावधानियाँ:</strong></p>
+            <ul>
+                <li>Intruder का उपयोग करते समय रेट लिमिट का ध्यान रखें</li>
+                <li>Scanner और Intruder सर्वर पर लोड बढ़ा सकते हैं</li>
+                <li>प्रोडक्शन सर्वर पर स्कैन करने से पहले अनुमति लें</li>
+                <li>Match and Replace का उपयोग सावधानी से करें</li>
+            </ul>
+        </div>
+
+        <h3>⚠️ Important Note (सावधानी)</h3>
+        <p><strong>Burp Suite एक शक्तिशाली वेब सिक्योरिटी टेस्टिंग टूल है। इसका उपयोग केवल उन्हीं वेबसाइट्स पर करें जिनकी आपको लिखित अनुमति हो। बिना अनुमति के स्कैन करना, Intruder से ब्रूटफोर्स करना, या वल्नरेबिलिटी एक्सप्लॉइट करना कानूनी अपराध है। हमेशा अपने खुद के वेब एप्लीकेशन, बग बाउंटी प्रोग्राम, या PortSwigger Web Security Academy पर ही प्रैक्टिस करें।</strong></p>
+
+        <button class="back-link" onclick="window.location.href='../index.html'">← Back to Home</button>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Ethical Learn — Empowering security researchers. All tools are for authorized testing only.</p>
+</footer>
+
+<script>
+    function openOverlay() {
+        let overlay = document.getElementById("globalToolsOverlay");
+        if (!overlay) {
+            overlay = document.createElement("div");
+            overlay.id = "globalToolsOverlay";
+            overlay.className = "tools-overlay";
+            overlay.innerHTML = `
+                <div class="tools-container">
+                    <button class="close-menu" id="closeOverlayBtnGlobal">✕</button>
+                    <h2 style="color:white; margin-bottom:0.5rem;">🛡️ Security Tools Arsenal</h2>
+                    <p style="color:#bbd4f0; margin-bottom:1rem;">Click any tool to open its dedicated page</p>
+                    <div class="tools-grid" id="globalToolsGrid"></div>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+            document.getElementById("closeOverlayBtnGlobal")?.addEventListener("click", () => overlay.classList.remove("open"));
+            overlay.addEventListener("click", (e) => { if (e.target === overlay) overlay.classList.remove("open"); });
+            const tools = ["Nmap", "Maltego", "theHarvester", "Recon-ng", "dnsenum", "dnsrecon", "Nikto", "OpenVAS", "OWASP ZAP", "SQLmap", "Burp Suite", "Commix", "Skipfish", "Wfuzz", "Hydra", "Hashcat", "John the Ripper", "Medusa", "Aircrack-ng", "Reaver", "Kismet", "Wifite", "Metasploit", "BeEF", "Armitage", "Wireshark", "Ettercap", "Bettercap", "Autopsy", "Binwalk", "Foremost"];
+            const grid = document.getElementById("globalToolsGrid");
+            if (grid) {
+                grid.className = "tools-grid";
+                let html = '';
+                tools.forEach(tool => {
+                    let filename = tool.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
+                    if (tool === "John the Ripper") filename = "john-the-ripper";
+                    if (tool === "OWASP ZAP") filename = "owasp-zap";
+                    if (tool === "Burp Suite") filename = "burpsuite";
+                    if (tool === "Recon-ng") filename = "recon-ng";
+                    if (tool === "theHarvester") filename = "theharvester";
+                    if (tool === "Aircrack-ng") filename = "aircrack-ng";
+                    html += `<div class="tool-category"><ul class="tool-list"><li><a href="../tools/${filename}.html">🔧 ${tool}</a></li></ul></div>`;
+                });
+                grid.innerHTML = html;
+            }
+        }
+        overlay.classList.add("open");
+    }
+    document.getElementById("navToolsTrigger")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); });
+    document.getElementById("mainToolsMenuBtn")?.addEventListener("click", () => openOverlay());
+    const mobileToggle = document.getElementById("mobileMenuToggle");
+    const mobilePanel = document.getElementById("mobileMenuPanel");
+    if (mobileToggle && mobilePanel) {
+        mobileToggle.addEventListener("click", () => { mobilePanel.style.display = mobilePanel.style.display === "none" || mobilePanel.style.display === "" ? "flex" : "none"; });
+        document.getElementById("mobileTools")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); mobilePanel.style.display = "none"; });
+        document.getElementById("mobileAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+        document.getElementById("mobileComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+    }
+    document.getElementById("navAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+    document.getElementById("navComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+</script>
+</body>
+</html>

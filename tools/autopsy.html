@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Autopsy - Ethical Learn | साइबर सिक्योरिटी टूल</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .tool-detail {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        }
+        .tool-detail h1 {
+            color: #1f6392;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        .tool-detail h3 {
+            margin: 1.8rem 0 0.8rem 0;
+            color: #0f2c3d;
+            border-left: 4px solid #1f6392;
+            padding-left: 12px;
+        }
+        .tool-detail pre {
+            background: #1e2a3a;
+            color: #eef4ff;
+            padding: 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            margin: 0.8rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .tool-detail .cmd-note {
+            color: #4a6a7a;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid #7bc6e6;
+        }
+        .tool-detail ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .tool-detail li {
+            margin: 0.5rem 0;
+            line-height: 1.5;
+        }
+        .tool-detail a {
+            color: #1f6392;
+            text-decoration: none;
+        }
+        .tool-detail a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            background: #1f6392;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        .back-link:hover {
+            background: #0f4b6e;
+            transform: scale(0.98);
+        }
+        .badge {
+            display: inline-block;
+            background: #eef2fa;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            color: #1f6392;
+        }
+        hr {
+            margin: 1.5rem 0;
+            border-color: #e0e7f0;
+        }
+        .highlight {
+            background: #f0f7ff;
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+        }
+        @media (max-width: 780px) {
+            .tool-detail {
+                margin: 1rem;
+                padding: 1.2rem;
+            }
+            .tool-detail h1 {
+                font-size: 1.5rem;
+            }
+            pre {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+        <!-- Google AdSense Code -->
+    <meta name="google-adsense-account" content="ca-pub-6124052333813612">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6124052333813612"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo-area">
+            <div class="ethical-logo"><span>EL</span></div>
+            <div class="logo-text"><h1>Ethical Learn</h1><p>cyber security hub</p></div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#" id="navToolsTrigger">Tools</a>
+            <a href="about.html" id="navAbout">About</a>
+            <a href="contant.html" id="navComment">Comment</a>
+        </div>
+        <button class="menu-btn" id="mainToolsMenuBtn"><span class="menu-icon">🛠️</span> Tools Menu</button>
+        <button class="mobile-menu-icon" id="mobileMenuToggle">☰</button>
+    </div>
+    <div id="mobileMenuPanel" style="display: none; background:#0e1c2c; padding: 1rem 2rem; flex-direction: column; gap: 1rem; border-bottom: 1px solid #2c7da0;">
+        <a href="../index.html" style="color:white; text-decoration:none;">🏠 Home</a>
+        <a href="#" id="mobileTools" style="color:white; text-decoration:none;">🛠️ Tools</a>
+        <a href="#" id="mobileAbout" style="color:white; text-decoration:none;">📖 About</a>
+        <a href="#" id="mobileComment" style="color:white; text-decoration:none;">💬 Comment</a>
+    </div>
+</header>
+
+<main>
+  <!-- Header Ad -->
+<div class="ad-container ad-header" style="max-width: 1200px; margin: 10px auto;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6124052333813612"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <div class="tool-detail">
+        <h1>🔬 Autopsy - Digital Forensics Platform</h1>
+        <p><span class="badge">🔍 Digital Forensics</span> <span class="badge">💾 Disk Analysis</span> <span class="badge">🕵️ Evidence Recovery</span></p>
+        <p><strong>Category:</strong> 8️⃣ Forensics Tools</p>
+        <hr>
+
+        <h3>📝 Description</h3>
+        <p>Autopsy एक ग्राफिकल डिजिटल फॉरेंसिक प्लेटफॉर्म है जो The Sleuth Kit (TSK) पर आधारित है। यह हार्ड ड्राइव, मेमोरी कार्ड, और मोबाइल डिवाइस से डेटा रिकवर करने और एनालिसिस करने के लिए उपयोग किया जाता है। Autopsy स्वचालित रूप से फाइल्स, फोटो, ईमेल, चैट हिस्ट्री, वेब हिस्ट्री, और डिलीट की गई फाइल्स को रिकवर करता है। यह साइबर अपराध जांच, फॉरेंसिक इन्वेस्टिगेशन, और डेटा रिकवरी के लिए सबसे लोकप्रिय टूल है।</p>
+        <p><strong>विशेषता:</strong> Autopsy की सबसे बड़ी खासियत है इसका यूजर-फ्रेंडली GUI और ऑटोमेटेड एनालिसिस। यह आपको फाइल सिस्टम ब्राउज़ करने, डिलीट फाइल्स रिकवर करने, और डेटा की टाइमलाइन बनाने की सुविधा देता है।</p>
+
+        <h3>📦 Installation</h3>
+        <p><strong>Kali Linux (पहले से इंस्टॉल):</strong></p>
+        <pre>autopsy</pre>
+        <p><strong>Ubuntu/Debian:</strong></p>
+        <pre>sudo apt update
+sudo apt install autopsy -y</pre>
+        <p><strong>Windows:</strong></p>
+        <pre>https://www.autopsy.com/download/ से डाउनलोड करें और इंस्टॉल करें।</pre>
+        <p><strong>macOS:</strong></p>
+        <pre>brew install autopsy</pre>
+
+        <h3>💻 Autopsy के मुख्य फीचर्स (उदाहरण सहित)</h3>
+        
+        <div class="highlight">
+            <p><strong>📌 Autopsy शुरू करना:</strong></p>
+            <pre>sudo autopsy</pre>
+            <div class="cmd-note">👉 <strong>उदाहरण:</strong> Web Interface: http://127.0.0.1:9999/autopsy पर उपलब्ध होता है।</div>
+        </div>
+        
+        <p><strong>🔹 1. नया केस (Case) बनाना:</strong></p>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> "File → New Case" → केस नाम दें (जैसे "Cyber_Crime_Case_001") → Create.</div>
+
+        <p><strong>🔹 2. डिस्क इमेज या ड्राइव जोड़ना:</strong></p>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> "Add Data Source" → डिस्क इमेज (E01, DD, RAW) या फिजिकल ड्राइव सेलेक्ट करें → Next.</div>
+
+        <p><strong>🔹 3. ऑटोमेटेड एनालिसिस (Ingest Modules):</strong></p>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> इमेज जोड़ने के बाद Ingest Modules सेलेक्ट करें (Recent Activity, Hash Lookup, Email Parser, etc.) → Start.</div>
+
+        <p><strong>🔹 4. डिलीट फाइल्स रिकवर करना:</strong></p>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Data Sources → Deleted Files → डिलीट फाइल्स की लिस्ट दिखती है → Right Click → Extract File.</div>
+
+        <p><strong>🔹 5. फाइल सिस्टम ब्राउज़ करना:</strong></p>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> File View → डायरेक्टरी स्ट्रक्चर में जाकर फाइल्स देख सकते हैं।</div>
+
+        <p><strong>🔹 6. टाइमलाइन व्यू:</strong></p>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Timeline Tab → टाइम के हिसाब से सभी गतिविधियाँ दिखती हैं (फाइल क्रिएशन, डिलीशन, एक्सेस).</div>
+
+        <p><strong>🔹 7. ईमेल एनालिसिस:</strong></p>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Email Tab → PST, OST, MBOX फाइल्स से ईमेल पढ़ सकते हैं.</div>
+
+        <p><strong>🔹 8. वेब हिस्ट्री एनालिसिस:</strong></p>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Web Bookmarks Tab → Chrome, Firefox, Edge से ब्राउज़र हिस्ट्री, बुकमार्क्स, कुकीज़ देख सकते हैं.</div>
+
+        <p><strong>🔹 9. रिपोर्ट जनरेट करना:</strong></p>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Generate Report → HTML, Excel, PDF फॉर्मेट में रिपोर्ट बना सकते हैं.</div>
+
+        <p><strong>🔹 10. कीवर्ड सर्च:</strong></p>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Keyword Search Tab → "password", "confidential" जैसे कीवर्ड सर्च कर सकते हैं.</div>
+
+        <h3>🎯 Autopsy के मुख्य मॉड्यूल्स (Ingest Modules):</h3>
+        <ul>
+            <li><strong>Recent Activity:</strong> हाल की गतिविधियाँ (फाइल्स, ऐप्स, डॉक्यूमेंट्स)</li>
+            <li><strong>Hash Lookup:</strong> NSRL (National Software Reference Library) से हैश मिलान</li>
+            <li><strong>Email Parser:</strong> ईमेल फाइल्स (PST, OST, MBOX) पार्स करना</li>
+            <li><strong>Web Bookmarks:</strong> ब्राउज़र हिस्ट्री, बुकमार्क्स, कुकीज़</li>
+            <li><strong>Exif Parser:</strong> फोटो से मेटाडेटा (GPS लोकेशन, कैमरा मॉडल, डेट)</li>
+            <li><strong>File Type Identification:</strong> फाइल टाइप डिटेक्शन (सिग्नेचर बेस्ड)</li>
+            <li><strong>Embedded File Extractor:</strong> जिप, पीडीएफ, ऑफिस फाइल्स से एंबेडेड फाइल्स निकालना</li>
+            <li><strong>PhotoRec Carver:</strong> डिलीट फाइल्स को कार्विंग करना</li>
+            <li><strong>Android Analyzer:</strong> एंड्रॉइड बैकअप और इमेज एनालिसिस</li>
+        </ul>
+
+        <h3>🎯 Use Cases (उपयोग के तरीके)</h3>
+        <ul>
+            <li><strong>साइबर अपराध जांच:</strong> संदिग्ध ड्राइव से सबूत इकट्ठा करना।</li>
+            <li><strong>डेटा रिकवरी:</strong> डिलीट की गई फाइल्स, फोटो, दस्तावेज़ रिकवर करना।</li>
+            <li><strong>फॉरेंसिक ऑडिट:</strong> कंपनी के एम्प्लॉयी की गतिविधियों की जांच।</li>
+            <li><strong>मैलवेयर एनालिसिस:</strong> संक्रमित सिस्टम से मैलवेयर आर्टिफैक्ट्स ढूँढना।</li>
+            <li><strong>मोबाइल फॉरेंसिक:</strong> एंड्रॉइड और iOS बैकअप एनालिसिस।</li>
+        </ul>
+
+        <h3>⚙️ Key Features (मुख्य विशेषताएँ)</h3>
+        <ul>
+            <li>✔️ ग्राफिकल यूजर इंटरफेस (Web-based)</li>
+            <li>✔️ ऑटोमेटेड एनालिसिस (Ingest Modules)</li>
+            <li>✔️ डिलीट फाइल्स रिकवरी</li>
+            <li>✔️ फाइल सिस्टम सपोर्ट (NTFS, FAT, exFAT, EXT, HFS+)</li>
+            <li>✔️ ईमेल एनालिसिस (PST, OST, MBOX)</li>
+            <li>✔️ वेब ब्राउज़र हिस्ट्री (Chrome, Firefox, Edge, IE)</li>
+            <li>✔️ टाइमलाइन व्यू</li>
+            <li>✔️ कीवर्ड सर्च और रेगुलर एक्सप्रेशन</li>
+            <li>✔️ हैश लुकअप (NSRL, कस्टम)</li>
+            <li>✔️ एक्सिफ मेटाडेटा पार्सर (फोटो से GPS लोकेशन)</li>
+            <li>✔️ एंड्रॉइड और iOS सपोर्ट</li>
+            <li>✔️ HTML, Excel, PDF फॉर्मेट में रिपोर्ट</li>
+            <li>✔️ ओपन-सोर्स और फ्री</li>
+        </ul>
+
+        <div class="highlight">
+            <p><strong>📌 Autopsy के लिए सपोर्टेड इमेज फॉर्मेट:</strong></p>
+            <ul>
+                <li><strong>DD / RAW:</strong> .dd, .raw, .img</li>
+                <li><strong>E01 (EnCase):</strong> .e01, .e02</li>
+                <li><strong>AFF (Advanced Forensic Format):</strong> .aff, .afm</li>
+                <li><strong>Logical Files:</strong> फोल्डर या एकल फाइल</li>
+                <li><strong>Physical Drive:</strong> लाइव ड्राइव (Windows: \\.\PhysicalDrive0, Linux: /dev/sda)</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <p><strong>📌 Autopsy vs The Sleuth Kit (TSK):</strong></p>
+            <ul>
+                <li><strong>Autopsy:</strong> GUI, Web-based, ऑटोमेटेड, बिगिनर-फ्रेंडली</li>
+                <li><strong>The Sleuth Kit (TSK):</strong> कमांड लाइन, मैनुअल, एक्सपर्ट्स के लिए</li>
+                <li><strong>अनुशंसा:</strong> Autopsy से शुरुआत करें, फिर TSK कमांड्स सीखें।</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <p><strong>📌 Autopsy के लिए सुझाव:</strong></p>
+            <ul>
+                <li>हमेशा डिस्क इमेज (E01) बनाकर काम करें, लाइव ड्राइव पर नहीं</li>
+                <li>पहले Quick Ingest Modules चुनें (Recent Activity, Hash Lookup, Email Parser)</li>
+                <li>टाइमलाइन से घटनाओं का क्रम समझें</li>
+                <li>डिलीट फाइल्स को पहले रिकवर करें</li>
+                <li>रिपोर्ट जनरेट करना न भूलें (HTML फॉर्मेट सबसे अच्छा)</li>
+            </ul>
+        </div>
+
+        <h3>🔗 Official Resources</h3>
+        <ul>
+            <li><strong>Official Website:</strong> <a href="https://www.autopsy.com" target="_blank">https://www.autopsy.com</a></li>
+            <li><strong>GitHub Repository:</strong> <a href="https://github.com/sleuthkit/autopsy" target="_blank">https://github.com/sleuthkit/autopsy</a></li>
+            <li><strong>Documentation:</strong> <a href="https://www.autopsy.com/documentation/" target="_blank">Autopsy User Guide</a></li>
+            <li><strong>The Sleuth Kit:</strong> <a href="https://www.sleuthkit.org" target="_blank">https://www.sleuthkit.org</a></li>
+        </ul>
+
+        <h3>🔧 Related Tools (समान उपकरण)</h3>
+        <ul>
+            <li><strong>The Sleuth Kit (TSK):</strong> Autopsy का कमांड लाइन वर्शन</li>
+            <li><strong>FTK Imager:</strong> फोरेंसिक इमेजिंग टूल (AccessData)</li>
+            <li><strong>EnCase:</strong> कमर्शियल फोरेंसिक टूल</li>
+            <li><strong>X-Ways Forensics:</strong> एडवांस्ड फोरेंसिक टूल</li>
+            <li><strong>Foremost:</strong> फाइल कार्विंग टूल</li>
+            <li><strong>Binwalk:</strong> फर्मवेयर एनालिसिस टूल</li>
+        </ul>
+
+        <h3>⚠️ Important Note (सावधानी)</h3>
+        <p><strong>Autopsy एक शक्तिशाली डिजिटल फॉरेंसिक टूल है। इसका उपयोग केवल कानूनी और नैतिक उद्देश्यों के लिए करें। बिना अनुमति के किसी की डिस्क एनालिसिस करना कानूनी अपराध है। हमेशा अपने खुद के डेटा या कानूनी रूप से अधिकृत केस पर ही प्रैक्टिस करें। फोरेंसिक जांच में डिस्क इमेज की इंटीग्रिटी बनाए रखें (हैश वेरिफिकेशन)। Autopsy का उपयोग सीखने और सुरक्षा ऑडिट के लिए करें, न कि अनधिकृत डेटा एक्सेस के लिए।</strong></p>
+
+        <button class="back-link" onclick="window.location.href='../index.html'">← Back to Home</button>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Ethical Learn — Empowering security researchers. All tools are for authorized testing only.</p>
+</footer>
+
+<script>
+    function openOverlay() {
+        let overlay = document.getElementById("globalToolsOverlay");
+        if (!overlay) {
+            overlay = document.createElement("div");
+            overlay.id = "globalToolsOverlay";
+            overlay.className = "tools-overlay";
+            overlay.innerHTML = `
+                <div class="tools-container">
+                    <button class="close-menu" id="closeOverlayBtnGlobal">✕</button>
+                    <h2 style="color:white; margin-bottom:0.5rem;">🛡️ Security Tools Arsenal</h2>
+                    <p style="color:#bbd4f0; margin-bottom:1rem;">Click any tool to open its dedicated page</p>
+                    <div class="tools-grid" id="globalToolsGrid"></div>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+            document.getElementById("closeOverlayBtnGlobal")?.addEventListener("click", () => overlay.classList.remove("open"));
+            overlay.addEventListener("click", (e) => { if (e.target === overlay) overlay.classList.remove("open"); });
+            const tools = ["Nmap", "Maltego", "theHarvester", "Recon-ng", "dnsenum", "dnsrecon", "Nikto", "OpenVAS", "OWASP ZAP", "SQLmap", "Burp Suite", "Commix", "Skipfish", "Wfuzz", "Hydra", "Hashcat", "John the Ripper", "Medusa", "Aircrack-ng", "Reaver", "Kismet", "Wifite", "Metasploit", "BeEF", "Armitage", "Wireshark", "Ettercap", "Bettercap", "Autopsy", "Binwalk", "Foremost"];
+            const grid = document.getElementById("globalToolsGrid");
+            if (grid) {
+                grid.className = "tools-grid";
+                let html = '';
+                tools.forEach(tool => {
+                    let filename = tool.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
+                    if (tool === "John the Ripper") filename = "john-the-ripper";
+                    if (tool === "OWASP ZAP") filename = "owasp-zap";
+                    if (tool === "Burp Suite") filename = "burpsuite";
+                    if (tool === "Recon-ng") filename = "recon-ng";
+                    if (tool === "theHarvester") filename = "theharvester";
+                    if (tool === "Aircrack-ng") filename = "aircrack-ng";
+                    html += `<div class="tool-category"><ul class="tool-list"><li><a href="../tools/${filename}.html">🔧 ${tool}</a></li></ul></div>`;
+                });
+                grid.innerHTML = html;
+            }
+        }
+        overlay.classList.add("open");
+    }
+    document.getElementById("navToolsTrigger")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); });
+    document.getElementById("mainToolsMenuBtn")?.addEventListener("click", () => openOverlay());
+    const mobileToggle = document.getElementById("mobileMenuToggle");
+    const mobilePanel = document.getElementById("mobileMenuPanel");
+    if (mobileToggle && mobilePanel) {
+        mobileToggle.addEventListener("click", () => { mobilePanel.style.display = mobilePanel.style.display === "none" || mobilePanel.style.display === "" ? "flex" : "none"; });
+        document.getElementById("mobileTools")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); mobilePanel.style.display = "none"; });
+        document.getElementById("mobileAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+        document.getElementById("mobileComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+    }
+    document.getElementById("navAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+    document.getElementById("navComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+</script>
+</body>
+</html>

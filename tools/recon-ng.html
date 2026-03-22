@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Recon-ng - Ethical Learn | साइबर सिक्योरिटी टूल</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .tool-detail {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        }
+        .tool-detail h1 {
+            color: #1f6392;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        .tool-detail h3 {
+            margin: 1.8rem 0 0.8rem 0;
+            color: #0f2c3d;
+            border-left: 4px solid #1f6392;
+            padding-left: 12px;
+        }
+        .tool-detail pre {
+            background: #1e2a3a;
+            color: #eef4ff;
+            padding: 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            margin: 0.8rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .tool-detail .cmd-note {
+            color: #4a6a7a;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid #7bc6e6;
+        }
+        .tool-detail ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .tool-detail li {
+            margin: 0.5rem 0;
+            line-height: 1.5;
+        }
+        .tool-detail a {
+            color: #1f6392;
+            text-decoration: none;
+        }
+        .tool-detail a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            background: #1f6392;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        .back-link:hover {
+            background: #0f4b6e;
+            transform: scale(0.98);
+        }
+        .badge {
+            display: inline-block;
+            background: #eef2fa;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            color: #1f6392;
+        }
+        hr {
+            margin: 1.5rem 0;
+            border-color: #e0e7f0;
+        }
+        .highlight {
+            background: #f0f7ff;
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+        }
+        @media (max-width: 780px) {
+            .tool-detail {
+                margin: 1rem;
+                padding: 1.2rem;
+            }
+            .tool-detail h1 {
+                font-size: 1.5rem;
+            }
+            pre {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+        <!-- Google AdSense Code -->
+    <meta name="google-adsense-account" content="ca-pub-6124052333813612">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6124052333813612"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo-area">
+            <div class="ethical-logo"><span>EL</span></div>
+            <div class="logo-text"><h1>Ethical Learn</h1><p>cyber security hub</p></div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#" id="navToolsTrigger">Tools</a>
+            <a href="about.html" id="navAbout">About</a>
+            <a href="contant.html" id="navComment">Comment</a>
+        </div>
+        <button class="menu-btn" id="mainToolsMenuBtn"><span class="menu-icon">🛠️</span> Tools Menu</button>
+        <button class="mobile-menu-icon" id="mobileMenuToggle">☰</button>
+    </div>
+    <div id="mobileMenuPanel" style="display: none; background:#0e1c2c; padding: 1rem 2rem; flex-direction: column; gap: 1rem; border-bottom: 1px solid #2c7da0;">
+        <a href="../index.html" style="color:white; text-decoration:none;">🏠 Home</a>
+        <a href="#" id="mobileTools" style="color:white; text-decoration:none;">🛠️ Tools</a>
+        <a href="#" id="mobileAbout" style="color:white; text-decoration:none;">📖 About</a>
+        <a href="#" id="mobileComment" style="color:white; text-decoration:none;">💬 Comment</a>
+    </div>
+</header>
+
+<main>
+  <!-- Header Ad -->
+<div class="ad-container ad-header" style="max-width: 1200px; margin: 10px auto;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6124052333813612"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <div class="tool-detail">
+        <h1>🎯 Recon-ng - Full Reconnaissance Framework</h1>
+        <p><span class="badge">🔍 OSINT</span> <span class="badge">🛠️ Framework</span> <span class="badge">🤖 Automation</span></p>
+        <p><strong>Category:</strong> 1️⃣ Information Gathering Tools</p>
+        <hr>
+
+        <h3>📝 Description</h3>
+        <p>Recon-ng एक पूर्ण (full-featured) रिकॉनिसेंस फ्रेमवर्क है जो Python में लिखा गया है। इसे Metasploit की तर्ज पर डिजाइन किया गया है, लेकिन यह एक्सप्लॉइटेशन नहीं करता, बल्कि सिर्फ OSINT (Open Source Intelligence) डेटा इकट्ठा करता है। इसमें 100+ मॉड्यूल हैं जो विभिन्न सोर्सेस (Google, Bing, GitHub, Shodan, Twitter, LinkedIn, और भी बहुत कुछ) से डेटा लाते हैं। Recon-ng की सबसे बड़ी खासियत है इसका ऑटोमेशन - आप अपने रिकॉनिसेंस वर्कफ्लो को पूरी तरह से ऑटोमेट कर सकते हैं।</p>
+        <p><strong>विशेषता:</strong> Recon-ng का इंटरफेस Metasploit जैसा है, इसलिए जिन्हें Metasploit आता है, वे इसे आसानी से सीख सकते हैं। इसमें डेटाबेस इंटीग्रेशन भी है, जिससे सारा डेटा स्टोर हो जाता है।</p>
+
+        <h3>📦 Installation</h3>
+        <p><strong>Kali Linux (पहले से इंस्टॉल):</strong></p>
+        <pre>recon-ng</pre>
+        <p><strong>Ubuntu/Debian - GitHub से:</strong></p>
+        <pre>sudo apt update
+sudo apt install git python3-pip -y
+git clone https://github.com/lanmaster53/recon-ng.git
+cd recon-ng
+pip3 install -r REQUIREMENTS
+python3 recon-ng</pre>
+        <p><strong>macOS:</strong></p>
+        <pre>git clone https://github.com/lanmaster53/recon-ng.git
+cd recon-ng
+pip3 install -r REQUIREMENTS
+python3 recon-ng</pre>
+        <p><strong>Docker से चलाना:</strong></p>
+        <pre>docker pull lanmaster53/recon-ng
+docker run -it lanmaster53/recon-ng</pre>
+
+        <h3>💻 Common Commands (उदाहरण सहित)</h3>
+        
+        <div class="highlight">
+            <p><strong>📌 Recon-ng इंटरफेस में आने के बाद:</strong></p>
+        </div>
+        
+        <p><strong>🔹 1. सभी उपलब्ध मॉड्यूल देखना:</strong></p>
+        <pre>marketplace search</pre>
+        <pre>marketplace install all</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> पहले मार्केटप्लेस से सभी मॉड्यूल इंस्टॉल करें, फिर उपयोग करें।</div>
+
+        <p><strong>🔹 2. किसी विशेष कैटेगरी के मॉड्यूल देखना:</strong></p>
+        <pre>marketplace search recon/domains-hosts</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> डोमेन और होस्ट से जुड़े सभी मॉड्यूल दिखाएगा।</div>
+
+        <p><strong>🔹 3. वर्कस्पेस बनाना और सेलेक्ट करना:</strong></p>
+        <pre>workspaces create target_company</pre>
+        <pre>workspaces list</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> target_company नाम की वर्कस्पेस बनाएगा, जहाँ सारा डेटा सेव होगा।</div>
+
+        <p><strong>🔹 4. API Keys कॉन्फ़िगर करना (जरूरी):</strong></p>
+        <pre>keys list</pre>
+        <pre>keys add shodan_api <YOUR_SHODAN_API_KEY></pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Shodan, GitHub, Twitter, Google APIs के लिए API keys डालना जरूरी है।</div>
+
+        <p><strong>🔹 5. मॉड्यूल लोड करना और उपयोग करना:</strong></p>
+        <pre>modules load recon/domains-hosts/google_site_web</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> यह मॉड्यूल Google से साइट से जुड़े डोमेन ढूँढता है।</div>
+
+        <p><strong>🔹 6. मॉड्यूल के ऑप्शन देखना और सेट करना:</strong></p>
+        <pre>options list</pre>
+        <pre>set SOURCE target.com</pre>
+        <pre>run</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> SOURCE में target.com डालें और run करें। मॉड्यूल चल जाएगा।</div>
+
+        <p><strong>🔹 7. डोमेन से सबडोमेन ढूँढना (DNS ब्रूटफोर्स):</strong></p>
+        <pre>modules load recon/domains-hosts/brute_hosts</pre>
+        <pre>set SOURCE target.com</pre>
+        <pre>run</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> target.com के सभी सबडोमेन ढूँढेगा जैसे mail.target.com, admin.target.com।</div>
+
+        <p><strong>🔹 8. LinkedIn से कर्मचारी ढूँढना:</strong></p>
+        <pre>modules load recon/companies-contacts/linkedin</pre>
+        <pre>set SOURCE "Target Company"</pre>
+        <pre>run</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> कंपनी के नाम से LinkedIn प्रोफाइल और कर्मचारियों की जानकारी मिलती है।</div>
+
+        <p><strong>🔹 9. ईमेल हार्वेस्टिंग - Google से:</strong></p>
+        <pre>modules load recon/contacts-credentials/hibp_email</pre>
+        <pre>set SOURCE admin@target.com</pre>
+        <pre>run</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Have I Been Pwned (HIBP) से चेक करता है कि ईमेल किसी डेटा ब्रीच में है या नहीं।</div>
+
+        <p><strong>🔹 10. Shodan से IP और पोर्ट जानकारी:</strong></p>
+        <pre>modules load recon/hosts-hosts/shodan_host</pre>
+        <pre>set SOURCE target.com</pre>
+        <pre>run</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Shodan से target.com से जुड़े IP, खुले पोर्ट, और वल्नरेबिलिटी की जानकारी मिलती है।</div>
+
+        <p><strong>🔹 11. सभी कलेक्ट किए डेटा देखना:</strong></p>
+        <pre>show hosts</pre>
+        <pre>show contacts</pre>
+        <pre>show domains</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> अब तक कलेक्ट किए सभी होस्ट, कॉन्टैक्ट्स, डोमेन देख सकते हैं।</div>
+
+        <p><strong>🔹 12. रिपोर्ट जनरेट करना:</strong></p>
+        <pre>modules load reporting/html</pre>
+        <pre>set SOURCE target_company</pre>
+        <pre>run</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> सारे कलेक्ट किए डेटा का HTML रिपोर्ट बनाएगा।</div>
+
+        <p><strong>🔹 13. सभी मॉड्यूल एक साथ चलाना (ऑटोमेशन):</strong></p>
+        <pre>script run recon_automation.rc</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> आप एक रिसोर्स फाइल बना सकते हैं जिसमें सभी कमांड्स हों, और एक कमांड से सब चला सकते हैं।</div>
+
+        <h3>🎯 Use Cases (उपयोग के तरीके)</h3>
+        <ul>
+            <li><strong>बग बाउंटी:</strong> टारगेट डोमेन के सभी सबडोमेन, ईमेल, IP, और पोर्ट की पूरी जानकारी इकट्ठा करना।</li>
+            <li><strong>पेनिट्रेशन टेस्टिंग:</strong> रिकॉनिसेंस फेज को पूरी तरह से ऑटोमेट करना।</li>
+            <li><strong>OSINT जांच:</strong> किसी कंपनी या व्यक्ति की ऑनलाइन उपस्थिति की पूरी मैपिंग करना।</li>
+            <li><strong>डेटा ब्रीच इन्वेस्टिगेशन:</strong> HIBP मॉड्यूल से पता करना कि ईमेल किसी ब्रीच में है या नहीं।</li>
+            <li><strong>सोशल इंजीनियरिंग:</strong> कंपनी के कर्मचारियों की जानकारी और ईमेल पैटर्न ढूँढना।</li>
+        </ul>
+
+        <h3>⚙️ Key Features (मुख्य विशेषताएँ)</h3>
+        <ul>
+            <li>✔️ 100+ मॉड्यूल - डोमेन, होस्ट, कॉन्टैक्ट्स, क्रेडेंशियल्स, रिपोर्टिंग</li>
+            <li>✔️ डेटाबेस इंटीग्रेशन - सारा डेटा SQLite में सेव होता है</li>
+            <li>✔️ Metasploit जैसा इंटरफेस - आसानी से सीखने में</li>
+            <li>✔️ वर्कस्पेस - अलग-अलग प्रोजेक्ट्स को अलग रखना</li>
+            <li>✔️ API Keys सपोर्ट - Shodan, GitHub, Twitter, Google, और बहुत कुछ</li>
+            <li>✔️ रिपोर्टिंग - HTML, CSV, JSON में रिपोर्ट एक्सपोर्ट करना</li>
+            <li>✔️ ऑटोमेशन - रिसोर्स स्क्रिप्ट्स से पूरा वर्कफ्लो ऑटोमेट</li>
+            <li>✔️ मार्केटप्लेस - नए मॉड्यूल आसानी से इंस्टॉल करना</li>
+        </ul>
+
+        <h3>🔗 Official Resources</h3>
+        <ul>
+            <li><strong>GitHub Repository:</strong> <a href="https://github.com/lanmaster53/recon-ng" target="_blank">https://github.com/lanmaster53/recon-ng</a></li>
+            <li><strong>Official Documentation:</strong> <a href="https://recon-ng.com/docs/" target="_blank">https://recon-ng.com/docs/</a></li>
+            <li><strong>Official Website:</strong> <a href="https://recon-ng.com" target="_blank">https://recon-ng.com</a></li>
+            <li><strong>YouTube Tutorials:</strong> <a href="https://www.youtube.com/results?search_query=recon-ng+tutorial" target="_blank">Recon-ng Tutorials</a></li>
+        </ul>
+
+        <h3>🔧 Related Tools (समान उपकरण)</h3>
+        <ul>
+            <li><strong>theHarvester:</strong> ईमेल और सबडोमेन हार्वेस्टिंग के लिए</li>
+            <li><strong>Maltego:</strong> ग्राफिकल OSINT टूल</li>
+            <li><strong>SpiderFoot:</strong> ऑटोमेटेड OSINT फ्रेमवर्क</li>
+            <li><strong>Amass:</strong> सबडोमेन डिस्कवरी के लिए बेस्ट</li>
+            <li><strong>Sn1per:</strong> ऑटोमेटेड पेनिट्रेशन टेस्टिंग टूल</li>
+        </ul>
+
+        <h3>⚠️ Important Note (सावधानी)</h3>
+        <p><strong>Recon-ng केवल पब्लिकली उपलब्ध डेटा इकट्ठा करता है। इसका उपयोग केवल कानूनी उद्देश्यों के लिए करें। बिना अनुमति के किसी कंपनी या व्यक्ति की जानकारी इकट्ठा करना कानूनी अपराध हो सकता है। कुछ मॉड्यूल के लिए API keys की आवश्यकता होती है। हमेशा अपने खुद के डोमेन या बग बाउंटी प्रोग्राम पर ही प्रैक्टिस करें।</strong></p>
+
+        <button class="back-link" onclick="window.location.href='../index.html'">← Back to Home</button>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Ethical Learn — Empowering security researchers. All tools are for authorized testing only.</p>
+</footer>
+
+<script>
+    function openOverlay() {
+        let overlay = document.getElementById("globalToolsOverlay");
+        if (!overlay) {
+            overlay = document.createElement("div");
+            overlay.id = "globalToolsOverlay";
+            overlay.className = "tools-overlay";
+            overlay.innerHTML = `
+                <div class="tools-container">
+                    <button class="close-menu" id="closeOverlayBtnGlobal">✕</button>
+                    <h2 style="color:white; margin-bottom:0.5rem;">🛡️ Security Tools Arsenal</h2>
+                    <p style="color:#bbd4f0; margin-bottom:1rem;">Click any tool to open its dedicated page</p>
+                    <div class="tools-grid" id="globalToolsGrid"></div>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+            document.getElementById("closeOverlayBtnGlobal")?.addEventListener("click", () => overlay.classList.remove("open"));
+            overlay.addEventListener("click", (e) => { if (e.target === overlay) overlay.classList.remove("open"); });
+            const tools = ["Nmap", "Maltego", "theHarvester", "Recon-ng", "dnsenum", "dnsrecon", "Nikto", "OpenVAS", "OWASP ZAP", "SQLmap", "Burp Suite", "Commix", "Skipfish", "Wfuzz", "Hydra", "Hashcat", "John the Ripper", "Medusa", "Aircrack-ng", "Reaver", "Kismet", "Wifite", "Metasploit", "BeEF", "Armitage", "Wireshark", "Ettercap", "Bettercap", "Autopsy", "Binwalk", "Foremost"];
+            const grid = document.getElementById("globalToolsGrid");
+            if (grid) {
+                grid.className = "tools-grid";
+                let html = '';
+                tools.forEach(tool => {
+                    let filename = tool.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
+                    if (tool === "John the Ripper") filename = "john-the-ripper";
+                    if (tool === "OWASP ZAP") filename = "owasp-zap";
+                    if (tool === "Burp Suite") filename = "burpsuite";
+                    if (tool === "Recon-ng") filename = "recon-ng";
+                    if (tool === "theHarvester") filename = "theharvester";
+                    if (tool === "Aircrack-ng") filename = "aircrack-ng";
+                    html += `<div class="tool-category"><ul class="tool-list"><li><a href="../tools/${filename}.html">🔧 ${tool}</a></li></ul></div>`;
+                });
+                grid.innerHTML = html;
+            }
+        }
+        overlay.classList.add("open");
+    }
+    document.getElementById("navToolsTrigger")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); });
+    document.getElementById("mainToolsMenuBtn")?.addEventListener("click", () => openOverlay());
+    const mobileToggle = document.getElementById("mobileMenuToggle");
+    const mobilePanel = document.getElementById("mobileMenuPanel");
+    if (mobileToggle && mobilePanel) {
+        mobileToggle.addEventListener("click", () => { mobilePanel.style.display = mobilePanel.style.display === "none" || mobilePanel.style.display === "" ? "flex" : "none"; });
+        document.getElementById("mobileTools")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); mobilePanel.style.display = "none"; });
+        document.getElementById("mobileAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+        document.getElementById("mobileComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+    }
+    document.getElementById("navAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+    document.getElementById("navComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+</script>
+</body>
+</html>

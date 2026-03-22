@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Maltego - Ethical Learn | साइबर सिक्योरिटी टूल</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .tool-detail {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        }
+        .tool-detail h1 {
+            color: #1f6392;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        .tool-detail h3 {
+            margin: 1.8rem 0 0.8rem 0;
+            color: #0f2c3d;
+            border-left: 4px solid #1f6392;
+            padding-left: 12px;
+        }
+        .tool-detail pre {
+            background: #1e2a3a;
+            color: #eef4ff;
+            padding: 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            margin: 0.8rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .tool-detail .cmd-note {
+            color: #4a6a7a;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid #7bc6e6;
+        }
+        .tool-detail ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .tool-detail li {
+            margin: 0.5rem 0;
+            line-height: 1.5;
+        }
+        .tool-detail a {
+            color: #1f6392;
+            text-decoration: none;
+        }
+        .tool-detail a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            background: #1f6392;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        .back-link:hover {
+            background: #0f4b6e;
+            transform: scale(0.98);
+        }
+        .badge {
+            display: inline-block;
+            background: #eef2fa;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            color: #1f6392;
+        }
+        hr {
+            margin: 1.5rem 0;
+            border-color: #e0e7f0;
+        }
+        @media (max-width: 780px) {
+            .tool-detail {
+                margin: 1rem;
+                padding: 1.2rem;
+            }
+            .tool-detail h1 {
+                font-size: 1.5rem;
+            }
+            pre {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+        <!-- Google AdSense Code -->
+    <meta name="google-adsense-account" content="ca-pub-6124052333813612">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6124052333813612"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo-area">
+            <div class="ethical-logo"><span>EL</span></div>
+            <div class="logo-text"><h1>Ethical Learn</h1><p>cyber security hub</p></div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#" id="navToolsTrigger">Tools</a>
+            <a href="about.html" id="navAbout">About</a>
+            <a href="contant.html" id="navComment">Comment</a>
+        </div>
+        <button class="menu-btn" id="mainToolsMenuBtn"><span class="menu-icon">🛠️</span> Tools Menu</button>
+        <button class="mobile-menu-icon" id="mobileMenuToggle">☰</button>
+    </div>
+    <div id="mobileMenuPanel" style="display: none; background:#0e1c2c; padding: 1rem 2rem; flex-direction: column; gap: 1rem; border-bottom: 1px solid #2c7da0;">
+        <a href="../index.html" style="color:white; text-decoration:none;">🏠 Home</a>
+        <a href="#" id="mobileTools" style="color:white; text-decoration:none;">🛠️ Tools</a>
+        <a href="#" id="mobileAbout" style="color:white; text-decoration:none;">📖 About</a>
+        <a href="#" id="mobileComment" style="color:white; text-decoration:none;">💬 Comment</a>
+    </div>
+</header>
+
+<main>
+  <!-- Header Ad -->
+<div class="ad-container ad-header" style="max-width: 1200px; margin: 10px auto;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6124052333813612"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <div class="tool-detail">
+        <h1>🔮 Maltego - OSINT & Link Analysis Tool</h1>
+        <p><span class="badge">🔍 OSINT</span> <span class="badge">📊 Link Analysis</span></p>
+        <p><strong>Category:</strong> 1️⃣ Information Gathering Tools</p>
+        <hr>
+
+        <h3>📝 Description</h3>
+        <p>Maltego एक शक्तिशाली OSINT (Open Source Intelligence) और लिंक एनालिसिस टूल है। यह ग्राफिकल इंटरफेस के जरिए डोमेन, आईपी एड्रेस, ईमेल, सोशल मीडिया अकाउंट्स, और कंपनियों के बीच के रिलेशनशिप को विजुअल फॉर्म में दिखाता है। साइबर सिक्योरिटी एक्सपर्ट्स, बग बाउंटी हंटर्स, और फॉरेंसिक इन्वेस्टीगेटर्स इसका इस्तेमाल करते हैं। यह पब्लिकली उपलब्ध डेटा से जानकारी इकट्ठा करता है और एक माइंड-मैप जैसा ग्राफ बनाता है।</p>
+        <p><strong>विशेषता:</strong> Maltego के पास 100+ "Transforms" होते हैं जो विभिन्न डेटाबेस (Whois, DNS, सोशल मीडिया API) से डेटा लाते हैं।</p>
+
+        <h3>📦 Installation</h3>
+        <p><strong>Windows / macOS / Linux:</strong></p>
+        <pre>https://www.maltego.com/download/ से डाउनलोड करें और इंस्टॉल करें।</pre>
+        <p><strong>Linux (Debian/Ubuntu):</strong></p>
+        <pre>wget https://downloads.maltego.com/maltego-v4/linux/Maltego.v4.7.0.deb
+sudo dpkg -i Maltego.v4.7.0.deb</pre>
+        <p><strong>Community Edition (फ्री):</strong> Maltego CE (Community Edition) फ्री में उपलब्ध है जिसमें बेसिक transforms शामिल हैं।</p>
+
+        <h3>💻 Common Commands & Usage (उदाहरण सहित)</h3>
+        
+        <p><strong>🔹 1. डोमेन से संबंधित जानकारी निकालना:</strong></p>
+        <pre>1. Maltego खोलें
+2. नया Graph बनाएँ
+3. "Domain" एंटिटी ड्रैग करें
+4. उस पर right-click करें → "Run Transform" → "To DNS Name"
+5. सभी सबडोमेन और DNS रिकॉर्ड दिख जाएँगे</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> google.com डोमेन पर Transform चलाने से mail.google.com, drive.google.com जैसे सबडोमेन मिल जाते हैं।</div>
+
+        <p><strong>🔹 2. ईमेल से जुड़े सोशल मीडिया अकाउंट ढूँढना:</strong></p>
+        <pre>1. "Email Address" एंटिटी बनाएँ
+2. Transform → "To Social Media Account" चुनें
+3. उस ईमेल से जुड़े Twitter, LinkedIn, Facebook अकाउंट दिखेंगे</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> admin@company.com से लिंक्ड इंस्टाग्राम, ट्विटर प्रोफाइल मिल सकते हैं।</div>
+
+        <p><strong>🔹 3. IP एड्रेस से जियोलोकेशन:</strong></p>
+        <pre>1. "IPv4 Address" एंटिटी बनाएँ
+2. Transform → "To Location" चुनें
+3. IP का देश, शहर, ISP दिख जाएगा</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> 8.8.8.8 (Google DNS) की लोकेशन USA दिखेगी।</div>
+
+        <p><strong>🔹 4. कंपनी नाम से सभी डोमेन ढूँढना:</strong></p>
+        <pre>1. "Company" एंटिटी बनाएँ (जैसे "Microsoft")
+2. Transform → "To DNS Name" चुनें
+3. कंपनी के सभी रजिस्टर्ड डोमेन दिखेंगे</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Microsoft कंपनी के microsoft.com, msn.com, office.com जैसे डोमेन मिलेंगे।</div>
+
+        <p><strong>🔹 5. फाइल या हैश से संबंधित जानकारी:</strong></p>
+        <pre>1. "File" या "Hash" एंटिटी बनाएँ
+2. Transform → "To VirusTotal Report"
+3. VirusTotal से फाइल की मैलवेयर डिटेक्शन रिपोर्ट आएगी</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> किसी संदिग्ध फाइल का SHA256 हैश डालने पर पता चलता है कि वह वायरस है या नहीं।</div>
+
+        <p><strong>🔹 6. फोन नंबर से जानकारी:</strong></p>
+        <pre>1. "Phone Number" एंटिटी बनाएँ
+2. Transform → "To Social Media Account" चुनें
+3. फोन नंबर से जुड़े WhatsApp, Telegram, सोशल मीडिया अकाउंट मिलते हैं</pre>
+
+        <h3>🎯 Use Cases (उपयोग के तरीके)</h3>
+        <ul>
+            <li><strong>बग बाउंटी:</strong> टारगेट कंपनी के सभी डोमेन, सबडोमेन, और ईमेल ढूँढना।</li>
+            <li><strong>OSINT जांच:</strong> किसी व्यक्ति या कंपनी की ऑनलाइन उपस्थिति मैप करना।</li>
+            <li><strong>फॉरेंसिक जांच:</strong> साइबर अपराध में शामिल IP, ईमेल, और डोमेन के बीच संबंध ढूँढना।</li>
+            <li><strong>सोशल इंजीनियरिंग अटैक तैयारी:</strong> टारगेट के बारे में पब्लिक जानकारी इकट्ठा करना।</li>
+            <li><strong>कॉर्पोरेट सिक्योरिटी:</strong> कंपनी के नाम पर रजिस्टर्ड सभी डोमेन की पहचान करना (शैडो आईटी)।</li>
+        </ul>
+
+        <h3>⚙️ Key Features (मुख्य विशेषताएँ)</h3>
+        <ul>
+            <li>✔️ 100+ Transforms - DNS, Whois, सोशल मीडिया, फोन नंबर, ईमेल, और भी बहुत कुछ</li>
+            <li>✔️ ग्राफिकल विजुअलाइजेशन - रिलेशनशिप को आसानी से समझें</li>
+            <li>✔️ सहयोग (Collaboration) - टीम के साथ शेयर करें</li>
+            <li>✔️ स्क्रिप्टिंग - अपने खुद के Transforms बना सकते हैं</li>
+            <li>✔️ CaseFile (फ्री) - ऑफलाइन एनालिसिस के लिए</li>
+            <li>✔️ सभी प्लेटफॉर्म पर काम करता है (Windows, Linux, macOS)</li>
+        </ul>
+
+        <h3>🔗 Official Resources</h3>
+        <ul>
+            <li><strong>Official Website:</strong> <a href="https://www.maltego.com" target="_blank">https://www.maltego.com</a></li>
+            <li><strong>Documentation:</strong> <a href="https://docs.maltego.com" target="_blank">https://docs.maltego.com</a></li>
+            <li><strong>Transform Hub:</strong> <a href="https://hub.maltego.com" target="_blank">https://hub.maltego.com</a></li>
+            <li><strong>YouTube Tutorials:</strong> <a href="https://www.youtube.com/c/Maltego" target="_blank">Maltego Official Channel</a></li>
+        </ul>
+
+        <h3>🔧 Related Tools (समान उपकरण)</h3>
+        <ul>
+            <li><strong>SpiderFoot:</strong> ऑटोमेटेड OSINT टूल, कमांड लाइन और वेब इंटरफेस दोनों</li>
+            <li><strong>theHarvester:</strong> ईमेल और सबडोमेन कलेक्ट करने वाला टूल</li>
+            <li><strong>Recon-ng:</strong> OSINT के लिए फ्रेमवर्क</li>
+            <li><strong>Shodan:</strong> इंटरनेट पर जुड़े डिवाइस खोजने के लिए</li>
+            <li><strong>BuiltWith:</strong> वेबसाइट की टेक्नोलॉजी स्टैक पता करने के लिए</li>
+        </ul>
+
+        <h3>⚠️ Important Note (सावधानी)</h3>
+        <p><strong>Maltego पब्लिकली उपलब्ध डेटा का उपयोग करता है। इसका उपयोग केवल कानूनी उद्देश्यों के लिए करें। बिना अनुमति के किसी की जासूसी करना या निजी जानकारी इकट्ठा करना कानूनी अपराध है। बग बाउंटी प्रोग्राम या अपने खुद के डेटा पर ही प्रैक्टिस करें।</strong></p>
+
+        <button class="back-link" onclick="window.location.href='../index.html'">← Back to Home</button>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Ethical Learn — Empowering security researchers. All tools are for authorized testing only.</p>
+</footer>
+
+<script>
+    function openOverlay() {
+        let overlay = document.getElementById("globalToolsOverlay");
+        if (!overlay) {
+            overlay = document.createElement("div");
+            overlay.id = "globalToolsOverlay";
+            overlay.className = "tools-overlay";
+            overlay.innerHTML = `
+                <div class="tools-container">
+                    <button class="close-menu" id="closeOverlayBtnGlobal">✕</button>
+                    <h2 style="color:white; margin-bottom:0.5rem;">🛡️ Security Tools Arsenal</h2>
+                    <p style="color:#bbd4f0; margin-bottom:1rem;">Click any tool to open its dedicated page</p>
+                    <div class="tools-grid" id="globalToolsGrid"></div>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+            document.getElementById("closeOverlayBtnGlobal")?.addEventListener("click", () => overlay.classList.remove("open"));
+            overlay.addEventListener("click", (e) => { if (e.target === overlay) overlay.classList.remove("open"); });
+            const tools = ["Nmap", "Maltego", "theHarvester", "Recon-ng", "dnsenum", "dnsrecon", "Nikto", "OpenVAS", "OWASP ZAP", "SQLmap", "Burp Suite", "Commix", "Skipfish", "Wfuzz", "Hydra", "Hashcat", "John the Ripper", "Medusa", "Aircrack-ng", "Reaver", "Kismet", "Wifite", "Metasploit", "BeEF", "Armitage", "Wireshark", "Ettercap", "Bettercap", "Autopsy", "Binwalk", "Foremost"];
+            const grid = document.getElementById("globalToolsGrid");
+            if (grid) {
+                grid.className = "tools-grid";
+                let html = '';
+                tools.forEach(tool => {
+                    let filename = tool.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
+                    if (tool === "John the Ripper") filename = "john-the-ripper";
+                    if (tool === "OWASP ZAP") filename = "owasp-zap";
+                    if (tool === "Burp Suite") filename = "burpsuite";
+                    if (tool === "Recon-ng") filename = "recon-ng";
+                    if (tool === "theHarvester") filename = "theharvester";
+                    if (tool === "Aircrack-ng") filename = "aircrack-ng";
+                    html += `<div class="tool-category"><ul class="tool-list"><li><a href="../tools/${filename}.html">🔧 ${tool}</a></li></ul></div>`;
+                });
+                grid.innerHTML = html;
+            }
+        }
+        overlay.classList.add("open");
+    }
+    document.getElementById("navToolsTrigger")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); });
+    document.getElementById("mainToolsMenuBtn")?.addEventListener("click", () => openOverlay());
+    const mobileToggle = document.getElementById("mobileMenuToggle");
+    const mobilePanel = document.getElementById("mobileMenuPanel");
+    if (mobileToggle && mobilePanel) {
+        mobileToggle.addEventListener("click", () => { mobilePanel.style.display = mobilePanel.style.display === "none" || mobilePanel.style.display === "" ? "flex" : "none"; });
+        document.getElementById("mobileTools")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); mobilePanel.style.display = "none"; });
+        document.getElementById("mobileAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+        document.getElementById("mobileComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+    }
+    document.getElementById("navAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+    document.getElementById("navComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+</script>
+</body>
+</html>

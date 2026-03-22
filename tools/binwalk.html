@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Binwalk - Ethical Learn | साइबर सिक्योरिटी टूल</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .tool-detail {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        }
+        .tool-detail h1 {
+            color: #1f6392;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        .tool-detail h3 {
+            margin: 1.8rem 0 0.8rem 0;
+            color: #0f2c3d;
+            border-left: 4px solid #1f6392;
+            padding-left: 12px;
+        }
+        .tool-detail pre {
+            background: #1e2a3a;
+            color: #eef4ff;
+            padding: 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            margin: 0.8rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .tool-detail .cmd-note {
+            color: #4a6a7a;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid #7bc6e6;
+        }
+        .tool-detail ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .tool-detail li {
+            margin: 0.5rem 0;
+            line-height: 1.5;
+        }
+        .tool-detail a {
+            color: #1f6392;
+            text-decoration: none;
+        }
+        .tool-detail a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            background: #1f6392;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        .back-link:hover {
+            background: #0f4b6e;
+            transform: scale(0.98);
+        }
+        .badge {
+            display: inline-block;
+            background: #eef2fa;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            color: #1f6392;
+        }
+        hr {
+            margin: 1.5rem 0;
+            border-color: #e0e7f0;
+        }
+        .highlight {
+            background: #f0f7ff;
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+        }
+        @media (max-width: 780px) {
+            .tool-detail {
+                margin: 1rem;
+                padding: 1.2rem;
+            }
+            .tool-detail h1 {
+                font-size: 1.5rem;
+            }
+            pre {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+        <!-- Google AdSense Code -->
+    <meta name="google-adsense-account" content="ca-pub-6124052333813612">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6124052333813612"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo-area">
+            <div class="ethical-logo"><span>EL</span></div>
+            <div class="logo-text"><h1>Ethical Learn</h1><p>cyber security hub</p></div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#" id="navToolsTrigger">Tools</a>
+            <a href="about.html" id="navAbout">About</a>
+            <a href="contact.html" id="navComment">Comment</a>
+        </div>
+        <button class="menu-btn" id="mainToolsMenuBtn"><span class="menu-icon">🛠️</span> Tools Menu</button>
+        <button class="mobile-menu-icon" id="mobileMenuToggle">☰</button>
+    </div>
+    <div id="mobileMenuPanel" style="display: none; background:#0e1c2c; padding: 1rem 2rem; flex-direction: column; gap: 1rem; border-bottom: 1px solid #2c7da0;">
+        <a href="../index.html" style="color:white; text-decoration:none;">🏠 Home</a>
+        <a href="#" id="mobileTools" style="color:white; text-decoration:none;">🛠️ Tools</a>
+        <a href="#" id="mobileAbout" style="color:white; text-decoration:none;">📖 About</a>
+        <a href="#" id="mobileComment" style="color:white; text-decoration:none;">💬 Comment</a>
+    </div>
+</header>
+
+<main>
+  <!-- Header Ad -->
+<div class="ad-container ad-header" style="max-width: 1200px; margin: 10px auto;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6124052333813612"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <div class="tool-detail">
+        <h1>📦 Binwalk - Firmware Analysis & File Carving Tool</h1>
+        <p><span class="badge">🔍 Firmware Analysis</span> <span class="badge">💾 File Carving</span> <span class="badge">🕵️ Embedded Device Forensics</span></p>
+        <p><strong>Category:</strong> 8️⃣ Forensics Tools</p>
+        <hr>
+
+        <h3>📝 Description</h3>
+        <p>Binwalk एक शक्तिशाली फर्मवेयर एनालिसिस, फाइल कार्विंग, और एंबेडेड डिवाइस फोरेंसिक टूल है। यह बाइनरी फाइल्स (जैसे फर्मवेयर इमेज, राउटर डंप, IoT डिवाइस फर्मवेयर) के अंदर छिपी हुई फाइल्स और डेटा को निकाल सकता है। Binwalk फाइल सिग्नेचर (मैजिक बाइट्स) के आधार पर ZIP, TAR, GZIP, JPEG, PNG, ELF, और कई अन्य फाइल टाइप्स को पहचानता है और उन्हें एक्सट्रैक्ट करता है। यह IoT सिक्योरिटी, फर्मवेयर रिवर्स इंजीनियरिंग, और डाटा रिकवरी के लिए बहुत उपयोगी है।</p>
+        <p><strong>विशेषता:</strong> Binwalk की सबसे बड़ी खासियत है इसकी फाइल सिग्नेचर डेटाबेस और ऑटोमेटेड कार्विंग। यह कुछ ही सेकंड में पूरी फाइल को स्कैन करके सभी एम्बेडेड फाइल्स को निकाल सकता है।</p>
+
+        <h3>📦 Installation</h3>
+        <p><strong>Kali Linux (पहले से इंस्टॉल):</strong></p>
+        <pre>binwalk -h</pre>
+        <p><strong>Ubuntu/Debian:</strong></p>
+        <pre>sudo apt update
+sudo apt install binwalk -y</pre>
+        <p><strong>GitHub से इंस्टॉल:</strong></p>
+        <pre>git clone https://github.com/ReFirmLabs/binwalk.git
+cd binwalk
+sudo python3 setup.py install</pre>
+        <p><strong>Python pip से:</strong></p>
+        <pre>pip3 install binwalk</pre>
+
+        <h3>💻 Common Commands (उदाहरण सहित)</h3>
+        
+        <div class="highlight">
+            <p><strong>📌 Binwalk का सबसे आम उपयोग फर्मवेयर इमेज स्कैन करना है:</strong></p>
+        </div>
+        
+        <p><strong>🔹 1. फाइल स्कैन करना - एम्बेडेड फाइल्स की पहचान:</strong></p>
+        <pre>binwalk firmware.bin</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> <code>binwalk router_firmware.bin</code> से फाइल के अंदर छिपी ZIP, TAR, JPEG, ELF फाइल्स की पहचान करता है।</div>
+
+        <p><strong>🔹 2. डिटेल्ड स्कैन (वर्बोस मोड):</strong></p>
+        <pre>binwalk -v firmware.bin</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> हर फाइल सिग्नेचर की डिटेल्ड जानकारी दिखाता है।</div>
+
+        <p><strong>🔹 3. एम्बेडेड फाइल्स एक्सट्रैक्ट करना:</strong></p>
+        <pre>binwalk -e firmware.bin</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> सभी पहचानी गई फाइल्स को <code>_firmware.bin.extracted</code> फोल्डर में निकालता है।</div>
+
+        <p><strong>🔹 4. मैट्रियोश्का (Recursive) एक्सट्रैक्शन:</strong></p>
+        <pre>binwalk -Me firmware.bin</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> निकाली गई फाइल्स को फिर से स्कैन करता है (जब तक कोई और फाइल न बचे)।</div>
+
+        <p><strong>🔹 5. डेटा कार्विंग - सिर्फ डेटा निकालना:</strong></p>
+        <pre>binwalk -D 'png:png' firmware.bin</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> सिर्फ PNG फाइल्स निकालता है।</div>
+
+        <p><strong>🔹 6. ऑफसेट स्पेसिफाई करके एक्सट्रैक्ट करना:</strong></p>
+        <pre>binwalk -e --dd='.*' firmware.bin --offset=0x1000</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> 0x1000 ऑफसेट से शुरू करके सभी फाइल्स निकालता है।</div>
+
+        <p><strong>🔹 7. सिग्नेचर डेटाबेस देखना:</strong></p>
+        <pre>binwalk --signature</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> सभी सपोर्टेड फाइल सिग्नेचर की लिस्ट दिखाता है।</div>
+
+        <p><strong>🔹 8. एंट्रॉपी (Entropy) एनालिसिस:</strong></p>
+        <pre>binwalk -E firmware.bin</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> फाइल की एंट्रॉपी ग्राफ दिखाता है (एन्क्रिप्टेड या कंप्रेस्ड डेटा की पहचान के लिए)।</div>
+
+        <p><strong>🔹 9. आउटपुट को फाइल में सेव करना:</strong></p>
+        <pre>binwalk firmware.bin > scan_result.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> स्कैन रिजल्ट को टेक्स्ट फाइल में सेव करता है।</div>
+
+        <p><strong>🔹 10. सिर्फ स्पेसिफिक फाइल टाइप निकालना:</strong></p>
+        <pre>binwalk -D 'zip:zip:unzip' firmware.bin</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> सिर्फ ZIP फाइल्स निकालता है और उन्हें अनजिप करता है।</div>
+
+        <h3>🎯 Binwalk के मुख्य फीचर्स:</h3>
+        <ul>
+            <li><strong>Signature Scanning:</strong> फाइल सिग्नेचर (magic bytes) से फाइल टाइप पहचानना</li>
+            <li><strong>File Carving:</strong> बाइनरी फाइल से एम्बेडेड फाइल्स निकालना</li>
+            <li><strong>Entropy Analysis:</strong> डेटा की एंट्रॉपी मापना (एन्क्रिप्शन/कंप्रेशन डिटेक्शन)</li>
+            <li><strong>Recursive Extraction:</strong> निकाली गई फाइल्स को फिर से स्कैन करना</li>
+            <li><strong>Disassembler Integration:</strong> ARM, MIPS, x86 डिसअसेंबलर के साथ इंटीग्रेशन</li>
+            <li><strong>Custom Signatures:</strong> कस्टम फाइल सिग्नेचर जोड़ना</li>
+        </ul>
+
+        <h3>🎯 Use Cases (उपयोग के तरीके)</h3>
+        <ul>
+            <li><strong>फर्मवेयर रिवर्स इंजीनियरिंग:</strong> राउटर, IoT डिवाइस, कैमरा फर्मवेयर से फाइल सिस्टम निकालना।</li>
+            <li><strong>IoT सिक्योरिटी ऑडिट:</strong> फर्मवेयर में बैकडोर, हार्डकोडेड क्रेडेंशियल्स, या संवेदनशील डेटा ढूँढना।</li>
+            <li><strong>डाटा रिकवरी:</strong> क्षतिग्रस्त फाइलों या डिस्क इमेज से डेटा निकालना।</li>
+            <li><strong>मैलवेयर एनालिसिस:</strong> मैलवेयर बाइनरी से एम्बेडेड पेलोड्स निकालना।</li>
+            <li><strong>फॉरेंसिक जांच:</strong> फोरेंसिक इमेज से छिपी हुई फाइल्स रिकवर करना।</li>
+        </ul>
+
+        <h3>⚙️ Key Features (मुख्य विशेषताएँ)</h3>
+        <ul>
+            <li>✔️ 100+ फाइल सिग्नेचर सपोर्ट (ZIP, TAR, GZIP, JPEG, PNG, ELF, PDF, etc.)</li>
+            <li>✔️ ऑटोमेटेड फाइल कार्विंग और एक्सट्रैक्शन</li>
+            <li>✔️ रिकर्सिव एक्सट्रैक्शन (मैट्रियोश्का)</li>
+            <li>✔️ एंट्रॉपी एनालिसिस (एन्क्रिप्टेड/कंप्रेस्ड डेटा डिटेक्शन)</li>
+            <li>✔️ कस्टम सिग्नेचर फाइल्स सपोर्ट</li>
+            <li>✔️ ARM, MIPS, PowerPC, x86 डिसअसेंबलर इंटीग्रेशन</li>
+            <li>✔️ फर्मवेयर इमेज (TRX, UBI, SquashFS, JFFS2, etc.) सपोर्ट</li>
+            <li>✔️ पायथन में लिखा, क्रॉस-प्लेटफॉर्म</li>
+            <li>✔️ ओपन-सोर्स और फ्री</li>
+        </ul>
+
+        <div class="highlight">
+            <p><strong>📌 Binwalk से फर्मवेयर एनालिसिस की पूरी प्रक्रिया:</strong></p>
+            <pre># 1. फर्मवेयर स्कैन करें
+binwalk firmware.bin
+
+# 2. एंट्रॉपी चेक करें (एन्क्रिप्शन/कंप्रेशन)
+binwalk -E firmware.bin
+
+# 3. सभी फाइल्स एक्सट्रैक्ट करें
+binwalk -Me firmware.bin
+
+# 4. एक्सट्रैक्टेड फाइल्स एनालिसिस करें
+cd _firmware.bin.extracted
+ls -la
+file *
+strings squashfs-root/etc/passwd</pre>
+        </div>
+
+        <div class="highlight">
+            <p><strong>📌 Binwalk के सिग्नेचर उदाहरण:</strong></p>
+            <ul>
+                <li><strong>ZIP:</strong> PK (0x504B)</li>
+                <li><strong>GZIP:</strong> 1F 8B</li>
+                <li><strong>JPEG:</strong> FF D8 FF</li>
+                <li><strong>PNG:</strong> 89 50 4E 47</li>
+                <li><strong>ELF:</strong> 7F 45 4C 46</li>
+                <li><strong>SquashFS:</strong> hsqs, sqsh</li>
+                <li><strong>UBI:</strong> UBI#</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <p><strong>📌 Binwalk vs Foremost:</strong></p>
+            <ul>
+                <li><strong>Binwalk:</strong> फर्मवेयर और एम्बेडेड डिवाइस पर फोकस, एंट्रॉपी एनालिसिस, रिकर्सिव एक्सट्रैक्शन</li>
+                <li><strong>Foremost:</strong> जनरल फाइल कार्विंग, सिंपल, फोरेंसिक डेटा रिकवरी</li>
+                <li><strong>अनुशंसा:</strong> IoT/फर्मवेयर एनालिसिस के लिए Binwalk, डिस्क फोरेंसिक के लिए Foremost।</li>
+            </ul>
+        </div>
+
+        <h3>🔗 Official Resources</h3>
+        <ul>
+            <li><strong>GitHub Repository:</strong> <a href="https://github.com/ReFirmLabs/binwalk" target="_blank">https://github.com/ReFirmLabs/binwalk</a></li>
+            <li><strong>Documentation:</strong> <a href="https://github.com/ReFirmLabs/binwalk/wiki" target="_blank">Binwalk Wiki</a></li>
+            <li><strong>Kali Linux Tools:</strong> <a href="https://www.kali.org/tools/binwalk/" target="_blank">Kali Binwalk Page</a></li>
+            <li><strong>Firmware Analysis Tutorials:</strong> <a href="https://www.youtube.com/results?search_query=binwalk+firmware" target="_blank">Binwalk Tutorials</a></li>
+        </ul>
+
+        <h3>🔧 Related Tools (समान उपकरण)</h3>
+        <ul>
+            <li><strong>Foremost:</strong> फाइल कार्विंग टूल</li>
+            <li><strong>dd:</strong> डिस्क इमेजिंग टूल</li>
+            <li><strong>strings:</strong> बाइनरी से स्ट्रिंग्स निकालना</li>
+            <li><strong>firmware-mod-kit:</strong> फर्मवेयर मॉडिफिकेशन किट</li>
+            <li><strong>QEMU:</strong> एम्बेडेड फर्मवेयर इमुलेशन</li>
+            <li><strong>Ghidra:</strong> रिवर्स इंजीनियरिंग टूल</li>
+        </ul>
+
+        <div class="highlight">
+            <p><strong>📌 Binwalk के लिए सुझाव:</strong></p>
+            <ul>
+                <li>हमेशा <code>-Me</code> का उपयोग करें (Recursive Extraction)</li>
+                <li>एंट्रॉपी ग्राफ (<code>-E</code>) से एन्क्रिप्टेड या कंप्रेस्ड डेटा पहचानें</li>
+                <li>फर्मवेयर एनालिसिस से पहले <code>binwalk -v</code> से डिटेल्ड स्कैन करें</li>
+                <li>निकाली गई फाइल्स में <code>strings</code> और <code>file</code> कमांड का उपयोग करें</li>
+                <li>SquashFS, JFFS2 फाइल सिस्टम के लिए विशेष टूल्स की जरूरत हो सकती है</li>
+            </ul>
+        </div>
+
+        <h3>⚠️ Important Note (सावधानी)</h3>
+        <p><strong>Binwalk एक शक्तिशाली फर्मवेयर एनालिसिस टूल है। इसका उपयोग केवल उन्हीं फाइल्स पर करें जिनकी आपको अनुमति हो। बिना अनुमति के फर्मवेयर रिवर्स इंजीनियरिंग करना कॉपीराइट और कानूनी उल्लंघन हो सकता है। हमेशा अपने खुद के डिवाइस, ओपन-सोर्स फर्मवेयर, या कानूनी रूप से अधिकृत प्रोजेक्ट पर ही प्रैक्टिस करें। Binwalk का उपयोग सीखने और सुरक्षा ऑडिट के लिए करें, न कि अनधिकृत रिवर्स इंजीनियरिंग के लिए।</strong></p>
+
+        <button class="back-link" onclick="window.location.href='../index.html'">← Back to Home</button>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Ethical Learn — Empowering security researchers. All tools are for authorized testing only.</p>
+</footer>
+
+<script>
+    function openOverlay() {
+        let overlay = document.getElementById("globalToolsOverlay");
+        if (!overlay) {
+            overlay = document.createElement("div");
+            overlay.id = "globalToolsOverlay";
+            overlay.className = "tools-overlay";
+            overlay.innerHTML = `
+                <div class="tools-container">
+                    <button class="close-menu" id="closeOverlayBtnGlobal">✕</button>
+                    <h2 style="color:white; margin-bottom:0.5rem;">🛡️ Security Tools Arsenal</h2>
+                    <p style="color:#bbd4f0; margin-bottom:1rem;">Click any tool to open its dedicated page</p>
+                    <div class="tools-grid" id="globalToolsGrid"></div>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+            document.getElementById("closeOverlayBtnGlobal")?.addEventListener("click", () => overlay.classList.remove("open"));
+            overlay.addEventListener("click", (e) => { if (e.target === overlay) overlay.classList.remove("open"); });
+            const tools = ["Nmap", "Maltego", "theHarvester", "Recon-ng", "dnsenum", "dnsrecon", "Nikto", "OpenVAS", "OWASP ZAP", "SQLmap", "Burp Suite", "Commix", "Skipfish", "Wfuzz", "Hydra", "Hashcat", "John the Ripper", "Medusa", "Aircrack-ng", "Reaver", "Kismet", "Wifite", "Metasploit", "BeEF", "Armitage", "Wireshark", "Ettercap", "Bettercap", "Autopsy", "Binwalk", "Foremost"];
+            const grid = document.getElementById("globalToolsGrid");
+            if (grid) {
+                grid.className = "tools-grid";
+                let html = '';
+                tools.forEach(tool => {
+                    let filename = tool.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
+                    if (tool === "John the Ripper") filename = "john-the-ripper";
+                    if (tool === "OWASP ZAP") filename = "owasp-zap";
+                    if (tool === "Burp Suite") filename = "burpsuite";
+                    if (tool === "Recon-ng") filename = "recon-ng";
+                    if (tool === "theHarvester") filename = "theharvester";
+                    if (tool === "Aircrack-ng") filename = "aircrack-ng";
+                    html += `<div class="tool-category"><ul class="tool-list"><li><a href="../tools/${filename}.html">🔧 ${tool}</a></li></ul></div>`;
+                });
+                grid.innerHTML = html;
+            }
+        }
+        overlay.classList.add("open");
+    }
+    document.getElementById("navToolsTrigger")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); });
+    document.getElementById("mainToolsMenuBtn")?.addEventListener("click", () => openOverlay());
+    const mobileToggle = document.getElementById("mobileMenuToggle");
+    const mobilePanel = document.getElementById("mobileMenuPanel");
+    if (mobileToggle && mobilePanel) {
+        mobileToggle.addEventListener("click", () => { mobilePanel.style.display = mobilePanel.style.display === "none" || mobilePanel.style.display === "" ? "flex" : "none"; });
+        document.getElementById("mobileTools")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); mobilePanel.style.display = "none"; });
+        document.getElementById("mobileAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+        document.getElementById("mobileComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+    }
+    document.getElementById("navAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+    document.getElementById("navComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+</script>
+</body>
+</html>

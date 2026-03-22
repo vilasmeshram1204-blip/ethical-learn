@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Nmap - Ethical Learn | साइबर सिक्योरिटी टूल</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .tool-detail {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        }
+        .tool-detail h1 {
+            color: #1f6392;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        .tool-detail h3 {
+            margin: 1.8rem 0 0.8rem 0;
+            color: #0f2c3d;
+            border-left: 4px solid #1f6392;
+            padding-left: 12px;
+        }
+        .tool-detail pre {
+            background: #1e2a3a;
+            color: #eef4ff;
+            padding: 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            margin: 0.8rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .tool-detail .cmd-note {
+            color: #4a6a7a;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid #7bc6e6;
+        }
+        .tool-detail ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .tool-detail li {
+            margin: 0.5rem 0;
+            line-height: 1.5;
+        }
+        .tool-detail a {
+            color: #1f6392;
+            text-decoration: none;
+        }
+        .tool-detail a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            background: #1f6392;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        .back-link:hover {
+            background: #0f4b6e;
+            transform: scale(0.98);
+        }
+        .badge {
+            display: inline-block;
+            background: #eef2fa;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            color: #1f6392;
+        }
+        hr {
+            margin: 1.5rem 0;
+            border-color: #e0e7f0;
+        }
+        @media (max-width: 780px) {
+            .tool-detail {
+                margin: 1rem;
+                padding: 1.2rem;
+            }
+            .tool-detail h1 {
+                font-size: 1.5rem;
+            }
+            pre {
+                font-size: 0.7rem;
+            }
+        }
+        /* ========== ADS STYLES ========== */
+.ad-container {
+    margin: 20px auto;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #f8f9fa;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e0e7f0;
+    transition: all 0.3s ease;
+}
+.ad-container:hover {
+    border-color: #2c7da0;
+    box-shadow: 0 2px 8px rgba(44,125,160,0.1);
+}
+
+/* Header Ad */
+.ad-header {
+    max-width: 1200px;
+    margin: 10px auto;
+}
+
+/* Sidebar Ad */
+.sidebar {
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.sidebar .ad-container {
+    position: sticky;
+    top: 100px;
+}
+
+/* In-Article Ad */
+.ad-in-article {
+    margin: 30px 0;
+}
+
+/* Two Column Layout */
+.two-column {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.main-column {
+    flex: 2;
+    min-width: 0;
+}
+.sidebar-column {
+    flex: 1;
+    min-width: 280px;
+}
+
+    </style>
+        <!-- Google AdSense Code -->
+    <meta name="google-adsense-account" content="ca-pub-6124052333813612">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6124052333813612"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo-area">
+            <div class="ethical-logo">
+                <span>EL</span>
+            </div>
+            <div class="logo-text">
+                <h1>Ethical Learn</h1>
+                <p>cyber security hub</p>
+            </div>
+        </div>
+
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#" id="navToolsTrigger">Tools</a>
+            <a href="about.html" id="navAbout">About</a>
+            <a href="contant.html" id="navComment">Comment</a>
+        </div>
+
+        <button class="menu-btn" id="mainToolsMenuBtn">
+            <span class="menu-icon">🛠️</span> Tools Menu
+        </button>
+        <button class="mobile-menu-icon" id="mobileMenuToggle">☰</button>
+    </div>
+
+    <div id="mobileMenuPanel" style="display: none; background:#0e1c2c; padding: 1rem 2rem; flex-direction: column; gap: 1rem; border-bottom: 1px solid #2c7da0;">
+        <a href="../index.html" style="color:white; text-decoration:none;">🏠 Home</a>
+        <a href="#" id="mobileTools" style="color:white; text-decoration:none;">🛠️ Tools</a>
+        <a href="#" id="mobileAbout" style="color:white; text-decoration:none;">📖 About</a>
+        <a href="#" id="mobileComment" style="color:white; text-decoration:none;">💬 Comment</a>
+    </div>
+</header>
+
+<main>
+  <!-- Header Ad -->
+<div class="ad-container ad-header" style="max-width: 1200px; margin: 10px auto;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6124052333813612"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <div class="tool-detail">
+        <h1>🔧 Nmap - Network Mapper</h1>
+        <p><span class="badge">🔐 Network Scanner</span> <span class="badge">📡 Information Gathering</span></p>
+        <p><strong>Category:</strong> 1️⃣ Information Gathering Tools</p>
+        <hr>
+
+        <!-- Description in Hindi -->
+        <h3>📝 Description</h3>
+        <p>Nmap (Network Mapper) एक मुफ्त और ओपन-सोर्स नेटवर्क स्कैनिंग टूल है। यह साइबर सिक्योरिटी एक्सपर्ट्स और सिस्टम एडमिनिस्ट्रेटर्स का सबसे पसंदीदा टूल है। Nmap नेटवर्क से जुड़े सभी डिवाइस, खुले हुए पोर्ट, चल रही सर्विसेज, ऑपरेटिंग सिस्टम, और फायरवॉल की जानकारी इकट्ठा कर सकता है। इसे पेनिट्रेशन टेस्टिंग, नेटवर्क ऑडिटिंग, और वल्नरेबिलिटी असेसमेंट के लिए उपयोग किया जाता है।</p>
+        <p><strong>विशेषता:</strong> Nmap स्क्रिप्टिंग इंजन (NSE) के जरिए एडवांस्ड वल्नरेबिलिटी डिटेक्शन, मालवेयर डिटेक्शन, और ऑटोमेटेड अटैक भी कर सकता है।</p>
+
+        <!-- Installation in Hindi -->
+        <h3>📦 Installation</h3>
+        <p><strong>Linux (Ubuntu/Debian):</strong></p>
+        <pre>sudo apt update && sudo apt install nmap -y</pre>
+        <p><strong>Linux (RHEL/CentOS/Fedora):</strong></p>
+        <pre>sudo yum install nmap</pre>
+        <p><strong>macOS (Homebrew):</strong></p>
+        <pre>brew install nmap</pre>
+        <p><strong>Windows:</strong> <a href="https://nmap.org/download.html" target="_blank">https://nmap.org/download.html</a> से इंस्टॉलर डाउनलोड करें और इंस्टॉल करें।</p>
+        <p><strong>स्रोत कोड से इंस्टॉल:</strong></p>
+        <pre>wget https://nmap.org/dist/nmap-7.95.tar.bz2
+tar -xjf nmap-7.95.tar.bz2
+cd nmap-7.95
+./configure
+make
+sudo make install</pre>
+
+        <!-- Commands with Hindi explanation -->
+        <h3>💻 Common Commands (उदाहरण सहित)</h3>
+
+        <p><strong>🔹 1. बेसिक पोर्ट स्कैन - सबसे आम और आसान स्कैन:</strong></p>
+        <pre>nmap target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> यह कमांड target.com पर मौजूद 1000 सबसे कॉमन पोर्ट्स स्कैन करेगा और बताएगा कि कौन से पोर्ट खुले हैं।</div>
+
+        <p><strong>🔹 2. सर्विस वर्जन डिटेक्शन - कौन सी सर्विस किस वर्जन पर चल रही है:</strong></p>
+        <pre>nmap -sV target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> अगर पोर्ट 80 खुला है, तो यह बताएगा "Apache httpd 2.4.41" या "nginx 1.18.0" जैसी डिटेल।</div>
+
+        <p><strong>🔹 3. ऑपरेटिंग सिस्टम डिटेक्शन - टारगेट का OS पता करना:</strong></p>
+        <pre>nmap -O target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> आउटपुट में "Running: Linux 5.x", "Windows 10", या "macOS 12" जैसी जानकारी मिलेगी।</div>
+
+        <p><strong>🔹 4. स्पेसिफिक पोर्ट स्कैन - सिर्फ कुछ पोर्ट चेक करना:</strong></p>
+        <pre>nmap -p 22,80,443,8080 target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> सिर्फ SSH (22), HTTP (80), HTTPS (443), और प्रॉक्सी (8080) पोर्ट चेक करेगा।</div>
+
+        <p><strong>🔹 5. पोर्ट रेंज स्कैन - पोर्ट्स की रेंज देना:</strong></p>
+        <pre>nmap -p 1-1000 target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> पोर्ट 1 से लेकर 1000 तक स्कैन करेगा।</div>
+
+        <p><strong>🔹 6. एग्रेसिव स्कैन (Aggressive Scan) - सब कुछ एक साथ:</strong></p>
+        <pre>nmap -A target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> यह OS डिटेक्शन, वर्जन डिटेक्शन, ट्रेसरूट, और Nmap स्क्रिप्ट्स (NSE) को एक साथ चलाता है। बहुत डिटेल्ड रिपोर्ट मिलती है।</div>
+
+        <p><strong>🔹 7. स्टील्थ SYN स्कैन - फायरवॉल से बचने के लिए:</strong></p>
+        <pre>nmap -sS target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> यह SYN पैकेट भेजता है, लेकिन कनेक्शन पूरा नहीं करता। इसलिए कई फायरवॉल इसे लॉग नहीं करते। स्पीड भी तेज होती है।</div>
+
+        <p><strong>🔹 8. UDP स्कैन - UDP पोर्ट्स के लिए:</strong></p>
+        <pre>nmap -sU target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> UDP पोर्ट्स (जैसे DNS 53, SNMP 161) स्कैन करता है। UDP स्कैन धीमा होता है लेकिन जरूरी है।</div>
+
+        <p><strong>🔹 9. मल्टीपल होस्ट स्कैन - एक साथ कई IP स्कैन करना:</strong></p>
+        <pre>nmap 192.168.1.1-50</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> 192.168.1.1 से 192.168.1.50 तक के सभी डिवाइस स्कैन करेगा।</div>
+
+        <p><strong>🔹 10. सबनेट स्कैन - पूरा नेटवर्क स्कैन:</strong></p>
+        <pre>nmap 192.168.1.0/24</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> 192.168.1.0 से 192.168.1.255 तक के सभी 256 IP एड्रेस स्कैन करेगा।</div>
+
+        <p><strong>🔹 11. फायरवॉल डिटेक्शन - फायरवॉल की पहचान:</strong></p>
+        <pre>nmap -sA target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> ACK स्कैन से पता चलता है कि फायरवॉल स्टेटफुल है या स्टेटलेस।</div>
+
+        <p><strong>🔹 12. NSE स्क्रिप्ट चलाना - वल्नरेबिलिटी स्कैन:</strong></p>
+        <pre>nmap --script vuln target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> यह टारगेट पर मौजूद जानी-मानी वल्नरेबिलिटीज (जैसे EternalBlue, Heartbleed) को स्कैन करता है।</div>
+
+        <p><strong>🔹 13. आउटपुट सेव करना - रिजल्ट फाइल में सेव:</strong></p>
+        <pre>nmap -sV -oN scan_result.txt target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> स्कैन का रिजल्ट scan_result.txt फाइल में सेव हो जाएगा।</div>
+
+        <p><strong>🔹 14. टाइमिंग टेम्पलेट - स्पीड कंट्रोल:</strong></p>
+        <pre>nmap -T4 target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> T0 (सबसे धीमा, स्टील्थी) से T5 (सबसे तेज) तक। आमतौर पर T4 का इस्तेमाल होता है।</div>
+
+        <!-- Use Cases in Hindi -->
+        <h3>🎯 Use Cases (उपयोग के तरीके)</h3>
+        <ul>
+            <li><strong>नेटवर्क इन्वेंटरी:</strong> कंपनी के नेटवर्क में कितने डिवाइस (सर्वर, लैपटॉप, प्रिंटर) कनेक्ट हैं, यह जानना।</li>
+            <li><strong>सिक्योरिटी ऑडिट:</strong> किन सर्वर पर अनचाहे पोर्ट खुले हैं (जैसे 21 FTP, 23 Telnet) जो हैकर्स के लिए रिस्क हो सकते हैं।</li>
+            <li><strong>वल्नरेबिलिटी असेसमेंट:</strong> पुराने सॉफ्टवेयर वर्जन (जैसे Apache 2.2) ढूंढना जिनमें जानी-मानी वल्नरेबिलिटी होती है।</li>
+            <li><strong>फायरवॉल टेस्टिंग:</strong> फायरवॉल के नियम सही से काम कर रहे हैं या नहीं, यह टेस्ट करना।</li>
+            <li><strong>पेनिट्रेशन टेस्टिंग:</strong> पहला कदम - टारगेट की पूरी जानकारी इकट्ठा करना (Reconnaissance)।</li>
+            <li><strong>सर्वर मॉनिटरिंग:</strong> अपने सर्वर पर कौन से पोर्ट खुले हैं, यह नियमित रूप से चेक करना।</li>
+        </ul>
+
+        <!-- Key Features -->
+        <h3>⚙️ Key Features (मुख्य विशेषताएँ)</h3>
+        <ul>
+            <li>✔️ होस्ट डिस्कवरी - नेटवर्क में लाइव डिवाइस ढूंढना</li>
+            <li>✔️ पोर्ट स्कैनिंग - TCP, UDP, SCTP पोर्ट्स स्कैन</li>
+            <li>✔️ वर्जन डिटेक्शन - सर्विस और वर्जन की पहचान</li>
+            <li>✔️ OS फिंगरप्रिंटिंग - ऑपरेटिंग सिस्टम की पहचान</li>
+            <li>✔️ NSE (Nmap Scripting Engine) - 600+ स्क्रिप्ट्स जो वल्नरेबिलिटी स्कैन, मालवेयर डिटेक्शन, ब्रूट फोर्स कर सकती हैं</li>
+            <li>✔️ GUI वर्शन (Zenmap) भी उपलब्ध</li>
+        </ul>
+
+        <!-- Official Resources -->
+        <h3>🔗 Official Resources</h3>
+        <ul>
+            <li><strong>Official Website:</strong> <a href="https://nmap.org" target="_blank">https://nmap.org</a></li>
+            <li><strong>Documentation:</strong> <a href="https://nmap.org/docs.html" target="_blank">https://nmap.org/docs.html</a></li>
+            <li><strong>Nmap Network Scanning (Free Book):</strong> <a href="https://nmap.org/book/" target="_blank">https://nmap.org/book/</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/nmap/nmap" target="_blank">https://github.com/nmap/nmap</a></li>
+            <li><strong>NSE Scripts List:</strong> <a href="https://nmap.org/nsedoc/" target="_blank">https://nmap.org/nsedoc/</a></li>
+        </ul>
+
+        <!-- Related Tools -->
+        <h3>🔧 Related Tools (समान उपकरण)</h3>
+        <ul>
+            <li><strong>Zenmap:</strong> Nmap का GUI वर्शन - जिन्हें कमांड लाइन पसंद नहीं, उनके लिए</li>
+            <li><strong>Masscan:</strong> बहुत तेजी से पोर्ट स्कैन करने वाला टूल (1 मिनट में लाखों पोर्ट)</li>
+            <li><strong>Netcat (nc):</strong> नेटवर्क कनेक्शन, पोर्ट स्कैनिंग, और रिवर्स शेल के लिए</li>
+            <li><strong>Angry IP Scanner:</strong> सिंपल और तेज IP स्कैनर (Windows/Linux/Mac)</li>
+            <li><strong>Zmap:</strong> इंटरनेट-वाइड स्कैनिंग के लिए डिजाइन किया गया टूल</li>
+        </ul>
+
+        <!-- Warning in Hindi -->
+        <h3>⚠️ Important Note (सावधानी)</h3>
+        <p><strong>यह टूल केवल उन्हीं सिस्टम पर उपयोग करें जिनकी आपको लिखित अनुमति हो। बिना अनुमति के किसी पर स्कैन करना साइबर अपराध है और इसके गंभीर कानूनी परिणाम हो सकते हैं। हमेशा अपने खुद के नेटवर्क या CTF/बग बाउंटी प्लेटफॉर्म पर ही प्रैक्टिस करें।</strong></p>
+
+        <button class="back-link" onclick="window.location.href='../index.html'">← Back to Home</button>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Ethical Learn — Empowering security researchers. All tools are for authorized testing only.</p>
+</footer>
+
+<script>
+    // Tools Overlay Functionality
+    function openOverlay() {
+        let overlay = document.getElementById("globalToolsOverlay");
+        if (!overlay) {
+            overlay = document.createElement("div");
+            overlay.id = "globalToolsOverlay";
+            overlay.className = "tools-overlay";
+            overlay.innerHTML = `
+                <div class="tools-container">
+                    <button class="close-menu" id="closeOverlayBtnGlobal">✕</button>
+                    <h2 style="color:white; margin-bottom:0.5rem;">🛡️ Security Tools Arsenal</h2>
+                    <p style="color:#bbd4f0; margin-bottom:1rem;">Click any tool to open its dedicated page</p>
+                    <div class="tools-grid" id="globalToolsGrid"></div>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+            
+            document.getElementById("closeOverlayBtnGlobal")?.addEventListener("click", () => {
+                overlay.classList.remove("open");
+            });
+            overlay.addEventListener("click", (e) => {
+                if (e.target === overlay) overlay.classList.remove("open");
+            });
+            
+            // Tools list
+            const tools = [
+                "Nmap", "Maltego", "theHarvester", "Recon-ng", "dnsenum", "dnsrecon",
+                "Nikto", "OpenVAS", "OWASP ZAP", "SQLmap", "Burp Suite", "Commix",
+                "Skipfish", "Wfuzz", "Hydra", "Hashcat", "John the Ripper", "Medusa",
+                "Aircrack-ng", "Reaver", "Kismet", "Wifite", "Metasploit", "BeEF",
+                "Armitage", "Wireshark", "Ettercap", "Bettercap", "Autopsy", "Binwalk", "Foremost"
+            ];
+            const grid = document.getElementById("globalToolsGrid");
+            if (grid) {
+                grid.className = "tools-grid";
+                let html = '';
+                tools.forEach(tool => {
+                    let filename = tool.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
+                    if (tool === "John the Ripper") filename = "john-the-ripper";
+                    if (tool === "OWASP ZAP") filename = "owasp-zap";
+                    if (tool === "Burp Suite") filename = "burpsuite";
+                    if (tool === "Recon-ng") filename = "recon-ng";
+                    if (tool === "theHarvester") filename = "theharvester";
+                    if (tool === "Aircrack-ng") filename = "aircrack-ng";
+                    html += `<div class="tool-category"><ul class="tool-list"><li><a href="../tools/${filename}.html">🔧 ${tool}</a></li></ul></div>`;
+                });
+                grid.innerHTML = html;
+            }
+        }
+        overlay.classList.add("open");
+    }
+
+    // Navbar event bindings
+    document.getElementById("navToolsTrigger")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); });
+    document.getElementById("mainToolsMenuBtn")?.addEventListener("click", () => openOverlay());
+    
+    // Mobile menu
+    const mobileToggle = document.getElementById("mobileMenuToggle");
+    const mobilePanel = document.getElementById("mobileMenuPanel");
+    if (mobileToggle && mobilePanel) {
+        mobileToggle.addEventListener("click", () => {
+            mobilePanel.style.display = mobilePanel.style.display === "none" || mobilePanel.style.display === "" ? "flex" : "none";
+        });
+        document.getElementById("mobileTools")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); mobilePanel.style.display = "none"; });
+        document.getElementById("mobileAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+        document.getElementById("mobileComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+    }
+    document.getElementById("navAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+    document.getElementById("navComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+</script>
+</body>
+</html>

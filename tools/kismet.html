@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Kismet - Ethical Learn | साइबर सिक्योरिटी टूल</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .tool-detail {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        }
+        .tool-detail h1 {
+            color: #1f6392;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        .tool-detail h3 {
+            margin: 1.8rem 0 0.8rem 0;
+            color: #0f2c3d;
+            border-left: 4px solid #1f6392;
+            padding-left: 12px;
+        }
+        .tool-detail pre {
+            background: #1e2a3a;
+            color: #eef4ff;
+            padding: 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            margin: 0.8rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .tool-detail .cmd-note {
+            color: #4a6a7a;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid #7bc6e6;
+        }
+        .tool-detail ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .tool-detail li {
+            margin: 0.5rem 0;
+            line-height: 1.5;
+        }
+        .tool-detail a {
+            color: #1f6392;
+            text-decoration: none;
+        }
+        .tool-detail a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            background: #1f6392;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        .back-link:hover {
+            background: #0f4b6e;
+            transform: scale(0.98);
+        }
+        .badge {
+            display: inline-block;
+            background: #eef2fa;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            color: #1f6392;
+        }
+        hr {
+            margin: 1.5rem 0;
+            border-color: #e0e7f0;
+        }
+        .highlight {
+            background: #f0f7ff;
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+        }
+        @media (max-width: 780px) {
+            .tool-detail {
+                margin: 1rem;
+                padding: 1.2rem;
+            }
+            .tool-detail h1 {
+                font-size: 1.5rem;
+            }
+            pre {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+        <!-- Google AdSense Code -->
+    <meta name="google-adsense-account" content="ca-pub-6124052333813612">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6124052333813612"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo-area">
+            <div class="ethical-logo"><span>EL</span></div>
+            <div class="logo-text"><h1>Ethical Learn</h1><p>cyber security hub</p></div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#" id="navToolsTrigger">Tools</a>
+            <a href="about.html" id="navAbout">About</a>
+            <a href="contant.html" id="navComment">Comment</a>
+        </div>
+        <button class="menu-btn" id="mainToolsMenuBtn"><span class="menu-icon">🛠️</span> Tools Menu</button>
+        <button class="mobile-menu-icon" id="mobileMenuToggle">☰</button>
+    </div>
+    <div id="mobileMenuPanel" style="display: none; background:#0e1c2c; padding: 1rem 2rem; flex-direction: column; gap: 1rem; border-bottom: 1px solid #2c7da0;">
+        <a href="../index.html" style="color:white; text-decoration:none;">🏠 Home</a>
+        <a href="#" id="mobileTools" style="color:white; text-decoration:none;">🛠️ Tools</a>
+        <a href="#" id="mobileAbout" style="color:white; text-decoration:none;">📖 About</a>
+        <a href="#" id="mobileComment" style="color:white; text-decoration:none;">💬 Comment</a>
+    </div>
+</header>
+
+<main>
+  <!-- Header Ad -->
+<div class="ad-container ad-header" style="max-width: 1200px; margin: 10px auto;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6124052333813612"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <div class="tool-detail">
+        <h1>📡 Kismet - Wireless Network Detector & Sniffer</h1>
+        <p><span class="badge">📶 Wireless Detection</span> <span class="badge">🔍 Packet Sniffer</span> <span class="badge">🕵️ Wardriving Tool</span></p>
+        <p><strong>Category:</strong> 5️⃣ Wireless Attacks</p>
+        <hr>
+
+        <h3>📝 Description</h3>
+        <p>Kismet एक वायरलेस नेटवर्क डिटेक्टर, स्निफर, और इंट्रूज़न डिटेक्शन सिस्टम (IDS) है। यह 802.11a/b/g/n/ac/ax (WiFi 6) नेटवर्क्स को डिटेक्ट करता है और हिडन SSIDs को भी रिवील कर सकता है। Kismet क्लाइंटलेस स्कैनिंग करता है - यानी WiFi नेटवर्क से कनेक्ट किए बिना भी उसके बारे में जानकारी इकट्ठा कर सकता है। यह पैकेट कैप्चर करता है, GPS डेटा के साथ लॉग सेव करता है, और वार्ड्राइविंग (wardriving) के लिए परफेक्ट है।</p>
+        <p><strong>विशेषता:</strong> Kismet की सबसे बड़ी खासियत है इसका हिडन SSID डिटेक्शन और रियल-टाइम वायरलेस नेटवर्क मैपिंग। यह वेब इंटरफेस (Kismet Web UI) के साथ आता है, जिससे आप ब्राउज़र से स्कैन देख सकते हैं।</p>
+
+        <h3>📦 Installation</h3>
+        <p><strong>Kali Linux (पहले से इंस्टॉल):</strong></p>
+        <pre>kismet -h</pre>
+        <p><strong>Ubuntu/Debian:</strong></p>
+        <pre>sudo apt update
+sudo apt install kismet -y</pre>
+        <p><strong>macOS (Homebrew):</strong></p>
+        <pre>brew install kismet</pre>
+        <p><strong>GitHub से इंस्टॉल:</strong></p>
+        <pre>git clone https://www.kismetwireless.net/git/kismet.git
+cd kismet
+./configure
+make
+sudo make install</pre>
+
+        <h3>💻 Common Commands (उदाहरण सहित)</h3>
+        
+        <div class="highlight">
+            <p><strong>📌 Kismet उपयोग करने से पहले वायरलेस कार्ड को मॉनिटर मोड में डालना जरूरी है:</strong></p>
+        </div>
+        
+        <p><strong>🔹 1. मॉनिटर मोड में डालना:</strong></p>
+        <pre>sudo airmon-ng start wlan0</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> wlan0 को मॉनिटर मोड में डालता है (wlan0mon बन जाता है)।</div>
+
+        <p><strong>🔹 2. Kismet GUI शुरू करना (कर्सर-आधारित):</strong></p>
+        <pre>sudo kismet</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Kismet का टर्मिनल-आधारित GUI खुलता है। सभी आसपास के WiFi नेटवर्क दिखते हैं।</div>
+
+        <p><strong>🔹 3. Kismet Web UI शुरू करना (ब्राउज़र में):</strong></p>
+        <pre>sudo kismet -c wlan0mon --daemonize</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Web UI http://127.0.0.1:2501 पर उपलब्ध होगा।</div>
+
+        <p><strong>🔹 4. कस्टम इंटरफेस के साथ Kismet शुरू करना:</strong></p>
+        <pre>sudo kismet -c wlan0mon</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> wlan0mon इंटरफेस से कैप्चर शुरू करता है।</div>
+
+        <p><strong>🔹 5. GPS के साथ Kismet (वार्ड्राइविंग):</strong></p>
+        <pre>sudo kismet -c wlan0mon --gps</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> GPS डेटा के साथ कैप्चर करता है (USB GPS डोंगल चाहिए)।</div>
+
+        <p><strong>🔹 6. Kismet लॉग फाइलें देखना:</strong></p>
+        <pre>ls -la /var/log/kismet/</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> कैप्चर की गई फाइलें (pcap, netxml, gpsxml, etc.) यहां सेव होती हैं।</div>
+
+        <p><strong>🔹 7. Kismet को बैकग्राउंड में चलाना:</strong></p>
+        <pre>sudo systemctl start kismet</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Kismet को सर्विस के रूप में चलाता है।</div>
+
+        <p><strong>🔹 8. Kismet को रोकना:</strong></p>
+        <pre>sudo systemctl stop kismet</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Kismet सर्विस बंद करता है।</div>
+
+        <p><strong>🔹 9. Kismet की स्थिति देखना:</strong></p>
+        <pre>sudo systemctl status kismet</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Kismet चल रहा है या नहीं, यह दिखाता है।</div>
+
+        <p><strong>🔹 10. कैप्चर की गई फाइल को PCAP फॉर्मेट में देखना:</strong></p>
+        <pre>wireshark /var/log/kismet/Kismet-*.pcap</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Wireshark में कैप्चर की गई फाइल खोलकर डिटेल्ड एनालिसिस कर सकते हैं।</div>
+
+        <h3>🎯 Kismet के मुख्य फीचर्स:</h3>
+        <ul>
+            <li><strong>Network Detection:</strong> सभी आसपास के WiFi नेटवर्क्स डिटेक्ट करता है</li>
+            <li><strong>Hidden SSID Detection:</strong> हिडन नेटवर्क्स (SSID न दिखाने वाले) को भी ढूँढता है</li>
+            <li><strong>Client Tracking:</strong> क्लाइंट डिवाइस (फोन, लैपटॉप) को ट्रैक करता है</li>
+            <li><strong>GPS Integration:</strong> GPS डेटा के साथ लोकेशन सेव करता है (वार्ड्राइविंग)</li>
+            <li><strong>Packet Capture:</strong> पैकेट कैप्चर करता है (PCAP फॉर्मेट)</li>
+            <li><strong>Web UI:</strong> ब्राउज़र से रियल-टाइम देख सकते हैं</li>
+            <li><strong>Multiple Interface Support:</strong> एक साथ कई वायरलेस कार्ड्स से स्कैन</li>
+            <li><strong>Alert System:</strong> सस्पेक्टस गतिविधि पर अलर्ट देना</li>
+        </ul>
+
+        <h3>🎯 Use Cases (उपयोग के तरीके)</h3>
+        <ul>
+            <li><strong>वार्ड्राइविंग (Wardriving):</strong> शहर में घूमकर WiFi नेटवर्क्स का मैप बनाना।</li>
+            <li><strong>WiFi सिक्योरिटी ऑडिट:</strong> आसपास के नेटवर्क्स की सुरक्षा स्थिति जांचना।</li>
+            <li><strong>हिडन SSIDs ढूँढना:</strong> जो नेटवर्क्स अपना नाम नहीं दिखाते, उन्हें रिवील करना।</li>
+            <li><strong>फॉरेंसिक जांच:</strong> WiFi ट्रैफिक को कैप्चर और एनालिसिस करना।</li>
+            <li><strong>इंट्रूज़न डिटेक्शन (IDS):</strong> नेटवर्क में सस्पेक्टस गतिविधि पर अलर्ट देना।</li>
+            <li><strong>सिग्नल कवरेज मैपिंग:</strong> WiFi सिग्नल की ताकत का मैप बनाना।</li>
+        </ul>
+
+        <h3>⚙️ Key Features (मुख्य विशेषताएँ)</h3>
+        <ul>
+            <li>✔️ 802.11a/b/g/n/ac/ax (WiFi 6) सपोर्ट</li>
+            <li>✔️ हिडन SSID डिटेक्शन</li>
+            <li>✔️ क्लाइंटलेस स्कैनिंग (कनेक्ट किए बिना)</li>
+            <li>✔️ GPS इंटीग्रेशन (लोकेशन डेटा)</li>
+            <li>✔️ रियल-टाइम वेब UI (http://127.0.0.1:2501)</li>
+            <li>✔️ PCAP, NetXML, GPSXML फॉर्मेट में लॉग सेव करना</li>
+            <li>✔️ मल्टी-थ्रेडेड (एक साथ कई इंटरफेस)</li>
+            <li>✔️ इंट्रूज़न डिटेक्शन अलर्ट्स</li>
+            <li>✔️ क्रॉस-प्लेटफॉर्म (Linux, macOS, Windows via WSL)</li>
+            <li>✔️ ओपन-सोर्स और फ्री</li>
+        </ul>
+
+        <div class="highlight">
+            <p><strong>📌 Kismet Web UI के मुख्य पेज:</strong></p>
+            <ul>
+                <li><strong>Devices:</strong> सभी डिटेक्ट किए गए डिवाइस (APs और क्लाइंट्स)</li>
+                <li><strong>Messages:</strong> सिस्टम मैसेज और अलर्ट्स</li>
+                <li><strong>Packets:</strong> कैप्चर किए गए पैकेट्स की जानकारी</li>
+                <li><strong>Channels:</strong> सभी चैनल्स पर एक्टिविटी</li>
+                <li><strong>GPS:</strong> GPS डेटा (अगर कनेक्टेड है)</li>
+                <li><strong>Maps:</strong> नेटवर्क्स का मैप व्यू</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <p><strong>📌 Kismet vs Airodump-ng:</strong></p>
+            <ul>
+                <li><strong>Kismet:</strong> GUI/Web UI, हिडन SSID डिटेक्शन, GPS सपोर्ट, क्लाइंट ट्रैकिंग, IDS फीचर्स</li>
+                <li><strong>Airodump-ng:</strong> कमांड लाइन, सिंपल, Aircrack-ng सुइट का हिस्सा</li>
+                <li><strong>अनुशंसा:</strong> Kismet डिटेल्ड एनालिसिस और वार्ड्राइविंग के लिए, Airodump-ng तेज स्कैन और हैंडशेक कैप्चर के लिए।</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <p><strong>📌 Kismet के लिए सुझाव:</strong></p>
+            <ul>
+                <li>हमेशा एडमिन राइट्स (sudo) के साथ चलाएं</li>
+                <li>पहले airmon-ng से मॉनिटर मोड में डालें</li>
+                <li>Web UI के लिए फायरवॉल पोर्ट 2501 खोलें</li>
+                <li>GPS उपयोग के लिए USB GPS डोंगल की जरूरत</li>
+                <li>लॉग फाइलें /var/log/kismet/ में सेव होती हैं</li>
+            </ul>
+        </div>
+
+        <h3>🔗 Official Resources</h3>
+        <ul>
+            <li><strong>Official Website:</strong> <a href="https://www.kismetwireless.net" target="_blank">https://www.kismetwireless.net</a></li>
+            <li><strong>GitHub Repository:</strong> <a href="https://github.com/kismetwireless/kismet" target="_blank">https://github.com/kismetwireless/kismet</a></li>
+            <li><strong>Documentation:</strong> <a href="https://www.kismetwireless.net/docs/" target="_blank">Kismet Documentation</a></li>
+            <li><strong>Kali Linux Tools:</strong> <a href="https://www.kali.org/tools/kismet/" target="_blank">Kali Kismet Page</a></li>
+        </ul>
+
+        <h3>🔧 Related Tools (समान उपकरण)</h3>
+        <ul>
+            <li><strong>Airodump-ng:</strong> Aircrack-ng सुइट का स्कैनर</li>
+            <li><strong>Wireshark:</strong> पैकेट एनालिसिस टूल</li>
+            <li><strong>Wifite:</strong> ऑटोमेटेड वायरलेस अटैक टूल</li>
+            <li><strong>NetStumbler:</strong> विंडोज के लिए वायरलेस स्कैनर (पुराना)</li>
+            <li><strong>Wigle.net:</strong> वार्ड्राइविंग डेटाबेस और मैपिंग</li>
+        </ul>
+
+        <div class="highlight">
+            <p><strong>📌 Kismet के उपयोग के लिए जरूरी सावधानियाँ:</strong></p>
+            <ul>
+                <li>केवल उन नेटवर्क्स को स्कैन करें जिनकी आपको अनुमति हो</li>
+                <li>वार्ड्राइविंग कुछ देशों में प्रतिबंधित हो सकती है</li>
+                <li>पैकेट कैप्चर में निजी डेटा शामिल हो सकता है</li>
+                <li>लॉग फाइल्स को सुरक्षित रखें और अनधिकृत उपयोग से बचाएं</li>
+            </ul>
+        </div>
+
+        <h3>⚠️ Important Note (सावधानी)</h3>
+        <p><strong>Kismet एक शक्तिशाली वायरलेस स्कैनर और स्निफर है। इसका उपयोग केवल उन्हीं नेटवर्क्स पर करें जिनकी आपको लिखित अनुमति हो। बिना अनुमति के WiFi नेटवर्क स्कैन करना, पैकेट कैप्चर करना, या वार्ड्राइविंग करना कानूनी अपराध हो सकता है। हमेशा अपने खुद के नेटवर्क या बग बाउंटी प्रोग्राम पर ही प्रैक्टिस करें। कुछ देशों में वायरलेस स्कैनिंग पर प्रतिबंध है।</strong></p>
+
+        <button class="back-link" onclick="window.location.href='../index.html'">← Back to Home</button>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Ethical Learn — Empowering security researchers. All tools are for authorized testing only.</p>
+</footer>
+
+<script>
+    function openOverlay() {
+        let overlay = document.getElementById("globalToolsOverlay");
+        if (!overlay) {
+            overlay = document.createElement("div");
+            overlay.id = "globalToolsOverlay";
+            overlay.className = "tools-overlay";
+            overlay.innerHTML = `
+                <div class="tools-container">
+                    <button class="close-menu" id="closeOverlayBtnGlobal">✕</button>
+                    <h2 style="color:white; margin-bottom:0.5rem;">🛡️ Security Tools Arsenal</h2>
+                    <p style="color:#bbd4f0; margin-bottom:1rem;">Click any tool to open its dedicated page</p>
+                    <div class="tools-grid" id="globalToolsGrid"></div>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+            document.getElementById("closeOverlayBtnGlobal")?.addEventListener("click", () => overlay.classList.remove("open"));
+            overlay.addEventListener("click", (e) => { if (e.target === overlay) overlay.classList.remove("open"); });
+            const tools = ["Nmap", "Maltego", "theHarvester", "Recon-ng", "dnsenum", "dnsrecon", "Nikto", "OpenVAS", "OWASP ZAP", "SQLmap", "Burp Suite", "Commix", "Skipfish", "Wfuzz", "Hydra", "Hashcat", "John the Ripper", "Medusa", "Aircrack-ng", "Reaver", "Kismet", "Wifite", "Metasploit", "BeEF", "Armitage", "Wireshark", "Ettercap", "Bettercap", "Autopsy", "Binwalk", "Foremost"];
+            const grid = document.getElementById("globalToolsGrid");
+            if (grid) {
+                grid.className = "tools-grid";
+                let html = '';
+                tools.forEach(tool => {
+                    let filename = tool.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
+                    if (tool === "John the Ripper") filename = "john-the-ripper";
+                    if (tool === "OWASP ZAP") filename = "owasp-zap";
+                    if (tool === "Burp Suite") filename = "burpsuite";
+                    if (tool === "Recon-ng") filename = "recon-ng";
+                    if (tool === "theHarvester") filename = "theharvester";
+                    if (tool === "Aircrack-ng") filename = "aircrack-ng";
+                    html += `<div class="tool-category"><ul class="tool-list"><li><a href="../tools/${filename}.html">🔧 ${tool}</a></li></ul></div>`;
+                });
+                grid.innerHTML = html;
+            }
+        }
+        overlay.classList.add("open");
+    }
+    document.getElementById("navToolsTrigger")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); });
+    document.getElementById("mainToolsMenuBtn")?.addEventListener("click", () => openOverlay());
+    const mobileToggle = document.getElementById("mobileMenuToggle");
+    const mobilePanel = document.getElementById("mobileMenuPanel");
+    if (mobileToggle && mobilePanel) {
+        mobileToggle.addEventListener("click", () => { mobilePanel.style.display = mobilePanel.style.display === "none" || mobilePanel.style.display === "" ? "flex" : "none"; });
+        document.getElementById("mobileTools")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); mobilePanel.style.display = "none"; });
+        document.getElementById("mobileAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+        document.getElementById("mobileComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+    }
+    document.getElementById("navAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+    document.getElementById("navComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+</script>
+</body>
+</html>

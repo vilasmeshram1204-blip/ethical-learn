@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Wfuzz - Ethical Learn | साइबर सिक्योरिटी टूल</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .tool-detail {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        }
+        .tool-detail h1 {
+            color: #1f6392;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        .tool-detail h3 {
+            margin: 1.8rem 0 0.8rem 0;
+            color: #0f2c3d;
+            border-left: 4px solid #1f6392;
+            padding-left: 12px;
+        }
+        .tool-detail pre {
+            background: #1e2a3a;
+            color: #eef4ff;
+            padding: 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            margin: 0.8rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .tool-detail .cmd-note {
+            color: #4a6a7a;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid #7bc6e6;
+        }
+        .tool-detail ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .tool-detail li {
+            margin: 0.5rem 0;
+            line-height: 1.5;
+        }
+        .tool-detail a {
+            color: #1f6392;
+            text-decoration: none;
+        }
+        .tool-detail a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            background: #1f6392;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        .back-link:hover {
+            background: #0f4b6e;
+            transform: scale(0.98);
+        }
+        .badge {
+            display: inline-block;
+            background: #eef2fa;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            color: #1f6392;
+        }
+        hr {
+            margin: 1.5rem 0;
+            border-color: #e0e7f0;
+        }
+        .highlight {
+            background: #f0f7ff;
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+        }
+        @media (max-width: 780px) {
+            .tool-detail {
+                margin: 1rem;
+                padding: 1.2rem;
+            }
+            .tool-detail h1 {
+                font-size: 1.5rem;
+            }
+            pre {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+        <!-- Google AdSense Code -->
+    <meta name="google-adsense-account" content="ca-pub-6124052333813612">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6124052333813612"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo-area">
+            <div class="ethical-logo"><span>EL</span></div>
+            <div class="logo-text"><h1>Ethical Learn</h1><p>cyber security hub</p></div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#" id="navToolsTrigger">Tools</a>
+            <a href="about.html" id="navAbout">About</a>
+            <a href="contant.html" id="navComment">Comment</a>
+        </div>
+        <button class="menu-btn" id="mainToolsMenuBtn"><span class="menu-icon">🛠️</span> Tools Menu</button>
+        <button class="mobile-menu-icon" id="mobileMenuToggle">☰</button>
+    </div>
+    <div id="mobileMenuPanel" style="display: none; background:#0e1c2c; padding: 1rem 2rem; flex-direction: column; gap: 1rem; border-bottom: 1px solid #2c7da0;">
+        <a href="../index.html" style="color:white; text-decoration:none;">🏠 Home</a>
+        <a href="#" id="mobileTools" style="color:white; text-decoration:none;">🛠️ Tools</a>
+        <a href="#" id="mobileAbout" style="color:white; text-decoration:none;">📖 About</a>
+        <a href="#" id="mobileComment" style="color:white; text-decoration:none;">💬 Comment</a>
+    </div>
+</header>
+
+<main>
+  <!-- Header Ad -->
+<div class="ad-container ad-header" style="max-width: 1200px; margin: 10px auto;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6124052333813612"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <div class="tool-detail">
+        <h1>⚡ Wfuzz - Web Fuzzing Tool</h1>
+        <p><span class="badge">🔍 Web Fuzzing</span> <span class="badge">🐍 Python</span> <span class="badge">🔄 Multiple Payloads</span></p>
+        <p><strong>Category:</strong> 3️⃣ Web Application Attacks</p>
+        <hr>
+
+        <h3>📝 Description</h3>
+        <p>Wfuzz एक शक्तिशाली वेब फजिंग (Web Fuzzing) टूल है जो Python में लिखा गया है। यह वेब एप्लीकेशन में विभिन्न पैरामीटर्स, डायरेक्टरी, फाइल्स, हेडर्स, और POST डेटा पर ब्रूटफोर्स और फजिंग अटैक करने के लिए उपयोग किया जाता है। Wfuzz Burp Suite के Intruder की तरह काम करता है लेकिन कमांड लाइन पर और अधिक फ्लेक्सिबल है। यह SQL Injection, XSS, डायरेक्टरी ब्रूटफोर्स, पैरामीटर फजिंग, और बहुत कुछ कर सकता है।</p>
+        <p><strong>विशेषता:</strong> Wfuzz की सबसे बड़ी खासियत है इसका मल्टी-पेलोड सपोर्ट - आप एक साथ कई वर्डलिस्ट का उपयोग कर सकते हैं। यह कुकी, हेडर, बेसिक ऑथेंटिकेशन, और प्रॉक्सी को भी सपोर्ट करता है।</p>
+
+        <h3>📦 Installation</h3>
+        <p><strong>Kali Linux (पहले से इंस्टॉल):</strong></p>
+        <pre>wfuzz -h</pre>
+        <p><strong>Ubuntu/Debian:</strong></p>
+        <pre>sudo apt update
+sudo apt install wfuzz -y</pre>
+        <p><strong>Python pip से:</strong></p>
+        <pre>pip3 install wfuzz</pre>
+        <p><strong>GitHub से इंस्टॉल:</strong></p>
+        <pre>git clone https://github.com/xmendez/wfuzz.git
+cd wfuzz
+python3 setup.py install</pre>
+
+        <h3>💻 Common Commands (उदाहरण सहित)</h3>
+        
+        <div class="highlight">
+            <p><strong>📌 Wfuzz में FUZZ keyword का उपयोग होता है जहाँ हम पेलोड डालना चाहते हैं।</strong></p>
+        </div>
+        
+        <p><strong>🔹 1. डायरेक्टरी ब्रूटफोर्स - सबसे आम उपयोग:</strong></p>
+        <pre>wfuzz -w /usr/share/wordlists/dirb/common.txt http://target.com/FUZZ</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> <code>wfuzz -w /usr/share/wordlists/dirb/common.txt http://testphp.vulnweb.com/FUZZ</code> से सभी डायरेक्टरी और फाइल्स ढूँढता है।</div>
+
+        <p><strong>🔹 2. फाइल एक्सटेंशन ब्रूटफोर्स:</strong></p>
+        <pre>wfuzz -w extensions.txt http://target.com/indexFUZZ</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> extensions.txt में .php, .asp, .jsp, .html डालकर चलाएं।</div>
+
+        <p><strong>🔹 3. GET पैरामीटर फजिंग - SQL Injection टेस्ट:</strong></p>
+        <pre>wfuzz -w payloads.txt "http://target.com/page.php?id=FUZZ"</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> payloads.txt में ' OR 1=1--, '; DROP TABLE users;-- आदि डालें।</div>
+
+        <p><strong>🔹 4. POST डेटा फजिंग - लॉगिन ब्रूटफोर्स:</strong></p>
+        <pre>wfuzz -w users.txt -w passes.txt -d "user=FUZZ&pass=FUZ2Z" http://target.com/login.php</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> दो वर्डलिस्ट (users.txt और passes.txt) से ब्रूटफोर्स करता है।</div>
+
+        <p><strong>🔹 5. कुकी के साथ फजिंग:</strong></p>
+        <pre>wfuzz -w payloads.txt -b "PHPSESSID=abc123" http://target.com/page.php?id=FUZZ</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> सेशन कुकी के साथ फजिंग करता है।</div>
+
+        <p><strong>🔹 6. हेडर फजिंग (User-Agent, Referer, etc.):</strong></p>
+        <pre>wfuzz -w user-agents.txt -H "User-Agent: FUZZ" http://target.com/page.php</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> अलग-अलग User-Agent भेजकर टेस्ट करता है।</div>
+
+        <p><strong>🔹 7. आउटपुट को फिल्टर करना - सिर्फ 200 ओके रिस्पॉन्स:</strong></p>
+        <pre>wfuzz -w wordlist.txt --hc 404 http://target.com/FUZZ</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> --hc 404 से 404 एरर वाले रिस्पॉन्स को हाइड करता है।</div>
+
+        <p><strong>🔹 8. आउटपुट को हाइड करना - सिर्फ अलग साइज वाले:</strong></p>
+        <pre>wfuzz -w wordlist.txt --hh 1234 http://target.com/FUZZ</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> --hh 1234 से उन रिस्पॉन्स को हाइड करता है जिनका साइज 1234 बाइट है।</div>
+
+        <p><strong>🔹 9. रिजल्ट को फाइल में सेव करना:</strong></p>
+        <pre>wfuzz -w wordlist.txt -o csv -f output.csv http://target.com/FUZZ</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> CSV फॉर्मेट में रिजल्ट सेव करता है।</div>
+
+        <p><strong>🔹 10. मल्टीपल पेलोड्स एक साथ (कॉम्बिनेशन):</strong></p>
+        <pre>wfuzz -z file,users.txt -z file,passes.txt -d "user=FUZZ&pass=FUZ2Z" http://target.com/login.php</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> users.txt और passes.txt का कार्टेशियन प्रोडक्ट बनाता है।</div>
+
+        <p><strong>🔹 11. बेसिक ऑथेंटिकेशन के साथ फजिंग:</strong></p>
+        <pre>wfuzz -w passwords.txt --basic admin:FUZZ http://target.com/admin</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> admin पासवर्ड ब्रूटफोर्स करता है।</div>
+
+        <p><strong>🔹 12. प्रॉक्सी के माध्यम से फजिंग:</strong></p>
+        <pre>wfuzz -w wordlist.txt -p 127.0.0.1:8080:HTTP http://target.com/FUZZ</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Burp Suite प्रॉक्सी के माध्यम से फजिंग करता है।</div>
+
+        <p><strong>🔹 13. थ्रेड्स की संख्या बढ़ाना (तेज फजिंग):</strong></p>
+        <pre>wfuzz -w wordlist.txt -t 50 http://target.com/FUZZ</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> 50 थ्रेड्स के साथ फजिंग (डिफॉल्ट 10)।</div>
+
+        <p><strong>🔹 14. डिले सेट करना (सर्वर पर लोड कम करने के लिए):</strong></p>
+        <pre>wfuzz -w wordlist.txt -s 1 http://target.com/FUZZ</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> हर रिक्वेस्ट के बीच 1 सेकंड का डिले।</div>
+
+        <p><strong>🔹 15. रिक्वेस्ट को पुनः प्रयास करना:</strong></p>
+        <pre>wfuzz -w wordlist.txt --retries 3 http://target.com/FUZZ</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> फेल रिक्वेस्ट को 3 बार दोबारा भेजता है।</div>
+
+        <p><strong>🔹 16. रिस्पॉन्स टाइम के हिसाब से फिल्टर:</strong></p>
+        <pre>wfuzz -w wordlist.txt --filter "time > 2" http://target.com/FUZZ</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> 2 सेकंड से अधिक समय लेने वाले रिस्पॉन्स दिखाता है।</div>
+
+        <h3>🎯 Wfuzz के पेलोड टाइप्स:</h3>
+        <ul>
+            <li><strong>file:</strong> फाइल से पेलोड लोड करना (<code>-z file,wordlist.txt</code>)</li>
+            <li><strong>range:</strong> नंबर रेंज (<code>-z range,1-1000</code>)</li>
+            <li><strong>list:</strong> इनलाइन लिस्ट (<code>-z list,admin-root-test</code>)</li>
+            <li><strong>stdin:</strong> पाइप से इनपुट (<code>cat wordlist.txt | wfuzz -z stdin ...</code>)</li>
+            <li><strong>burp:</strong> Burp Suite Intruder फॉर्मेट</li>
+        </ul>
+
+        <h3>🎯 Use Cases (उपयोग के तरीके)</h3>
+        <ul>
+            <li><strong>डायरेक्टरी और फाइल डिस्कवरी:</strong> छिपी हुई डायरेक्टरी, बैकअप फाइल्स, एडमिन पैनल ढूँढना।</li>
+            <li><strong>पैरामीटर फजिंग:</strong> गेट और पोस्ट पैरामीटर्स पर SQL Injection, XSS, LFI, RFI टेस्ट करना।</li>
+            <li><strong>लॉगिन ब्रूटफोर्स:</strong> यूजरनेम और पासवर्ड की वर्डलिस्ट से ब्रूटफोर्स करना।</li>
+            <li><strong>हैडर फजिंग:</strong> User-Agent, Referer, X-Forwarded-For हैडर्स पर टेस्ट करना।</li>
+            <li><strong>API एंडपॉइंट डिस्कवरी:</strong> API एंडपॉइंट्स और पैरामीटर्स ढूँढना।</li>
+        </ul>
+
+        <h3>⚙️ Key Features (मुख्य विशेषताएँ)</h3>
+        <ul>
+            <li>✔️ मल्टी-पेलोड सपोर्ट (एक साथ कई वर्डलिस्ट)</li>
+            <li>✔️ GET, POST, COOKIE, HEADER पर फजिंग</li>
+            <li>✔️ बेसिक और डाइजेस्ट ऑथेंटिकेशन सपोर्ट</li>
+            <li>✔️ प्रॉक्सी सपोर्ट (HTTP, HTTPS, SOCKS)</li>
+            <li>✔️ रिस्पॉन्स फिल्टर (स्टेटस कोड, साइज, टाइम, लाइन्स, वर्ड्स)</li>
+            <li>✔️ थ्रेडिंग (तेज फजिंग)</li>
+            <li>✔️ कस्टम हैडर्स</li>
+            <li>✔️ कुकी सपोर्ट</li>
+            <li>✔️ CSV, HTML, JSON, SQLite फॉर्मेट में रिपोर्ट</li>
+            <li>✔️ पाइपलाइनिंग (stdin से पेलोड लोड करना)</li>
+            <li>✔️ रिक्वेस्ट डिले (सर्वर पर लोड कंट्रोल)</li>
+            <li>✔️ Python में लिखा, क्रॉस-प्लेटफॉर्म</li>
+        </ul>
+
+        <div class="highlight">
+            <p><strong>📌 Wfuzz के फिल्टर ऑप्शन:</strong></p>
+            <ul>
+                <li><strong>--hc:</strong> Hide by status code (--hc 404,403)</li>
+                <li><strong>--hl:</strong> Hide by lines (--hl 0)</li>
+                <li><strong>--hw:</strong> Hide by words (--hw 100)</li>
+                <li><strong>--hh:</strong> Hide by characters (--hh 1234)</li>
+                <li><strong>--sc:</strong> Show by status code (--sc 200,302)</li>
+                <li><strong>--sl:</strong> Show by lines</li>
+                <li><strong>--sw:</strong> Show by words</li>
+                <li><strong>--sh:</strong> Show by characters</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <p><strong>📌 Wfuzz vs Burp Intruder:</strong></p>
+            <ul>
+                <li><strong>Wfuzz:</strong> कमांड लाइन, स्क्रिप्टिंग के लिए अच्छा, हल्का, मल्टी-पेलोड सपोर्ट</li>
+                <li><strong>Burp Intruder:</strong> GUI, विजुअल, ज्यादा फीचर्स, प्रोफेशनल वर्शन में तेज</li>
+                <li><strong>अनुशंसा:</strong> Wfuzz स्क्रिप्ट ऑटोमेशन के लिए, Burp मैनुअल टेस्टिंग के लिए।</li>
+            </ul>
+        </div>
+
+        <h3>🔗 Official Resources</h3>
+        <ul>
+            <li><strong>GitHub Repository:</strong> <a href="https://github.com/xmendez/wfuzz" target="_blank">https://github.com/xmendez/wfuzz</a></li>
+            <li><strong>Official Documentation:</strong> <a href="https://wfuzz.readthedocs.io" target="_blank">https://wfuzz.readthedocs.io</a></li>
+            <li><strong>Kali Linux Tools:</strong> <a href="https://www.kali.org/tools/wfuzz/" target="_blank">Kali Wfuzz Page</a></li>
+        </ul>
+
+        <h3>🔧 Related Tools (समान उपकरण)</h3>
+        <ul>
+            <li><strong>Burp Suite Intruder:</strong> GUI आधारित फजिंग टूल</li>
+            <li><strong>ffuf:</strong> तेज वेब फजिंग टूल (Go में लिखा)</li>
+            <li><strong>dirb:</strong> डायरेक्टरी ब्रूटफोर्स टूल</li>
+            <li><strong>gobuster:</strong> तेज डायरेक्टरी/डीएनएस ब्रूटफोर्स</li>
+            <li><strong>hydra:</strong> नेटवर्क लॉगिन क्रैकर</li>
+            <li><strong>SQLmap:</strong> SQL इंजेक्शन के लिए स्पेशलाइज्ड</li>
+        </ul>
+
+        <div class="highlight">
+            <p><strong>📌 Wfuzz के लिए सुझाव:</strong></p>
+            <ul>
+                <li>हमेशा --hc 404 का उपयोग करें ताकि नॉट फाउंड रिस्पॉन्स न दिखें</li>
+                <li>बड़ी वर्डलिस्ट के लिए -t (थ्रेड्स) बढ़ाएं लेकिन सर्वर पर लोड का ध्यान रखें</li>
+                <li>प्रोडक्शन साइट पर -s (डिले) का उपयोग करें</li>
+                <li>फजिंग से पहले हमेशा अनुमति लें</li>
+            </ul>
+        </div>
+
+        <h3>⚠️ Important Note (सावधानी)</h3>
+        <p><strong>Wfuzz एक शक्तिशाली फजिंग टूल है जो वेब सर्वर पर भारी लोड डाल सकता है। इसका उपयोग केवल उन्हीं वेबसाइट्स पर करें जिनकी आपको लिखित अनुमति हो। बिना अनुमति के ब्रूटफोर्स या फजिंग करना कानूनी अपराध है। प्रोडक्शन सर्वर पर स्कैन करते समय -s (delay) पैरामीटर का उपयोग करके रिक्वेस्ट लिमिट लगाएं। हमेशा अपने खुद के वेब एप्लीकेशन या बग बाउंटी प्रोग्राम पर ही प्रैक्टिस करें।</strong></p>
+
+        <button class="back-link" onclick="window.location.href='../index.html'">← Back to Home</button>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Ethical Learn — Empowering security researchers. All tools are for authorized testing only.</p>
+</footer>
+
+<script>
+    function openOverlay() {
+        let overlay = document.getElementById("globalToolsOverlay");
+        if (!overlay) {
+            overlay = document.createElement("div");
+            overlay.id = "globalToolsOverlay";
+            overlay.className = "tools-overlay";
+            overlay.innerHTML = `
+                <div class="tools-container">
+                    <button class="close-menu" id="closeOverlayBtnGlobal">✕</button>
+                    <h2 style="color:white; margin-bottom:0.5rem;">🛡️ Security Tools Arsenal</h2>
+                    <p style="color:#bbd4f0; margin-bottom:1rem;">Click any tool to open its dedicated page</p>
+                    <div class="tools-grid" id="globalToolsGrid"></div>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+            document.getElementById("closeOverlayBtnGlobal")?.addEventListener("click", () => overlay.classList.remove("open"));
+            overlay.addEventListener("click", (e) => { if (e.target === overlay) overlay.classList.remove("open"); });
+            const tools = ["Nmap", "Maltego", "theHarvester", "Recon-ng", "dnsenum", "dnsrecon", "Nikto", "OpenVAS", "OWASP ZAP", "SQLmap", "Burp Suite", "Commix", "Skipfish", "Wfuzz", "Hydra", "Hashcat", "John the Ripper", "Medusa", "Aircrack-ng", "Reaver", "Kismet", "Wifite", "Metasploit", "BeEF", "Armitage", "Wireshark", "Ettercap", "Bettercap", "Autopsy", "Binwalk", "Foremost"];
+            const grid = document.getElementById("globalToolsGrid");
+            if (grid) {
+                grid.className = "tools-grid";
+                let html = '';
+                tools.forEach(tool => {
+                    let filename = tool.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
+                    if (tool === "John the Ripper") filename = "john-the-ripper";
+                    if (tool === "OWASP ZAP") filename = "owasp-zap";
+                    if (tool === "Burp Suite") filename = "burpsuite";
+                    if (tool === "Recon-ng") filename = "recon-ng";
+                    if (tool === "theHarvester") filename = "theharvester";
+                    if (tool === "Aircrack-ng") filename = "aircrack-ng";
+                    html += `<div class="tool-category"><ul class="tool-list"><li><a href="../tools/${filename}.html">🔧 ${tool}</a></li></ul></div>`;
+                });
+                grid.innerHTML = html;
+            }
+        }
+        overlay.classList.add("open");
+    }
+    document.getElementById("navToolsTrigger")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); });
+    document.getElementById("mainToolsMenuBtn")?.addEventListener("click", () => openOverlay());
+    const mobileToggle = document.getElementById("mobileMenuToggle");
+    const mobilePanel = document.getElementById("mobileMenuPanel");
+    if (mobileToggle && mobilePanel) {
+        mobileToggle.addEventListener("click", () => { mobilePanel.style.display = mobilePanel.style.display === "none" || mobilePanel.style.display === "" ? "flex" : "none"; });
+        document.getElementById("mobileTools")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); mobilePanel.style.display = "none"; });
+        document.getElementById("mobileAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+        document.getElementById("mobileComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+    }
+    document.getElementById("navAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+    document.getElementById("navComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+</script>
+</body>
+</html>

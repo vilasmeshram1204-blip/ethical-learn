@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Nikto - Ethical Learn | साइबर सिक्योरिटी टूल</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .tool-detail {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        }
+        .tool-detail h1 {
+            color: #1f6392;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        .tool-detail h3 {
+            margin: 1.8rem 0 0.8rem 0;
+            color: #0f2c3d;
+            border-left: 4px solid #1f6392;
+            padding-left: 12px;
+        }
+        .tool-detail pre {
+            background: #1e2a3a;
+            color: #eef4ff;
+            padding: 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            margin: 0.8rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .tool-detail .cmd-note {
+            color: #4a6a7a;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid #7bc6e6;
+        }
+        .tool-detail ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .tool-detail li {
+            margin: 0.5rem 0;
+            line-height: 1.5;
+        }
+        .tool-detail a {
+            color: #1f6392;
+            text-decoration: none;
+        }
+        .tool-detail a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            background: #1f6392;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        .back-link:hover {
+            background: #0f4b6e;
+            transform: scale(0.98);
+        }
+        .badge {
+            display: inline-block;
+            background: #eef2fa;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            color: #1f6392;
+        }
+        hr {
+            margin: 1.5rem 0;
+            border-color: #e0e7f0;
+        }
+        .highlight {
+            background: #f0f7ff;
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+        }
+        @media (max-width: 780px) {
+            .tool-detail {
+                margin: 1rem;
+                padding: 1.2rem;
+            }
+            .tool-detail h1 {
+                font-size: 1.5rem;
+            }
+            pre {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+        <!-- Google AdSense Code -->
+    <meta name="google-adsense-account" content="ca-pub-6124052333813612">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6124052333813612"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo-area">
+            <div class="ethical-logo"><span>EL</span></div>
+            <div class="logo-text"><h1>Ethical Learn</h1><p>cyber security hub</p></div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#" id="navToolsTrigger">Tools</a>
+            <a href="about.html" id="navAbout">About</a>
+            <a href="comtant.html" id="navComment">Comment</a>
+        </div>
+        <button class="menu-btn" id="mainToolsMenuBtn"><span class="menu-icon">🛠️</span> Tools Menu</button>
+        <button class="mobile-menu-icon" id="mobileMenuToggle">☰</button>
+    </div>
+    <div id="mobileMenuPanel" style="display: none; background:#0e1c2c; padding: 1rem 2rem; flex-direction: column; gap: 1rem; border-bottom: 1px solid #2c7da0;">
+        <a href="../index.html" style="color:white; text-decoration:none;">🏠 Home</a>
+        <a href="#" id="mobileTools" style="color:white; text-decoration:none;">🛠️ Tools</a>
+        <a href="#" id="mobileAbout" style="color:white; text-decoration:none;">📖 About</a>
+        <a href="#" id="mobileComment" style="color:white; text-decoration:none;">💬 Comment</a>
+    </div>
+</header>
+
+<main>
+  <!-- Header Ad -->
+<div class="ad-container ad-header" style="max-width: 1200px; margin: 10px auto;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6124052333813612"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <div class="tool-detail">
+        <h1>🕷️ Nikto - Web Server Scanner</h1>
+        <p><span class="badge">🌐 Web Scanner</span> <span class="badge">🔍 Vulnerability Detection</span> <span class="badge">🛡️ Security Audit</span></p>
+        <p><strong>Category:</strong> 2️⃣ Vulnerability Analysis</p>
+        <hr>
+
+        <h3>📝 Description</h3>
+        <p>Nikto एक ओपन-सोर्स वेब सर्वर स्कैनर है जो वेब सर्वर पर मौजूद संभावित वल्नरेबिलिटीज, खतरनाक फाइल्स, पुराने वर्जन, और गलत कॉन्फ़िगरेशन को डिटेक्ट करता है। यह Perl में लिखा गया है और 6700+ खतरनाक फाइल्स/सीजीआई, 1200+ सर्वर वर्जन, और 270+ वल्नरेबिलिटीज को चेक करता है। Nikto तेज, फ्लेक्सिबल, और पेनिट्रेशन टेस्टिंग के लिए एक जरूरी टूल है।</p>
+        <p><strong>विशेषता:</strong> Nikto SSL सपोर्ट करता है, प्रॉक्सी के माध्यम से स्कैन कर सकता है, और HTML, CSV, XML फॉर्मेट में रिपोर्ट जनरेट कर सकता है। यह Nmap, Nessus, OpenVAS जैसे टूल्स के साथ इंटीग्रेट हो सकता है।</p>
+
+        <h3>📦 Installation</h3>
+        <p><strong>Kali Linux (पहले से इंस्टॉल):</strong></p>
+        <pre>nikto -h</pre>
+        <p><strong>Ubuntu/Debian:</strong></p>
+        <pre>sudo apt update
+sudo apt install nikto -y</pre>
+        <p><strong>GitHub से इंस्टॉल:</strong></p>
+        <pre>git clone https://github.com/sullo/nikto.git
+cd nikto
+perl nikto.pl -h</pre>
+        <p><strong>macOS (Homebrew):</strong></p>
+        <pre>brew install nikto</pre>
+
+        <h3>💻 Common Commands (उदाहरण सहित)</h3>
+        
+        <div class="highlight">
+            <p><strong>📌 Nikto की सबसे खास बात है इसकी स्पीड। नीचे सभी महत्वपूर्ण कमांड्स दिए गए हैं:</strong></p>
+        </div>
+        
+        <p><strong>🔹 1. बेसिक स्कैन - सबसे आम कमांड:</strong></p>
+        <pre>nikto -h http://target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> <code>nikto -h http://example.com</code> से वेबसाइट की बेसिक वल्नरेबिलिटी स्कैन करता है।</div>
+
+        <p><strong>🔹 2. HTTPS वेबसाइट स्कैन करना:</strong></p>
+        <pre>nikto -h https://target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> SSL/TLS वाली वेबसाइट स्कैन करता है।</div>
+
+        <p><strong>🔹 3. पोर्ट स्पेसिफाई करना - अगर वेबसाइट अलग पोर्ट पर है:</strong></p>
+        <pre>nikto -h target.com -p 8080</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> पोर्ट 8080 पर चल रही वेबसाइट स्कैन करता है।</div>
+
+        <p><strong>🔹 4. SSL/TLS चेक करना:</strong></p>
+        <pre>nikto -h https://target.com -ssl</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> SSL सर्टिफिकेट और TLS कॉन्फ़िगरेशन चेक करता है।</div>
+
+        <p><strong>🔹 5. कस्टम पोर्ट रेंज स्कैन:</strong></p>
+        <pre>nikto -h target.com -p 80,443,8080,8443</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> कई पोर्ट्स एक साथ स्कैन करता है।</div>
+
+        <p><strong>🔹 6. आउटपुट फाइल में सेव करना - HTML फॉर्मेट:</strong></p>
+        <pre>nikto -h target.com -o result.html -Format html</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> रिजल्ट HTML फाइल में सेव होगा।</div>
+
+        <p><strong>🔹 7. CSV फॉर्मेट में रिपोर्ट:</strong></p>
+        <pre>nikto -h target.com -o result.csv -Format csv</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> CSV फॉर्मेट में रिपोर्ट सेव करता है।</div>
+
+        <p><strong>🔹 8. XML फॉर्मेट में रिपोर्ट:</strong></p>
+        <pre>nikto -h target.com -o result.xml -Format xml</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> XML फॉर्मेट में रिपोर्ट सेव करता है।</div>
+
+        <p><strong>🔹 9. प्रॉक्सी के माध्यम से स्कैन:</strong></p>
+        <pre>nikto -h target.com -useproxy http://127.0.0.1:8080</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Burp Suite या OWASP ZAP प्रॉक्सी के माध्यम से स्कैन करता है।</div>
+
+        <p><strong>🔹 10. स्पेसिफिक सीजीआई डायरेक्टरी स्कैन:</strong></p>
+        <pre>nikto -h target.com -c /cgi-bin/</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> सिर्फ cgi-bin डायरेक्टरी स्कैन करता है।</div>
+
+        <p><strong>🔹 11. स्पेसिफिक फाइल चेक करना:</strong></p>
+        <pre>nikto -h target.com -C "robots.txt"</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> robots.txt फाइल चेक करता है।</div>
+
+        <p><strong>🔹 12. ब्रूटफोर्स मोड - सबडायरेक्टरी ढूँढना:</strong></p>
+        <pre>nikto -h target.com -mutate 1</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> फाइल और डायरेक्टरी ब्रूटफोर्स करता है।</div>
+
+        <p><strong>🔹 13. सभी म्यूटेशन एक साथ:</strong></p>
+        <pre>nikto -h target.com -mutate 1,2,3</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> कई तरह के म्यूटेशन (सबडोमेन, फाइल एक्सटेंशन, आदि) चेक करता है।</div>
+
+        <p><strong>🔹 14. थ्रेड्स की संख्या बढ़ाना (तेज स्कैन):</strong></p>
+        <pre>nikto -h target.com -maxtime 30 -maxthreads 10</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> 30 मिनट मैक्स टाइम, 10 थ्रेड्स के साथ स्कैन करता है।</div>
+
+        <p><strong>🔹 15. Nmap के साथ इंटीग्रेट करना:</strong></p>
+        <pre>nmap -p80 target.com -oG - | nikto -h -</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Nmap से मिले होस्ट्स को Nikto में पाइप करके स्कैन करता है।</div>
+
+        <p><strong>🔹 16. डीबग मोड - डिटेल्ड आउटपुट:</strong></p>
+        <pre>nikto -h target.com -Display V</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Verbose मोड में सभी डिटेल दिखाता है।</div>
+
+        <h3>🎯 Use Cases (उपयोग के तरीके)</h3>
+        <ul>
+            <li><strong>वेब सर्वर सिक्योरिटी ऑडिट:</strong> वेब सर्वर पर मौजूद खतरनाक फाइल्स, पुराने वर्जन, और गलत कॉन्फ़िगरेशन ढूँढना।</li>
+            <li><strong>पेनिट्रेशन टेस्टिंग:</strong> वेब एप्लीकेशन टेस्टिंग से पहले सर्वर लेवल की वल्नरेबिलिटी चेक करना।</li>
+            <li><strong>बग बाउंटी:</strong> टारगेट वेबसाइट पर कॉमन वल्नरेबिलिटीज (जैसे robots.txt, phpinfo, डिफॉल्ट पेज) ढूँढना।</li>
+            <li><strong>सीजीआई स्कैनिंग:</strong> /cgi-bin/ डायरेक्टरी में मौजूद खतरनाक स्क्रिप्ट्स ढूँढना।</li>
+            <li><strong>SSL/TLS कॉन्फ़िगरेशन चेक:</strong> सर्टिफिकेट एक्सपायरी, कमजोर साइफर, और TLS वर्जन चेक करना।</li>
+        </ul>
+
+        <h3>⚙️ Key Features (मुख्य विशेषताएँ)</h3>
+        <ul>
+            <li>✔️ 6700+ खतरनाक फाइल्स और CGI स्क्रिप्ट्स डेटाबेस</li>
+            <li>✔️ 1200+ सर्वर वर्जन डिटेक्शन</li>
+            <li>✔️ 270+ वल्नरेबिलिटीज चेक</li>
+            <li>✔️ SSL/TLS सपोर्ट</li>
+            <li>✔️ HTTP प्रॉक्सी सपोर्ट</li>
+            <li>✔️ HTML, CSV, XML फॉर्मेट में रिपोर्ट</li>
+            <li>✔️ म्यूटेशन तकनीक (सबडोमेन, फाइल एक्सटेंशन ब्रूटफोर्स)</li>
+            <li>✔️ Nmap, Nessus, OpenVAS के साथ इंटीग्रेशन</li>
+            <li>✔️ मल्टी-थ्रेडिंग</li>
+            <li>✔️ पर्ल में लिखा, क्रॉस-प्लेटफॉर्म</li>
+            <li>✔️ कस्टम डेटाबेस और प्लगइन्स बना सकते हैं</li>
+        </ul>
+
+        <div class="highlight">
+            <p><strong>📌 Nikto के मुख्य चेक लिस्ट:</strong></p>
+            <ul>
+                <li><strong>सर्वर कॉन्फ़िगरेशन:</strong> खुले डायरेक्टरी, डिफॉल्ट पेज, index.html</li>
+                <li><strong>खतरनाक फाइल्स:</strong> phpinfo.php, test.php, admin.php, config.php</li>
+                <li><strong>सीजीआई स्क्रिप्ट्स:</strong> /cgi-bin/ में खतरनाक स्क्रिप्ट्स</li>
+                <li><strong>पुराने वर्जन:</strong> Apache, Nginx, IIS के पुराने वर्जन</li>
+                <li><strong>SSL/TLS:</strong> कमजोर साइफर, एक्सपायर्ड सर्टिफिकेट</li>
+                <li><strong>HTTP मेथड्स:</strong> PUT, DELETE, TRACE, OPTIONS</li>
+            </ul>
+        </div>
+
+        <h3>🔗 Official Resources</h3>
+        <ul>
+            <li><strong>GitHub Repository:</strong> <a href="https://github.com/sullo/nikto" target="_blank">https://github.com/sullo/nikto</a></li>
+            <li><strong>Official Website:</strong> <a href="https://cirt.net/Nikto2" target="_blank">https://cirt.net/Nikto2</a></li>
+            <li><strong>Documentation:</strong> <a href="https://github.com/sullo/nikto/wiki" target="_blank">Nikto Wiki</a></li>
+            <li><strong>Database Updates:</strong> <code>nikto -update</code> (डेटाबेस अपडेट करता है)</li>
+        </ul>
+
+        <h3>🔧 Related Tools (समान उपकरण)</h3>
+        <ul>
+            <li><strong>Nmap:</strong> पोर्ट स्कैनिंग के लिए</li>
+            <li><strong>OpenVAS:</strong> फुल वल्नरेबिलिटी स्कैनर</li>
+            <li><strong>OWASP ZAP:</strong> वेब एप्लीकेशन सिक्योरिटी टेस्टिंग</li>
+            <li><strong>Wapiti:</strong> वेब एप्लीकेशन वल्नरेबिलिटी स्कैनर</li>
+            <li><strong>Burp Suite:</strong> वेब सिक्योरिटी टेस्टिंग सुइट</li>
+            <li><strong>Skipfish:</strong> गूगल का वेब सिक्योरिटी स्कैनर</li>
+        </ul>
+
+        <div class="highlight">
+            <p><strong>📌 Nikto vs OpenVAS vs ZAP:</strong></p>
+            <ul>
+                <li><strong>Nikto:</strong> तेज, कमांड लाइन, सर्वर लेवल स्कैन</li>
+                <li><strong>OpenVAS:</strong> फुल स्कोप वल्नरेबिलिटी स्कैनर, GUI सपोर्ट</li>
+                <li><strong>OWASP ZAP:</strong> वेब एप्लीकेशन फोकस, प्रॉक्सी और स्पाइडर</li>
+                <li><strong>अनुशंसा:</strong> तीनों को मिलाकर उपयोग करें - Nikto सर्वर लेवल, ZAP एप्लीकेशन लेवल, OpenVAS पूरा ऑडिट।</li>
+            </ul>
+        </div>
+
+        <h3>⚠️ Important Note (सावधानी)</h3>
+        <p><strong>Nikto एक एक्टिव स्कैनर है - यह वेब सर्वर पर रिक्वेस्ट भेजता है जो सर्वर लॉग में रिकॉर्ड होती हैं। इसका उपयोग केवल उन्हीं वेबसाइट्स पर करें जिनकी आपको लिखित अनुमति हो। बिना अनुमति के स्कैन करना कानूनी अपराध है। हमेशा अपने खुद के सर्वर या बग बाउंटी प्रोग्राम पर ही प्रैक्टिस करें। कुछ स्कैन (जैसे ब्रूटफोर्स) वेबसर्वर पर लोड बढ़ा सकते हैं, इसलिए प्रोडक्शन सर्वर पर सावधानी से उपयोग करें।</strong></p>
+
+        <button class="back-link" onclick="window.location.href='../index.html'">← Back to Home</button>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Ethical Learn — Empowering security researchers. All tools are for authorized testing only.</p>
+</footer>
+
+<script>
+    function openOverlay() {
+        let overlay = document.getElementById("globalToolsOverlay");
+        if (!overlay) {
+            overlay = document.createElement("div");
+            overlay.id = "globalToolsOverlay";
+            overlay.className = "tools-overlay";
+            overlay.innerHTML = `
+                <div class="tools-container">
+                    <button class="close-menu" id="closeOverlayBtnGlobal">✕</button>
+                    <h2 style="color:white; margin-bottom:0.5rem;">🛡️ Security Tools Arsenal</h2>
+                    <p style="color:#bbd4f0; margin-bottom:1rem;">Click any tool to open its dedicated page</p>
+                    <div class="tools-grid" id="globalToolsGrid"></div>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+            document.getElementById("closeOverlayBtnGlobal")?.addEventListener("click", () => overlay.classList.remove("open"));
+            overlay.addEventListener("click", (e) => { if (e.target === overlay) overlay.classList.remove("open"); });
+            const tools = ["Nmap", "Maltego", "theHarvester", "Recon-ng", "dnsenum", "dnsrecon", "Nikto", "OpenVAS", "OWASP ZAP", "SQLmap", "Burp Suite", "Commix", "Skipfish", "Wfuzz", "Hydra", "Hashcat", "John the Ripper", "Medusa", "Aircrack-ng", "Reaver", "Kismet", "Wifite", "Metasploit", "BeEF", "Armitage", "Wireshark", "Ettercap", "Bettercap", "Autopsy", "Binwalk", "Foremost"];
+            const grid = document.getElementById("globalToolsGrid");
+            if (grid) {
+                grid.className = "tools-grid";
+                let html = '';
+                tools.forEach(tool => {
+                    let filename = tool.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
+                    if (tool === "John the Ripper") filename = "john-the-ripper";
+                    if (tool === "OWASP ZAP") filename = "owasp-zap";
+                    if (tool === "Burp Suite") filename = "burpsuite";
+                    if (tool === "Recon-ng") filename = "recon-ng";
+                    if (tool === "theHarvester") filename = "theharvester";
+                    if (tool === "Aircrack-ng") filename = "aircrack-ng";
+                    html += `<div class="tool-category"><ul class="tool-list"><li><a href="../tools/${filename}.html">🔧 ${tool}</a></li></ul></div>`;
+                });
+                grid.innerHTML = html;
+            }
+        }
+        overlay.classList.add("open");
+    }
+    document.getElementById("navToolsTrigger")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); });
+    document.getElementById("mainToolsMenuBtn")?.addEventListener("click", () => openOverlay());
+    const mobileToggle = document.getElementById("mobileMenuToggle");
+    const mobilePanel = document.getElementById("mobileMenuPanel");
+    if (mobileToggle && mobilePanel) {
+        mobileToggle.addEventListener("click", () => { mobilePanel.style.display = mobilePanel.style.display === "none" || mobilePanel.style.display === "" ? "flex" : "none"; });
+        document.getElementById("mobileTools")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); mobilePanel.style.display = "none"; });
+        document.getElementById("mobileAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+        document.getElementById("mobileComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+    }
+    document.getElementById("navAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+    document.getElementById("navComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+</script>
+</body>
+</html>

