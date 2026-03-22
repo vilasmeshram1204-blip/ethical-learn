@@ -1,0 +1,13 @@
+{
+  "rewrites": [
+    {
+      "source": "/tools/:tool",
+      "destination": "/tools/:tool.html"
+    },
+    {
+      "source": "/:path",
+      "destination": "/:path.html"
+    }
+  ],
+  "cleanUrls": true
+}

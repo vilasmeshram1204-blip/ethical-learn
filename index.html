@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Ethical Learn | Complete Cybersecurity Tool Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional Homepage Specific Styles */
+        .hero-section {
+            background: linear-gradient(135deg, #0b1c2c 0%, #1a3a4f 100%);
+            border-radius: 2rem;
+            padding: 3rem 2rem;
+            color: white;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .hero-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff, #7bc6e6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #cce7f5;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background: #2c7da0;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background: #1f6392;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #2c7da0;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-secondary:hover {
+            background: #2c7da0;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            text-align: center;
+            transition: 0.3s;
+            height: 100%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .feature-card h3 {
+            color: #1f6392;
+            margin-bottom: 1rem;
+        }
+        
+        .guide-card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #2c7da0;
+            transition: 0.3s;
+        }
+        .guide-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .guide-card h3 {
+            color: #1f6392;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .guide-card pre {
+            background: #1e2a3a;
+            color: #eef4ff;
+            padding: 1rem;
+            border-radius: 0.8rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-size: 0.85rem;
+        }
+        .guide-card .cmd-note {
+            background: #eef2fa;
+            padding: 0.8rem;
+            border-radius: 0.5rem;
+            margin: 0.8rem 0;
+            color: #2c3e4e;
+        }
+        
+        .platform-tab {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        .platform-btn {
+            background: #eef2fa;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 40px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .platform-btn.active {
+            background: #1f6392;
+            color: white;
+        }
+        .platform-content {
+            display: none;
+        }
+        .platform-content.active {
+            display: block;
+        }
+        
+        .tool-category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .tool-mini-card {
+            background: #f8fafc;
+            border-radius: 1rem;
+            padding: 1rem;
+            border: 1px solid #e0e7f0;
+            transition: 0.2s;
+        }
+        .tool-mini-card:hover {
+            border-color: #2c7da0;
+        }
+        .tool-mini-card h4 {
+            color: #1f6392;
+            margin-bottom: 0.5rem;
+        }
+        .tool-mini-card code {
+            background: #eef2fa;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin: 2px 0;
+        }
+        
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            background: linear-gradient(135deg, #0b1c2c, #1a3a4f);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            margin: 2rem 0;
+            color: white;
+            text-align: center;
+        }
+        .stat-item h3 {
+            font-size: 2rem;
+            color: #7bc6e6;
+        }
+        
+        /* Termux Button Special Styles */
+        .termux-button {
+            display: block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            text-decoration: none;
+            transition: 0.3s;
+            margin: 20px 0;
+        }
+        .termux-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .termux-icon {
+            font-size: 3rem;
+            display: block;
+        }
+        .termux-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 10px 0;
+            color: white;
+        }
+        .termux-desc {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 15px;
+        }
+        .termux-cta {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 10px 25px;
+            border-radius: 40px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 780px) {
+            .hero-section h1 {
+                font-size: 1.8rem;
+            }
+            .hero-section p {
+                font-size: 1rem;
+            }
+            .stats-bar {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .tool-category-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+    <!-- Google AdSense Code - REPLACE WITH YOUR OWN -->
+    <meta name="google-adsense-account" content="ca-pub-6124052333813612">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6124052333813612"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo-area">
+            <div class="ethical-logo"><span>EL</span></div>
+            <div class="logo-text">
+                <h1>Ethical Learn</h1>
+                <p>cyber security hub</p>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="#" id="navHome">Home</a>
+            <a href="#" id="navToolsTrigger">Tools</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <button class="menu-btn" id="mainToolsMenuBtn"><span class="menu-icon">🛠️</span> Tools Menu</button>
+        <button class="mobile-menu-icon" id="mobileMenuToggle">☰</button>
+    </div>
+    <div id="mobileMenuPanel" style="display: none; background:#0e1c2c; padding: 1rem 2rem; flex-direction: column; gap: 1rem;">
+        <a href="#" id="mobileHome" style="color:white; text-decoration:none;">🏠 Home</a>
+        <a href="#" id="mobileTools" style="color:white; text-decoration:none;">🛠️ Tools</a>
+        <a href="about.html" style="color:white; text-decoration:none;">📖 About</a>
+        <a href="contact.html" style="color:white; text-decoration:none;">💬 Contact</a>
+    </div>
+</header>
+
+<!-- Header Ad -->
+<div class="ad-container ad-header" style="max-width: 1200px; margin: 10px auto;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-6124052333813612"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<main>
+    <!-- Hero Section -->
+    <div class="main-content">
+        <div class="hero-section">
+            <h1>🎓 Ethical Learn</h1>
+            <p>Complete Cybersecurity Tool Learning Platform</p>
+            <p style="font-size: 1rem;">Learn Ethical Hacking Tools on Mobile & PC/Laptop | Detailed Guidance with Commands & Examples</p>
+            <div class="hero-buttons">
+                <button id="exploreToolsBtn" class="btn-primary">🚀 Explore All Tools</button>
+                <a href="#learning-guide" class="btn-secondary">📖 Learning Guide</a>
+            </div>
+        </div>
+        
+        <!-- Stats Section -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <h3>31+</h3>
+                <p>Security Tools</p>
+            </div>
+            <div class="stat-item">
+                <h3>100+</h3>
+                <p>Commands & Examples</p>
+            </div>
+            <div class="stat-item">
+                <h3>8</h3>
+                <p>Tool Categories</p>
+            </div>
+            <div class="stat-item">
+                <h3>Mobile & PC</h3>
+                <p>Learn Anywhere</p>
+            </div>
+        </div>
+        
+        <!-- Features Section -->
+        <h2 style="text-align: center; margin: 2rem 0 1rem;">✨ What You'll Learn Here</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>Complete Tool Guide</h3>
+                <p>हर tool की पूरी जानकारी - क्या है, कैसे काम करता है, कहाँ उपयोग होता है</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💻</div>
+                <h3>Commands with Examples</h3>
+                <p>हर tool के लिए practical commands और real-world examples</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱💻</div>
+                <h3>Mobile & PC Learning</h3>
+                <p>Termux (Mobile) और Linux/Windows (PC) दोनों पर सीखें</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Ethical Guidance</h3>
+                <p>कानूनी और नैतिक तरीके से tools का उपयोग करना सीखें</p>
+            </div>
+        </div>
+        
+        <!-- Mobile vs PC Learning Section with Termux Redirect Button -->
+        <div id="learning-guide" style="background: #f0f4fc; border-radius: 1.5rem; padding: 2rem; margin: 2rem 0;">
+            <h2 style="text-align: center; margin-bottom: 1.5rem;">📱💻 How to Learn - Mobile & PC/Laptop</h2>
+            
+            <div class="platform-tab">
+                <button class="platform-btn active" data-platform="mobile">📱 Mobile (Android/Termux)</button>
+                <button class="platform-btn" data-platform="pc">💻 PC/Laptop (Linux/Windows/Mac)</button>
+            </div>
+            
+            <!-- Mobile Content with Termux Redirect Button -->
+            <div id="mobile-content" class="platform-content active">
+                <div class="guide-card">
+                    <h3>📱 Termux Setup on Android - Complete Guide</h3>
+                    <p><strong>Termux क्या है?</strong> Termux एक Android app है जो आपके mobile में Linux जैसा environment देता है। यहाँ आप सभी cybersecurity tools चला सकते हैं - Nmap, Hydra, SQLmap, Metasploit, और 100+ tools।</p>
+                    
+                    <!-- TERMUX REDIRECT BUTTON - REPLACE URL WITH YOUR WEBSITE -->
+                    <a href="https://your-termux-setup-website.com" target="_blank" class="termux-button">
+                        <span class="termux-icon">📱</span>
+                        <div class="termux-title">Complete Termux Setup Guide</div>
+                        <div class="termux-desc">Learn how to install Termux, configure it, and install all 31+ security tools step by step</div>
+                        <span class="termux-cta">🔧 Get Started →</span>
+                    </a>
+                    
+                    <div class="cmd-note">
+                        <strong>📌 Quick Termux Commands (After Setup):</strong><br>
+                        <code>pkg update && pkg upgrade</code><br>
+                        <code>pkg install nmap hydra python git</code><br>
+                        <code>git clone https://github.com/sqlmapproject/sqlmap.git</code><br>
+                        <code>cd sqlmap && python sqlmap.py -h</code>
+                    </div>
+                    
+                    <p><strong>✨ Tools you can run on Termux:</strong> Nmap, Hydra, SQLmap, Metasploit, John the Ripper, Hashcat, Wireshark (via tshark), Python scripts, and 100+ more</p>
+                    <p><strong>✅ Requirements:</strong> Android 7.0+, 2GB RAM, 500MB free storage, Internet connection</p>
+                </div>
+            </div>
+            
+            <!-- PC/Laptop Content -->
+            <div id="pc-content" class="platform-content">
+                <div class="guide-card">
+                    <h3>💻 Kali Linux (Best for Security)</h3>
+                    <p>Kali Linux में सभी tools पहले से इंस्टॉल होते हैं। आप VirtualBox में भी चला सकते हैं।</p>
+                    <pre># Download Kali Linux: https://www.kali.org/get-kali/
+# Install on VirtualBox or Dual Boot
+
+# Update tools
+sudo apt update && sudo apt upgrade
+
+# Start any tool directly
+nmap
+hydra
+sqlmap
+msfconsole</pre>
+                </div>
+                
+                <div class="guide-card">
+                    <h3>💻 Ubuntu/Debian (Regular Linux)</h3>
+                    <pre># Install tools one by one
+sudo apt install nmap -y
+sudo apt install hydra -y
+sudo apt install wireshark -y
+sudo apt install metasploit-framework -y
+sudo apt install aircrack-ng -y</pre>
+                </div>
+                
+                <div class="guide-card">
+                    <h3>💻 Windows Setup</h3>
+                    <pre># Option 1: WSL (Windows Subsystem for Linux)
+wsl --install
+wsl --set-default-version 2
+
+# Option 2: VirtualBox + Kali Linux
+# Download Kali Linux ISO and install in VirtualBox
+
+# Option 3: Individual Windows Tools
+# Nmap, Wireshark, Burp Suite have Windows installers</pre>
+                </div>
+            </div>
+        </div>
+        
+        <!-- In-Content Ad -->
+        <div class="ad-container" style="margin: 2rem 0;">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-6124052333813612"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="auto"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+        
+        <!-- Tool Categories with Examples -->
+        <h2 style="text-align: center; margin: 2rem 0 1rem;">🛠️ Security Tools - Complete Guide</h2>
+        <p style="text-align: center; margin-bottom: 2rem;">हर tool के बारे में जानें: क्या है, कैसे use करें, commands क्या हैं</p>
+        
+        <!-- Category 1: Information Gathering -->
+        <div style="margin-bottom: 2rem;">
+            <h3 style="color: #1f6392; margin-bottom: 1rem;">1️⃣ Information Gathering Tools</h3>
+            <div class="tool-category-grid">
+                <div class="tool-mini-card">
+                    <h4>🔍 Nmap - Network Scanner</h4>
+                    <p><strong>क्या है:</strong> नेटवर्क में डिवाइस और खुले पोर्ट ढूँढने का टूल</p>
+                    <p><strong>कैसे use करें:</strong></p>
+                    <code>nmap -sV target.com</code>
+                    <code>nmap -O target.com</code>
+                    <a href="tools/nmap.html" style="color: #2c7da0; display: inline-block; margin-top: 0.5rem;">Full Guide →</a>
+                </div>
+                <div class="tool-mini-card">
+                    <h4>🔮 Maltego - OSINT Tool</h4>
+                    <p><strong>क्या है:</strong> डोमेन, ईमेल, सोशल मीडिया के बीच संबंध ढूँढना</p>
+                    <p><strong>कैसे use करें:</strong> GUI में ड्रैग-एंड-ड्रॉप, transforms चलाएँ</p>
+                    <a href="tools/maltego.html" style="color: #2c7da0; display: inline-block; margin-top: 0.5rem;">Full Guide →</a>
+                </div>
+                <div class="tool-mini-card">
+                    <h4>📧 theHarvester - Email Harvester</h4>
+                    <p><strong>क्या है:</strong> डोमेन से ईमेल और सबडोमेन ढूँढना</p>
+                    <p><strong>कैसे use करें:</strong></p>
+                    <code>theHarvester -d target.com -b google</code>
+                    <a href="tools/theharvester.html" style="color: #2c7da0; display: inline-block; margin-top: 0.5rem;">Full Guide →</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Category 2: Vulnerability Analysis -->
+        <div style="margin-bottom: 2rem;">
+            <h3 style="color: #1f6392; margin-bottom: 1rem;">2️⃣ Vulnerability Analysis Tools</h3>
+            <div class="tool-category-grid">
+                <div class="tool-mini-card">
+                    <h4>🕷️ Nikto - Web Server Scanner</h4>
+                    <p><strong>क्या है:</strong> वेब सर्वर पर खतरनाक फाइल्स और वल्नरेबिलिटी ढूँढना</p>
+                    <code>nikto -h https://target.com</code>
+                    <a href="tools/nikto.html" style="color: #2c7da0; display: inline-block; margin-top: 0.5rem;">Full Guide →</a>
+                </div>
+                <div class="tool-mini-card">
+                    <h4>🗄️ SQLmap - SQL Injection</h4>
+                    <p><strong>क्या है:</strong> ऑटोमेटेड SQL इंजेक्शन एक्सप्लॉइटेशन</p>
+                    <code>sqlmap -u "http://target.com?id=1" --dbs</code>
+                    <a href="tools/sqlmap.html" style="color: #2c7da0; display: inline-block; margin-top: 0.5rem;">Full Guide →</a>
+                </div>
+                <div class="tool-mini-card">
+                    <h4>🔬 OpenVAS - Full Scanner</h4>
+                    <p><strong>क्या है:</strong> पूरा वल्नरेबिलिटी स्कैनर (Enterprise Grade)</p>
+                    <code>gvm-setup && gvm-start</code>
+                    <a href="tools/openvas.html" style="color: #2c7da0; display: inline-block; margin-top: 0.5rem;">Full Guide →</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Category 3: Password Attacks -->
+        <div style="margin-bottom: 2rem;">
+            <h3 style="color: #1f6392; margin-bottom: 1rem;">3️⃣ Password Attacks Tools</h3>
+            <div class="tool-category-grid">
+                <div class="tool-mini-card">
+                    <h4>🐍 Hydra - Network Cracker</h4>
+                    <p><strong>क्या है:</strong> SSH, FTP, HTTP पर ब्रूटफोर्स अटैक</p>
+                    <code>hydra -l root -P pass.txt ssh://192.168.1.100</code>
+                    <a href="tools/hydra.html" style="color: #2c7da0; display: inline-block; margin-top: 0.5rem;">Full Guide →</a>
+                </div>
+                <div class="tool-mini-card">
+                    <h4>⚡ Hashcat - GPU Cracker</h4>
+                    <p><strong>क्या है:</strong> दुनिया का सबसे तेज पासवर्ड क्रैकर (GPU)</p>
+                    <code>hashcat -m 0 hash.txt rockyou.txt</code>
+                    <a href="tools/hashcat.html" style="color: #2c7da0; display: inline-block; margin-top: 0.5rem;">Full Guide →</a>
+                </div>
+                <div class="tool-mini-card">
+                    <h4>🔓 John the Ripper</h4>
+                    <p><strong>क्या है:</strong> पासवर्ड हैश क्रैकिंग टूल (CPU)</p>
+                    <code>john shadow.txt</code>
+                    <a href="tools/john-the-ripper.html" style="color: #2c7da0; display: inline-block; margin-top: 0.5rem;">Full Guide →</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Category 4: Wireless Attacks -->
+        <div style="margin-bottom: 2rem;">
+            <h3 style="color: #1f6392; margin-bottom: 1rem;">4️⃣ Wireless Attacks Tools</h3>
+            <div class="tool-category-grid">
+                <div class="tool-mini-card">
+                    <h4>📡 Aircrack-ng - WiFi Cracking</h4>
+                    <p><strong>क्या है:</strong> WPA/WPA2 WiFi पासवर्ड क्रैकिंग</p>
+                    <code>airmon-ng start wlan0<br>airodump-ng wlan0mon</code>
+                    <a href="tools/aircrack-ng.html" style="color: #2c7da0; display: inline-block; margin-top: 0.5rem;">Full Guide →</a>
+                </div>
+                <div class="tool-mini-card">
+                    <h4>🔑 Reaver - WPS Attack</h4>
+                    <p><strong>क्या है:</strong> WPS PIN ब्रूटफोर्स अटैक</p>
+                    <code>reaver -i wlan0mon -b 00:11:22:33:44:55</code>
+                    <a href="tools/reaver.html" style="color: #2c7da0; display: inline-block; margin-top: 0.5rem;">Full Guide →</a>
+                </div>
+                <div class="tool-mini-card">
+                    <h4>⚡ Wifite - Automated Attack</h4>
+                    <p><strong>क्या है:</strong> ऑटोमेटेड WiFi अटैक टूल</p>
+                    <code>sudo wifite</code>
+                    <a href="tools/wifite.html" style="color: #2c7da0; display: inline-block; margin-top: 0.5rem;">Full Guide →</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Category 5: Exploitation Tools -->
+        <div style="margin-bottom: 2rem;">
+            <h3 style="color: #1f6392; margin-bottom: 1rem;">5️⃣ Exploitation Tools</h3>
+            <div class="tool-category-grid">
+                <div class="tool-mini-card">
+                    <h4>🎯 Metasploit - Exploitation Framework</h4>
+                    <p><strong>क्या है:</strong> दुनिया का सबसे पॉपुलर एक्सप्लॉइटेशन टूल</p>
+                    <code>msfconsole<br>use exploit/...<br>set RHOSTS target<br>exploit</code>
+                    <a href="tools/metasploit.html" style="color: #2c7da0; display: inline-block; margin-top: 0.5rem;">Full Guide →</a>
+                </div>
+                <div class="tool-mini-card">
+                    <h4>🐮 BeEF - Browser Exploitation</h4>
+                    <p><strong>क्या है:</strong> ब्राउज़र एक्सप्लॉइटेशन फ्रेमवर्क</p>
+                    <code>beef-xss<br>http://localhost:3000/ui/panel</code>
+                    <a href="tools/beef.html" style="color: #2c7da0; display: inline-block; margin-top: 0.5rem;">Full Guide →</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Category 6: Sniffing & Forensics -->
+        <div style="margin-bottom: 2rem;">
+            <h3 style="color: #1f6392; margin-bottom: 1rem;">6️⃣ Sniffing & Forensics Tools</h3>
+            <div class="tool-category-grid">
+                <div class="tool-mini-card">
+                    <h4>🔍 Wireshark - Packet Analyzer</h4>
+                    <p><strong>क्या है:</strong> नेटवर्क ट्रैफिक कैप्चर और एनालिसिस</p>
+                    <code>wireshark<br>ip.addr == 192.168.1.1</code>
+                    <a href="tools/wireshark.html" style="color: #2c7da0; display: inline-block; margin-top: 0.5rem;">Full Guide →</a>
+                </div>
+                <div class="tool-mini-card">
+                    <h4>🐘 Ettercap - MITM Attack</h4>
+                    <p><strong>क्या है:</strong> मैन-इन-द-मिडिल अटैक टूल</p>
+                    <code>ettercap -T -M arp:remote /target// /gateway//</code>
+                    <a href="tools/ettercap.html" style="color: #2c7da0; display: inline-block; margin-top: 0.5rem;">Full Guide →</a>
+                </div>
+                <div class="tool-mini-card">
+                    <h4>🔬 Autopsy - Digital Forensics</h4>
+                    <p><strong>क्या है:</strong> डिजिटल फोरेंसिक प्लेटफॉर्म</p>
+                    <code>autopsy<br>http://localhost:9999/autopsy</code>
+                    <a href="tools/autopsy.html" style="color: #2c7da0; display: inline-block; margin-top: 0.5rem;">Full Guide →</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- All Tools Button -->
+        <div style="text-align: center; margin: 2rem 0;">
+            <button id="viewAllToolsBtn" class="btn-primary" style="font-size: 1.2rem; padding: 15px 40px;">🔧 View All 31+ Tools →</button>
+        </div>
+        
+        <!-- Footer Ad -->
+        <div class="ad-container" style="margin: 2rem 0;">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-6124052333813612"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="auto"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+        
+        <!-- Learning Tips -->
+        <div style="background: linear-gradient(135deg, #1e2a3a, #0f1a24); border-radius: 1.5rem; padding: 2rem; color: white; margin-top: 2rem;">
+            <h2 style="text-align: center; margin-bottom: 1rem;">📖 How to Learn Effectively</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                <div>
+                    <h3>✅ Step 1: Start with Basics</h3>
+                    <p>पहले Information Gathering tools (Nmap, theHarvester) सीखें। ये सबसे आसान हैं।</p>
+                </div>
+                <div>
+                    <h3>✅ Step 2: Practice on Labs</h3>
+                    <p>TryHackMe, HackTheBox, VulnHub पर प्रैक्टिस करें। कभी रियल वेबसाइट पर न करें।</p>
+                </div>
+                <div>
+                    <h3>✅ Step 3: Learn Commands</h3>
+                    <p>हर tool के commands को उदाहरण सहित समझें। हमारे tool pages में सब दिया है।</p>
+                </div>
+                <div>
+                    <h3>✅ Step 4: Mobile + PC</h3>
+                    <p>Termux (Mobile) और Kali Linux (PC) दोनों पर प्रैक्टिस करें।</p>
+                </div>
+            </div>
+            <div class="cmd-note" style="background: rgba(255,255,255,0.1); margin-top: 1.5rem; text-align: center;">
+                ⚠️ <strong>Important:</strong> Only use these tools on systems you have permission to test. Unauthorized testing is illegal.
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Ethical Learn — Empowering security researchers. All tools are for authorized testing only.</p>
+    <p style="margin-top: 0.5rem;">
+        <a href="privacy.html" style="color: #2c7da0;">Privacy Policy</a> | 
+        <a href="about.html" style="color: #2c7da0;">About Us</a> | 
+        <a href="contact.html" style="color: #2c7da0;">Contact</a>
+    </p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+    // Platform Tabs (Mobile vs PC)
+    document.querySelectorAll('.platform-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.platform-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            const platform = this.dataset.platform;
+            document.getElementById('mobile-content').classList.remove('active');
+            document.getElementById('pc-content').classList.remove('active');
+            
+            if(platform === 'mobile') {
+                document.getElementById('mobile-content').classList.add('active');
+            } else {
+                document.getElementById('pc-content').classList.add('active');
+            }
+        });
+    });
+    
+    // Explore Tools Button
+    document.getElementById('exploreToolsBtn')?.addEventListener('click', function(e) {
+        e.preventDefault();
+        if(typeof openOverlay === 'function') openOverlay();
+    });
+    
+    document.getElementById('viewAllToolsBtn')?.addEventListener('click', function() {
+        if(typeof openOverlay === 'function') openOverlay();
+    });
+    
+    // Navbar Home Link
+    document.getElementById('navHome')?.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.location.href = 'index.html';
+    });
+    
+    document.getElementById('mobileHome')?.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.location.href = 'index.html';
+    });
+    
+    document.getElementById('mobileTools')?.addEventListener('click', function(e) {
+        e.preventDefault();
+        if(typeof openOverlay === 'function') openOverlay();
+    });
+</script>
+</body>
+</html>

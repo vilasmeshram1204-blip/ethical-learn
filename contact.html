@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us - Ethical Learn</title>
+
+<meta name="description" content="Contact Ethical Learn for cybersecurity questions and suggestions">
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6124052333813612"
+crossorigin="anonymous"></script>
+
+<style>
+
+body{
+background:#0d1117;
+color:white;
+font-family:Arial;
+margin:0;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:30px;
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin-top:6px;
+margin-bottom:15px;
+border-radius:6px;
+border:none;
+}
+
+button{
+background:#1f6feb;
+color:white;
+padding:12px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.comment-box{
+background:#161b22;
+padding:15px;
+margin-top:30px;
+border-radius:8px;
+}
+
+.ad-box{
+margin:30px 0;
+text-align:center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📧 Contact Ethical Learn</h1>
+
+<p>Cybersecurity questions, suggestions or collaboration के लिए contact करें.</p>
+
+<!-- ADSENSE -->
+<div class="ad-box">
+
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-6124052333813612"
+data-ad-slot="1234567890"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
+
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+<form id="contactForm">
+
+<label>Name</label>
+<input type="text" id="name" required>
+
+<label>Email</label>
+<input type="email" id="email" required>
+
+<label>Message</label>
+<textarea id="message" rows="5" required></textarea>
+
+<input type="hidden" id="honeypot">
+
+<button type="submit">Send Message</button>
+
+</form>
+
+<div id="response"></div>
+
+<!-- COMMENT SYSTEM -->
+
+<div class="comment-box">
+
+<h2>💬 Leave a Comment</h2>
+
+<input type="text" id="cname" placeholder="Your Name">
+
+<textarea id="comment" rows="4" placeholder="Write comment"></textarea>
+
+<button onclick="sendComment()">Post Comment</button>
+
+<div id="commentResponse"></div>
+
+</div>
+
+</div>
+
+<script>
+
+const API_URL="https://script.google.com/macros/s/AKfycbzxJj3iIwxKaCGrGlyQeZnHjROP65FFxJG0vl10gsIpssfDUjanzX7dhF1xr74W5MY9/exec";
+
+document.getElementById("contactForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+if(document.getElementById("honeypot").value!=""){
+return;
+}
+
+fetch("https://api.ipify.org?format=json")
+.then(res=>res.json())
+.then(ipdata=>{
+
+const data={
+type:"contact",
+name:document.getElementById("name").value,
+email:document.getElementById("email").value,
+message:document.getElementById("message").value,
+ip:ipdata.ip
+};
+
+fetch(API_URL,{
+method:"POST",
+body:JSON.stringify(data)
+})
+.then(res=>res.json())
+.then(result=>{
+
+document.getElementById("response").innerHTML="✅ Message Sent Successfully";
+
+document.getElementById("contactForm").reset();
+
+});
+
+});
+
+});
+
+
+function sendComment(){
+
+const data={
+type:"comment",
+name:document.getElementById("cname").value,
+comment:document.getElementById("comment").value
+};
+
+fetch(API_URL,{
+method:"POST",
+body:JSON.stringify(data)
+})
+.then(res=>res.json())
+.then(result=>{
+
+document.getElementById("commentResponse").innerHTML="✅ Comment Posted";
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
