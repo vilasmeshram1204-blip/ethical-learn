@@ -1,57 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://ethical-learn.vercel.app/</loc>
-<priority>1.00</priority>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
 </url>
 
 <!-- Information Gathering -->
-<url><loc>https://ethical-learn.vercel.app/tools/nmap</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/maltego</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/theharvester</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/recon-ng</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/dnsenum</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/dnsrecon</loc></url>
+<url>
+<loc>https://ethical-learn.vercel.app/tools/nmap</loc>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+</url>
+
+<url>
+<loc>https://ethical-learn.vercel.app/tools/maltego</loc>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://ethical-learn.vercel.app/tools/theharvester</loc>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://ethical-learn.vercel.app/tools/recon-ng</loc>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://ethical-learn.vercel.app/tools/dnsenum</loc>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://ethical-learn.vercel.app/tools/dnsrecon</loc>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
 
 <!-- Vulnerability Analysis -->
-<url><loc>https://ethical-learn.vercel.app/tools/nikto</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/openvas</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/owasp-zap</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/sqlmap</loc></url>
+<url>
+<loc>https://ethical-learn.vercel.app/tools/nikto</loc>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://ethical-learn.vercel.app/tools/openvas</loc>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://ethical-learn.vercel.app/tools/owasp-zap</loc>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://ethical-learn.vercel.app/tools/sqlmap</loc>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+</url>
 
 <!-- Web Application Attacks -->
-<url><loc>https://ethical-learn.vercel.app/tools/burp-suite</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/commix</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/skipfish</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/wfuzz</loc></url>
+<url>
+<loc>https://ethical-learn.vercel.app/tools/burp-suite</loc>
+</url>
+
+<url>
+<loc>https://ethical-learn.vercel.app/tools/commix</loc>
+</url>
+
+<url>
+<loc>https://ethical-learn.vercel.app/tools/skipfish</loc>
+</url>
+
+<url>
+<loc>https://ethical-learn.vercel.app/tools/wfuzz</loc>
+</url>
 
 <!-- Password Attacks -->
-<url><loc>https://ethical-learn.vercel.app/tools/hydra</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/hashcat</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/john-the-ripper</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/medusa</loc></url>
+<url>
+<loc>https://ethical-learn.vercel.app/tools/hydra</loc>
+</url>
+
+<url>
+<loc>https://ethical-learn.vercel.app/tools/hashcat</loc>
+</url>
+
+<url>
+<loc>https://ethical-learn.vercel.app/tools/john-the-ripper</loc>
+</url>
+
+<url>
+<loc>https://ethical-learn.vercel.app/tools/medusa</loc>
+</url>
 
 <!-- Wireless Attacks -->
-<url><loc>https://ethical-learn.vercel.app/tools/aircrack-ng</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/reaver</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/kismet</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/wifite</loc></url>
+<url>
+<loc>https://ethical-learn.vercel.app/tools/aircrack-ng</loc>
+</url>
 
-<!-- Exploitation Tools -->
-<url><loc>https://ethical-learn.vercel.app/tools/metasploit</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/beef</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/armitage</loc></url>
+<url>
+<loc>https://ethical-learn.vercel.app/tools/reaver</loc>
+</url>
 
-<!-- Sniffing & Spoofing -->
-<url><loc>https://ethical-learn.vercel.app/tools/wireshark</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/ettercap</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/bettercap</loc></url>
+<url>
+<loc>https://ethical-learn.vercel.app/tools/kismet</loc>
+</url>
+
+<url>
+<loc>https://ethical-learn.vercel.app/tools/wifite</loc>
+</url>
+
+<!-- Exploitation -->
+<url>
+<loc>https://ethical-learn.vercel.app/tools/metasploit</loc>
+</url>
+
+<url>
+<loc>https://ethical-learn.vercel.app/tools/beef</loc>
+</url>
+
+<url>
+<loc>https://ethical-learn.vercel.app/tools/armitage</loc>
+</url>
+
+<!-- Sniffing -->
+<url>
+<loc>https://ethical-learn.vercel.app/tools/wireshark</loc>
+</url>
+
+<url>
+<loc>https://ethical-learn.vercel.app/tools/ettercap</loc>
+</url>
+
+<url>
+<loc>https://ethical-learn.vercel.app/tools/bettercap</loc>
+</url>
 
 <!-- Forensics -->
-<url><loc>https://ethical-learn.vercel.app/tools/autopsy</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/binwalk</loc></url>
-<url><loc>https://ethical-learn.vercel.app/tools/foremost</loc></url>
+<url>
+<loc>https://ethical-learn.vercel.app/tools/autopsy</loc>
+</url>
+
+<url>
+<loc>https://ethical-learn.vercel.app/tools/binwalk</loc>
+</url>
+
+<url>
+<loc>https://ethical-learn.vercel.app/tools/foremost</loc>
+</url>
 
 </urlset>
