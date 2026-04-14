@@ -1,1 +1,165 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- SEO Meta Tags -->
+  <title>Termux में arp -a command कैसे use करें | Net-tools install guide</title>
+  <meta name="description" content="Termux में arp -a command कैसे use करें। Net-tools install करने की पूरी step-by-step guide हिंदी में। Network devices देखने का आसान तरीका।">
+  <meta name="keywords" content="Termux arp command, arp -a Termux, net-tools install Termux, Termux networking, arp command Hindi">
+  <meta name="author" content="Ethical Learn">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Termux में arp -a command कैसे use करें">
+  <meta property="og:description" content="Step-by-step हिंदी guide net-tools install और arp command use करने की।">
+  <meta property="og:type" content="website">
+
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6124052333813612"
+     crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      background:#0f172a;
+      color:#e2e8f0;
+      font-family: Arial, sans-serif;
+      margin:0;
+      padding:0;
+    }
+    .container {
+      padding:20px;
+      line-height:1.8;
+    }
+    h1, h2 {
+      color:#38bdf8;
+    }
+    code {
+      background:#1e293b;
+      padding:10px;
+      display:block;
+      border-radius:8px;
+      margin:10px 0;
+      color:#22c55e;
+    }
+    .btn {
+      display:inline-block;
+      padding:10px 15px;
+      background:#22c55e;
+      color:#000;
+      border-radius:8px;
+      text-decoration:none;
+      margin-top:10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📌 Termux में arp -a command कैसे use करें</h1>
+
+<p>
+Termux एक powerful Android terminal app है जिसकी मदद से आप Linux commands चला सकते हैं। 
+इस guide में हम सीखेंगे कि <b>arp -a command</b> का use करके network में connected devices कैसे देखें।
+</p>
+
+<h2>🔹 arp -a क्या होता है?</h2>
+
+<p>
+arp -a एक networking command है जो आपके WiFi network में जुड़े devices के IP और MAC address दिखाता है। 
+यह command खासकर ethical hacking और network analysis में बहुत useful होती है।
+</p>
+
+<h2>🔧 Step 1: Termux update करें</h2>
+
+<code>
+apt update && apt upgrade -y
+</code>
+
+<p>
+यह command आपके Termux को latest version में update कर देती है।
+</p>
+
+<h2>📦 Step 2: net-tools install करें</h2>
+
+<code>
+apt install net-tools -y
+</code>
+
+<p>
+arp command net-tools package के अंदर आती है, इसलिए इसे install करना जरूरी है।
+</p>
+
+<h2>🌐 Step 3: WiFi से connect रहें</h2>
+
+<p>
+ध्यान रखें कि आपका फोन WiFi network से connected होना चाहिए, तभी arp command काम करेगी।
+</p>
+
+<h2>⚡ Step 4: arp -a command चलाएं</h2>
+
+<code>
+arp -a
+</code>
+
+<h2>📊 Output समझें</h2>
+
+<code>
+? (192.168.1.1) at aa:bb:cc:dd:ee:ff [ether] on wlan0
+</code>
+
+<p>
+यहाँ:
+<br>✔ IP Address → 192.168.1.1  
+<br>✔ MAC Address → aa:bb:cc:dd:ee:ff  
+<br>✔ Interface → wlan0  
+</p>
+
+<h2>⚠️ अगर result नहीं आए तो?</h2>
+
+<p>
+कभी-कभी arp empty दिखाता है, तब पहले network scan करना पड़ता है।
+</p>
+
+<code>
+ping -c 4 192.168.1.1
+</code>
+
+<h2>🚀 Advanced तरीका (Nmap)</h2>
+
+<code>
+apt install nmap -y
+nmap -sn 192.168.1.0/24
+</code>
+
+<p>
+यह command पूरे network के सभी devices दिखा देती है।
+</p>
+
+<h2>🔥 Extra Tool: Netdiscover</h2>
+
+<code>
+apt install netdiscover -y
+netdiscover
+</code>
+
+<p>
+यह tool live network devices detect करता है।
+</p>
+
+<h2>📌 Conclusion</h2>
+
+<p>
+✔ arp -a command network devices दिखाने के लिए use होती है  
+<br>✔ net-tools install करना जरूरी है  
+<br>✔ best result के लिए nmap use करें  
+</p>
+
+<a href="#" class="btn">⬅ Back to Home</a>
+
+</div>
+
+</body>
+</html>
